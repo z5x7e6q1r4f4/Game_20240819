@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 212
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 72
+  controlID: 213
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -274,9 +274,9 @@ MonoBehaviour:
     y: 568
     width: 1277
     height: 371
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
@@ -284,8 +284,8 @@ MonoBehaviour:
   - {fileID: 23}
   - {fileID: 24}
   - {fileID: 25}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -305,17 +305,17 @@ MonoBehaviour:
     y: 0
     width: 643
     height: 939
-  m_MinSize: {x: 51, y: 71}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 29}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 26}
   - {fileID: 27}
   - {fileID: 28}
   - {fileID: 29}
-  m_Selected: 4
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 4
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,8 +337,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1277
-    y: 73
+    x: 1278
+    y: 19
     width: 642
     height: 918
   m_SerializedDataModeController:
@@ -406,7 +406,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e4ccffff92cfffff7cd2ffffbed5ffffbefaffff
+      m_ExpandedIDs: 3e8fffff349bffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 641
+    y: 587
     width: 1276
     height: 350
   m_SerializedDataModeController:
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Main/Objects
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1376,16 +1376,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Main
+  - Assets/Scripts/Main/Objects
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\UnityProject\Game0818
+  m_LastProjectPath: D:\UnityProject\Game_20240819
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3cae0000
-    m_LastClickedID: 44604
-    m_ExpandedIDs: 
+    m_SelectedIDs: 14de0000
+    m_LastClickedID: 56852
+    m_ExpandedIDs: 00000000b2ac0000b4ac0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1414,7 +1414,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000b2ac0000b4ac0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1440,8 +1440,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d4ae0000
-    m_LastClickedInstanceID: 44756
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007c59000000000000beb50000d0b50000d6b50000fed90000
     m_RenameOverlay:
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 587
+    y: 641
     width: 1276
     height: 350
   m_SerializedDataModeController:
@@ -2833,8 +2833,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Test Runner\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1278
-    y: 19
+    x: 1277
+    y: 73
     width: 642
     height: 918
   m_SerializedDataModeController:
@@ -2849,7 +2849,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 117
+    ID: 160
     splitterInitialOffset: 479
     currentActiveSplitter: -1
     realSizes:
@@ -2877,9 +2877,9 @@ MonoBehaviour:
   - m_Window: {fileID: 29}
     m_NewResultList:
     - id: 1000
-      uniqueId: '[Game0818][suite]'
-      name: Game0818
-      fullName: Game0818
+      uniqueId: '[Game_20240819][suite]'
+      name: Game_20240819
+      fullName: Game_20240819
       resultStatus: 0
       duration: 0
       messages: 
@@ -2892,212 +2892,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1011
-      uniqueId: '[EditMode.dll][suite]'
-      name: EditMode.dll
-      fullName: D:/UnityProject/Game0818/Library/ScriptAssemblies/EditMode.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Game0818][suite]'
-    - id: 1012
-      uniqueId: 'EditMode.dll/[EditMode][Main][suite]'
-      name: Main
-      fullName: Main
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1011
-      parentUniqueId: '[EditMode.dll][suite]'
-    - id: 1001
-      uniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-      name: UnitTest_Reuse
-      fullName: Main.UnitTest_Reuse
-      resultStatus: 1
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: 'EditMode.dll/[EditMode][Main][suite]'
-    - id: 1006
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_ClearReference]'
-      name: UnitTest_Reuse_ClearReference
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_ClearReference
-      resultStatus: 1
-      duration: 0.0137464
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1003
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_Get]'
-      name: UnitTest_Reuse_Get
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_Get
-      resultStatus: 1
-      duration: 0.0014469
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1005
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_Get_Prefab]'
-      name: UnitTest_Reuse_Get_Prefab
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_Get_Prefab
-      resultStatus: 1
-      duration: 0.0005863
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1003
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_GetPool_Prefab]'
-      name: UnitTest_Reuse_GetPool_Prefab
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_GetPool_Prefab
-      resultStatus: 1
-      duration: 0.003362
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1002
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_GetPool_Type]'
-      name: UnitTest_Reuse_GetPool_Type
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_GetPool_Type
-      resultStatus: 1
-      duration: 0.0004177
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1005
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_Release]'
-      name: UnitTest_Reuse_Release
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_Release
-      resultStatus: 1
-      duration: 0.0005223
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1007
-      uniqueId: 'EditMode.dll/Main/UnitTest_Reuse/[EditMode][Main.UnitTest_Reuse.UnitTest_Reuse_ReleaseAfterClear]'
-      name: UnitTest_Reuse_ReleaseAfterClear
-      fullName: Main.UnitTest_Reuse.UnitTest_Reuse_ReleaseAfterClear
-      resultStatus: 1
-      duration: 0.0002673
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Reuse][suite]'
-    - id: 1009
-      uniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_RXs_RXsProperty][suite]'
-      name: UnitTest_RXs_RXsProperty
-      fullName: Main.UnitTest_RXs_RXsProperty
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: 'EditMode.dll/[EditMode][Main][suite]'
-    - id: 1010
-      uniqueId: 'EditMode.dll/Main/UnitTest_RXs_RXsProperty/[EditMode][Main.UnitTest_RXs_RXsProperty.UnitTest_RXsProperty_Constructor]'
-      name: UnitTest_RXsProperty_Constructor
-      fullName: Main.UnitTest_RXs_RXsProperty.UnitTest_RXsProperty_Constructor
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_RXs_RXsProperty][suite]'
-    m_ResultText: UnitTest_Reuse (7 tests) (0.000s)
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 27b9e956
-      m_LastClickedID: 1458157863
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: f6a67887c741b7875c876d8869ecb28b71ea378f72c92b9300d4139e052cb39fbbfa99a6cf1f00abd2d304aff43196afa44a39b606a0f4b804a8aeb938368abb054309bd14695dc2ac69f5c26cc478c69f04b7cc6547a4d005b472d349d8f0d73d420ee0f5aa31e15d328be401e22ce778d1dde75a7489e8d49ba8f57d968908add9f00e0408d912279faa17992d0f1c42c2791cf50feb1f32456b232197b328b0afa12b5145ca3313756c3bb1884f401177d640fa2c5f439963494617a49d4de93918528efd67542215e255f6b6ee5527b9e956f9257166ff96e26668426a670f5dbf69a4d19c6d3e9feb6e4b5ea47ccac4c37c6fb0f97effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
