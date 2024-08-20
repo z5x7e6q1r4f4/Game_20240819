@@ -8,7 +8,7 @@ namespace Main
             private static IPool<T> StaticPool => staticPool ??= GetPool<T>(releaseOnClear: () => staticPool = null);
             private static IPool<T> staticPool;
             IPool IReuseable.Pool { get; set; }
-            protected static T GetFromReusePool(bool onGet) => StaticPool.Get(onGet);
+            protected static T GetFromReusePool(bool onGet = true) => StaticPool.Get(onGet);
         }
     }
 }
