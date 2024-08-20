@@ -26,7 +26,7 @@ namespace Main
             => GetPool(prefab).Get(onGet);
         public static void ReleaseToReusePool<T>(this T item, bool onRelease = true)
             where T : class, IReuseable
-            => item.Pool?.Release(onRelease);
+            => item.Pool?.Release(item,onRelease);
         //LifeCycle
         public static void Clear()
         {
