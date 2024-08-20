@@ -23,7 +23,7 @@ namespace Main.RXs
         private T GetAt(int index, bool indexCheck = true)
         {
             if (indexCheck && (index < 0 || index >= Count)) return default;
-            return this[index];
+            return SerializedCollection[index];
         }
         protected int AddCore(int index, T item, bool beforeAdd, bool afterAdd)
         {

@@ -12,6 +12,7 @@ namespace Main
         public static IPool<T> GetPool<T>(T prefab = null, Action releaseOnClear = null)
             where T : class, IReuseable
         {
+            CheckRegisterUnityLifeCycle();
             var key = prefab ?? typeof(T) as object;
             if (!Pools.TryGetValue(key, out var pool))
             {
@@ -26,7 +27,7 @@ namespace Main
             => GetPool(prefab).Get(onGet);
         public static void ReleaseToReusePool<T>(this T item, bool onRelease = true)
             where T : class, IReuseable
-            => item.Pool?.Release(item,onRelease);
+            => item.Pool?.Release(item, onRelease);
         //LifeCycle
         public static void Clear()
         {

@@ -8,6 +8,7 @@ namespace Main
     {
         public static T New<T>(Type type = null, CustomNewAttribute customNew = null, params object[] args)
         {
+            type ??= typeof(T);
             customNew ??= type.GetCustomAttribute<CustomNewAttribute>(true);
             if (customNew != null) return customNew.New<T>(type, args);
             else return (T)Activator.CreateInstance(type ?? typeof(T), args: args);
