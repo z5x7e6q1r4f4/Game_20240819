@@ -15,6 +15,7 @@ namespace Main.RXs
     }
     public interface IRXsCollection_Readonly<T> : IRXsCollection_Readonly, IEnumerable<T>
     {
+        object IRXsCollection_Readonly.this[int index] => this[index];
         bool IRXsCollection_Readonly.Contains(object item) => Contains((T)item);
         int IRXsCollection_Readonly.IndexOf(object item) => IndexOf((T)item);
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

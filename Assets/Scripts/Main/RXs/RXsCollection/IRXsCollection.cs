@@ -7,8 +7,6 @@ namespace Main.RXs
 {
     public interface IRXsCollection : IRXsCollection_Readonly
     {
-        object IRXsCollection_Readonly.this[int index] => this[index];
-        //
         new object this[int index] { get; set; }
         IObservable<IRXsCollection_BeforeAdd> BeforeAdd { get; }
         IObservable<IRXsCollection_BeforeRemove> BeforeRemove { get; }
@@ -21,8 +19,6 @@ namespace Main.RXs
     }
     public interface IRXsCollection<T> : IRXsCollection, IRXsCollection_Readonly<T>
     {
-        T IRXsCollection_Readonly<T>.this[int index] => this[index];
-        //
         object IRXsCollection.this[int index] { get => this[index]; set => this[index] = (T)value; }
         IObservable<IRXsCollection_BeforeAdd> IRXsCollection.BeforeAdd => BeforeAdd;
         IObservable<IRXsCollection_BeforeRemove> IRXsCollection.BeforeRemove => BeforeRemove;
