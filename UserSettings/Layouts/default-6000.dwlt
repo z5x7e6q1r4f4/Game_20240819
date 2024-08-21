@@ -244,8 +244,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 509
     y: 0
+<<<<<<< HEAD
     width: 768
     height: 568
+=======
+    width: 764
+    height: 566
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -388,8 +393,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 19
+<<<<<<< HEAD
     width: 342
     height: 547
+=======
+    width: 341
+    height: 545
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -452,10 +462,17 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 344
     y: 19
     width: 164
     height: 547
+=======
+    x: 343
+    y: 19
+    width: 165
+    height: 545
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1168,8 +1185,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 510
     y: 19
+<<<<<<< HEAD
     width: 766
     height: 547
+=======
+    width: 762
+    height: 545
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1494,9 +1516,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 641
     width: 1276
     height: 350
+=======
+    y: 585
+    width: 1272
+    height: 352
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2833,9 +2861,15 @@ MonoBehaviour:
     m_TextWithWhitespace: "Test Runner\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1277
     y: 73
     width: 642
+=======
+    x: 1274
+    y: 19
+    width: 646
+>>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
