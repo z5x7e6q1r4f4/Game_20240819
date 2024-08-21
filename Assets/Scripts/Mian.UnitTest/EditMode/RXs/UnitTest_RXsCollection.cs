@@ -5,12 +5,13 @@ using NSubstitute;
 using UnityEngine;
 using UnityEngine.TestTools;
 using System;
+using System.Reflection;
 
 namespace Main.RXs
 {
     public class UnitTest_RXsCollection
     {
-        private IEnumerable<string> items
+        private static IEnumerable<string> items
         {
             get
             {
@@ -19,7 +20,7 @@ namespace Main.RXs
                 yield return "Item3";
             }
         }
-        private IEnumerable<string> newItems
+        private static IEnumerable<string> newItems
         {
             get
             {
@@ -28,8 +29,8 @@ namespace Main.RXs
                 yield return "NewItem3";
             }
         }
-        private string item => items.First();
-        private string newItem => newItems.First();
+        private static string item => items.First();
+        private static string newItem => newItems.First();
         private RXsCollection_SerializeField<string> collection;
         [SetUp]
         public void SetUp()
@@ -129,11 +130,108 @@ namespace Main.RXs
             collection.Insert(index, item);
         }
         [Test]
+        public void AfterAdd_Count([Values] bool afterAdd)
+        {
+            var count = 0;
+            collection.AfterAdd.Subscribe(e => count++);
+            collection.Add(newItem, afterAdd: afterAdd);
+            if (afterAdd) Assert.AreEqual(1, count);
+            else Assert.AreEqual(0, count);
+        }
+        [Test]
         public void AfterAdd_Immediately()
         {
             var count = 0;
             collection.AfterAdd.Immediately().Subscribe(e => count++);
             Assert.AreEqual(count, collection.Count);
+        }
+        [Test]
+        public void AfterAdd_IsEnable([Values] bool isEnable)
+        {
+            var count = 0;
+            collection.BeforeAdd.Subscribe(e => e.IsEnable = isEnable);
+            collection.AfterAdd.Subscribe(e => count++);
+            collection.Add(newItem);
+            if (isEnable) Assert.AreEqual(1, count);
+            else Assert.AreEqual(0, count);
+        }
+        [Test]
+        public void AfterAdd_Modified([Values(null, "modified")] string modified)
+        {
+            var useModified = modified != null;
+            int count = 0;
+            collection.BeforeAdd.Subscribe(e => { if (useModified) e.Modified = modified; });
+            collection.AfterAdd.Subscribe(e =>
+            {
+                count++;
+                if (useModified) Assert.AreEqual(modified, e.Item);
+                else Assert.AreEqual(newItem, e.Item);
+            });
+            collection.Add(newItem);
+            Assert.AreEqual(1, count);
+        }
+        //
+        [Test]
+        public void BeforeRemove_Data([ValueSource(nameof(items))] string item)
+        {
+            var index = collection.IndexOf(item);
+            collection.BeforeRemove.Subscribe(e =>
+            {
+                Assert.AreEqual(collection, e.Collection);
+                Assert.AreEqual(index, e.Index);
+                Assert.AreEqual(item, e.Item);
+                Assert.IsTrue(e.IsEnable);
+            });
+            collection.Remove(item);
+        }
+        [Test]
+        public void BeforeRemove_Count([Values] bool beforeRemove)
+        {
+            var count = 0;
+            collection.BeforeRemove.Subscribe(e => count++);
+            collection.RemoveAt(0, beforeRemove: beforeRemove);
+            if (beforeRemove) Assert.AreEqual(1, count);
+            else Assert.AreEqual(0, count);
+        }
+        [Test]
+        public void BeforeRemove_IsEnable([Values] bool isEnable)
+        {
+            collection.BeforeRemove.Subscribe(e => e.IsEnable = isEnable);
+            collection.RemoveAt(1);
+            if (isEnable) Assert.AreEqual(items.Count() - 1, collection.Count);
+            else Assert.AreEqual(items.Count(), collection.Count);
+        }
+        //
+        [Test]
+        public void AfterRemove_Data([ValueSource(nameof(items))] string item)
+        {
+            var index = collection.IndexOf(item);
+            collection.AfterRemove.Subscribe(e =>
+            {
+                Assert.AreEqual(collection, e.Collection);
+                Assert.AreEqual(index, e.Index);
+                Assert.AreEqual(item, e.Item);
+            });
+            collection.Remove(item);
+        }
+        [Test]
+        public void AfterRemove_Count([Values] bool afterRemove)
+        {
+            var count = 0;
+            collection.AfterRemove.Subscribe(e => count++);
+            collection.RemoveAt(0, afterRemove: afterRemove);
+            if (afterRemove) Assert.AreEqual(1, count);
+            else Assert.AreEqual(0, count);
+        }
+        [Test]
+        public void AfterRemove_IsEnable([Values] bool isEnable)
+        {
+            var count = 0;
+            collection.BeforeRemove.Subscribe(e => e.IsEnable = isEnable);
+            collection.AfterRemove.Subscribe(e => count++);
+            collection.RemoveAt(1);
+            if (isEnable) Assert.AreEqual(1, count);
+            else Assert.AreEqual(0, count);
         }
     }
 }
