@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using static PlasticPipe.PlasticProtocol.Messages.Serialization.ItemHandlerMessagesSerialization;
 
 namespace Main
 {
@@ -39,11 +40,7 @@ namespace Main
                     active.Remove(item);
                     inactive.Add(item);
                 }
-                else//has disposed
-                {
-                    item.Pool = null;
-                    if (item is IReuseable.IOnDestroy destroy) destroy.OnDestroy();
-                }
+                else Destroy(item);//has disposed
             }
             private void CheckCountAndGenerate()
             {
@@ -57,11 +54,15 @@ namespace Main
             public void Dispose()
             {
                 //Inactive
-                foreach (var item in inactive)
-                { if (item is IReuseable.IOnDestroy destroy) destroy.OnDestroy(); }
+                foreach (var item in inactive) Destroy(item);
                 inactive.Clear();
                 //Active
                 active.Clear();
+            }
+            private void Destroy(T item)
+            {
+                item.Pool = null;
+                if (item is IReuseable.IOnDestroy destroy) destroy.OnDestroy();
             }
         }
     }

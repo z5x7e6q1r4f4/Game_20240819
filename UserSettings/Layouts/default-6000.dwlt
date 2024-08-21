@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Test Runner
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 130
+  controlID: 106
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -140,12 +140,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1277
+    width: 1273
     height: 939
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 73
+  controlID: 48
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -167,8 +167,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1277
-    height: 568
+    width: 1273
+    height: 566
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 343
-    height: 568
+    width: 342
+    height: 566
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -215,10 +215,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 343
+    x: 342
     y: 0
-    width: 166
-    height: 568
+    width: 167
+    height: 566
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -244,6 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 509
     y: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     width: 768
     height: 568
@@ -253,6 +254,12 @@ MonoBehaviour:
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 764
+    height: 566
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Stashed changes
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -270,18 +277,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 568
-    width: 1277
-    height: 371
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+    y: 566
+    width: 1273
+    height: 373
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
@@ -289,8 +296,8 @@ MonoBehaviour:
   - {fileID: 23}
   - {fileID: 24}
   - {fileID: 25}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -301,26 +308,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1277
+    x: 1273
     y: 0
-    width: 643
+    width: 647
     height: 939
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 51, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 29}
   m_Panes:
   - {fileID: 13}
   - {fileID: 26}
   - {fileID: 27}
   - {fileID: 28}
   - {fileID: 29}
-  m_Selected: 0
-  m_LastSelected: 4
+  m_Selected: 4
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,9 +349,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1278
-    y: 19
-    width: 642
+    x: 1273
+    y: 73
+    width: 646
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 1
@@ -392,6 +399,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< Updated upstream
     y: 19
 <<<<<<< HEAD
     width: 342
@@ -400,6 +408,11 @@ MonoBehaviour:
     width: 341
     height: 545
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
+=======
+    y: 73
+    width: 341
+    height: 545
+>>>>>>> Stashed changes
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -416,7 +429,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: befaffff
+      m_ExpandedIDs: 42e0ffffcee0ffffc2e2ffff54e3ffff54e5ffffe0e5ffff68e6fffff4e6ffff7ce7ffff08e8ffff02eaffff94eaffff94ecffff20edffff14efffffa0efffff94f1ffff20f2ffffa8f2ffff34f3ffff28f5ffffb6f5ffffbafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -462,6 +475,7 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     x: 344
     y: 19
@@ -473,6 +487,12 @@ MonoBehaviour:
     width: 165
     height: 545
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
+=======
+    x: 342
+    y: 73
+    width: 165
+    height: 545
+>>>>>>> Stashed changes
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1183,6 +1203,7 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< Updated upstream
     x: 510
     y: 19
 <<<<<<< HEAD
@@ -1192,6 +1213,12 @@ MonoBehaviour:
     width: 762
     height: 545
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
+=======
+    x: 509
+    y: 73
+    width: 762
+    height: 545
+>>>>>>> Stashed changes
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1245,10 +1272,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 766
-      height: 526
-    m_Scale: {x: 0.56076133, y: 0.56076133}
-    m_Translation: {x: 383, y: 263}
+      width: 762
+      height: 524
+    m_Scale: {x: 0.5578331, y: 0.5578331}
+    m_Translation: {x: 381, y: 262}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1256,12 +1283,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -683
-      y: -469.00525
+      y: -469.67456
       width: 1366
-      height: 938.0105
+      height: 939.3491
     m_MinimalGUI: 1
-  m_defaultScale: 0.56076133
-  m_LastWindowPixelSize: {x: 766, y: 547}
+  m_defaultScale: 0.5578331
+  m_LastWindowPixelSize: {x: 762, y: 545}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1363,9 +1390,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 587
-    width: 1276
-    height: 350
+    y: 639
+    width: 1272
+    height: 352
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1388,7 +1415,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Main/RXs/RXsProperty/Misc
+    - Assets/Scripts/Mian.UnitTest/EditMode
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1398,16 +1425,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Main/RXs/RXsProperty/Misc
+  - Assets/Scripts/Mian.UnitTest/EditMode
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\UnityProject\Game_20240819
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0aaf0000
-    m_LastClickedID: 44810
-    m_ExpandedIDs: 0000000036ad000038ad000004af00000caf00000eaf000000ca9a3b
+    m_SelectedIDs: 52b60000
+    m_LastClickedID: 46674
+    m_ExpandedIDs: 0000000074ad000076ad000078ad00007aad00007cad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1436,7 +1463,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036ad000038ad0000
+    m_ExpandedIDs: 0000000074ad000076ad000078ad00007aad00007cad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1462,9 +1489,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 58b60000
+    m_LastClickedInstanceID: 46680
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007c59000000000000beb50000d0b50000d6b50000fed90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1516,6 +1543,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     y: 641
     width: 1276
@@ -1525,6 +1553,11 @@ MonoBehaviour:
     width: 1272
     height: 352
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
+=======
+    y: 639
+    width: 1272
+    height: 352
+>>>>>>> Stashed changes
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2719,9 +2752,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Physics Debug\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1298
+    x: 1273
     y: 73
-    width: 621
+    width: 646
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2760,9 +2793,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project Settings\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1277
+    x: 1273
     y: 73
-    width: 642
+    width: 646
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2782,8 +2815,8 @@ MonoBehaviour:
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a73eced7
-    m_LastClickedID: -674349401
+    m_SelectedIDs: 53336be2
+    m_LastClickedID: -496290989
     m_ExpandedIDs: 53336be2000000007f0eae07e594f01ac53aba5a
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2824,9 +2857,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Lighting\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1369
+    x: 1273
     y: 73
-    width: 550
+    width: 646
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2861,6 +2894,7 @@ MonoBehaviour:
     m_TextWithWhitespace: "Test Runner\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     x: 1277
     y: 73
@@ -2870,6 +2904,11 @@ MonoBehaviour:
     y: 19
     width: 646
 >>>>>>> cb69eb6 (進度 : RXsCollection UnitTest)
+=======
+    x: 1273
+    y: 73
+    width: 646
+>>>>>>> Stashed changes
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2883,7 +2922,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 160
+    ID: 139
     splitterInitialOffset: 479
     currentActiveSplitter: -1
     realSizes:
@@ -2914,7 +2953,7 @@ MonoBehaviour:
       uniqueId: '[Game_20240819][suite]'
       name: Game_20240819
       fullName: Game_20240819
-      resultStatus: 0
+      resultStatus: 1
       duration: 0
       messages: 
       output: 
@@ -2926,13 +2965,1932 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    m_ResultText: 
+    - id: 1112
+      uniqueId: '[EditMode.dll][suite]'
+      name: EditMode.dll
+      fullName: D:/UnityProject/Game_20240819/Library/ScriptAssemblies/EditMode.dll
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1119
+      parentUniqueId: '[Game_20240819][suite]'
+    - id: 1113
+      uniqueId: 'EditMode.dll/[Main][suite]'
+      name: Main
+      fullName: Main
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1112
+      parentUniqueId: '[EditMode.dll][suite]'
+    - id: 1114
+      uniqueId: 'EditMode.dll/Main/[EditMode][Main.RXs][suite]'
+      name: RXs
+      fullName: Main.RXs
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1113
+      parentUniqueId: 'EditMode.dll/[Main][suite]'
+    - id: 1014
+      uniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+      name: UnitTest_RXsCollection
+      fullName: Main.RXs.UnitTest_RXsCollection
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1114
+      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.RXs][suite]'
+    - id: 1019
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Add][suite]'
+      name: Add
+      fullName: Main.RXs.UnitTest_RXsCollection.Add
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1002
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Add/[EditMode][Main.RXs.UnitTest_RXsCollection.Add(True,True)]'
+      name: Add(True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Add(True,True)
+      resultStatus: 1
+      duration: 0.0181317
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Add][suite]'
+    - id: 1003
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Add/[EditMode][Main.RXs.UnitTest_RXsCollection.Add(True,False)]'
+      name: Add(True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Add(True,False)
+      resultStatus: 1
+      duration: 0.0005074
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Add][suite]'
+    - id: 1004
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Add/[EditMode][Main.RXs.UnitTest_RXsCollection.Add(False,True)]'
+      name: Add(False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Add(False,True)
+      resultStatus: 1
+      duration: 0.0001446
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Add][suite]'
+    - id: 1005
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Add/[EditMode][Main.RXs.UnitTest_RXsCollection.Add(False,False)]'
+      name: Add(False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Add(False,False)
+      resultStatus: 1
+      duration: 0.0001347
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Add][suite]'
+    - id: 1024
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange][suite]'
+      name: AddRange
+      fullName: Main.RXs.UnitTest_RXsCollection.AddRange
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1020
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AddRange/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange(True,True)]'
+      name: AddRange(True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.AddRange(True,True)
+      resultStatus: 1
+      duration: 0.0004294
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange][suite]'
+    - id: 1021
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AddRange/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange(True,False)]'
+      name: AddRange(True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.AddRange(True,False)
+      resultStatus: 1
+      duration: 0.0001645
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange][suite]'
+    - id: 1022
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AddRange/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange(False,True)]'
+      name: AddRange(False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.AddRange(False,True)
+      resultStatus: 1
+      duration: 0.0001379
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange][suite]'
+    - id: 1023
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AddRange/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange(False,False)]'
+      name: AddRange(False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.AddRange(False,False)
+      resultStatus: 1
+      duration: 0.0001275
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AddRange][suite]'
+    - id: 1108
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+      name: AfterAdd_Data
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1099
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"a")]'
+      name: AfterAdd_Data(0,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"a")
+      resultStatus: 1
+      duration: 0.0012433
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1100
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"b")]'
+      name: AfterAdd_Data(0,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"b")
+      resultStatus: 1
+      duration: 0.0002546
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1101
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"c")]'
+      name: AfterAdd_Data(0,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(0,"c")
+      resultStatus: 1
+      duration: 0.0002048
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1102
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"a")]'
+      name: AfterAdd_Data(1,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"a")
+      resultStatus: 1
+      duration: 0.0002031
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1103
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"b")]'
+      name: AfterAdd_Data(1,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"b")
+      resultStatus: 1
+      duration: 0.0001874
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1104
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"c")]'
+      name: AfterAdd_Data(1,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(1,"c")
+      resultStatus: 1
+      duration: 0.0002299
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1105
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"a")]'
+      name: AfterAdd_Data(2,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"a")
+      resultStatus: 1
+      duration: 0.0002533
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1106
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"b")]'
+      name: AfterAdd_Data(2,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"b")
+      resultStatus: 1
+      duration: 0.0002225
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1107
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/AfterAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"c")]'
+      name: AfterAdd_Data(2,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Data(2,"c")
+      resultStatus: 1
+      duration: 0.0001948
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1108
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Data][suite]'
+    - id: 1109
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.AfterAdd_Immediately]'
+      name: AfterAdd_Immediately
+      fullName: Main.RXs.UnitTest_RXsCollection.AfterAdd_Immediately
+      resultStatus: 1
+      duration: 0.0012295
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1092
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count][suite]'
+      name: BaforeAdd_Count
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1090
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Count/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count(True)]'
+      name: BaforeAdd_Count(True)
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count(True)
+      resultStatus: 1
+      duration: 0.0006362
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1092
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count][suite]'
+    - id: 1091
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Count/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count(False)]'
+      name: BaforeAdd_Count(False)
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count(False)
+      resultStatus: 1
+      duration: 0.0001912
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1092
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Count][suite]'
+    - id: 1089
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+      name: BaforeAdd_Data
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1080
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"a")]'
+      name: BaforeAdd_Data(0,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"a")
+      resultStatus: 1
+      duration: 0.0004386
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1081
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"b")]'
+      name: BaforeAdd_Data(0,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"b")
+      resultStatus: 1
+      duration: 0.0001724
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1082
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"c")]'
+      name: BaforeAdd_Data(0,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(0,"c")
+      resultStatus: 1
+      duration: 0.0001514
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1083
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"a")]'
+      name: BaforeAdd_Data(1,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"a")
+      resultStatus: 1
+      duration: 0.0001441
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1084
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"b")]'
+      name: BaforeAdd_Data(1,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"b")
+      resultStatus: 1
+      duration: 0.0002751
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1085
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"c")]'
+      name: BaforeAdd_Data(1,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(1,"c")
+      resultStatus: 1
+      duration: 0.0001649
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1086
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"a")]'
+      name: BaforeAdd_Data(2,"a")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"a")
+      resultStatus: 1
+      duration: 0.0001531
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1087
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"b")]'
+      name: BaforeAdd_Data(2,"b")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"b")
+      resultStatus: 1
+      duration: 0.0001761
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1088
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Data/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"c")]'
+      name: BaforeAdd_Data(2,"c")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data(2,"c")
+      resultStatus: 1
+      duration: 0.0001707
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Data][suite]'
+    - id: 1095
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable][suite]'
+      name: BaforeAdd_IsEnable
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1093
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_IsEnable/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable(True)]'
+      name: BaforeAdd_IsEnable(True)
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable(True)
+      resultStatus: 1
+      duration: 0.0004782
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1095
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable][suite]'
+    - id: 1094
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_IsEnable/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable(False)]'
+      name: BaforeAdd_IsEnable(False)
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable(False)
+      resultStatus: 1
+      duration: 0.0002168
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1095
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_IsEnable][suite]'
+    - id: 1098
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified][suite]'
+      name: BaforeAdd_Modified
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1096
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Modified/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified(null)]'
+      name: BaforeAdd_Modified(null)
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified(null)
+      resultStatus: 1
+      duration: 0.0007267
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1098
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified][suite]'
+    - id: 1097
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/BaforeAdd_Modified/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified("modified")]'
+      name: BaforeAdd_Modified("modified")
+      fullName: Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified("modified")
+      resultStatus: 1
+      duration: 0.0001793
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1098
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.BaforeAdd_Modified][suite]'
+    - id: 1053
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+      name: Insert
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1020
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(-1,True,True)]'
+      name: Insert(-1,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(-1,True,True)
+      resultStatus: 1
+      duration: 0.0024909
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1021
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(-1,True,False)]'
+      name: Insert(-1,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(-1,True,False)
+      resultStatus: 1
+      duration: 0.0002093
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1022
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(-1,False,True)]'
+      name: Insert(-1,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(-1,False,True)
+      resultStatus: 1
+      duration: 0.0001649
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1023
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(-1,False,False)]'
+      name: Insert(-1,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(-1,False,False)
+      resultStatus: 1
+      duration: 0.0001703
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1024
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(0,True,True)]'
+      name: Insert(0,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(0,True,True)
+      resultStatus: 1
+      duration: 0.0002407
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1025
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(0,True,False)]'
+      name: Insert(0,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(0,True,False)
+      resultStatus: 1
+      duration: 0.0001396
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1026
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(0,False,True)]'
+      name: Insert(0,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(0,False,True)
+      resultStatus: 1
+      duration: 0.0001284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1027
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(0,False,False)]'
+      name: Insert(0,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(0,False,False)
+      resultStatus: 1
+      duration: 0.0001211
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1028
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(1,True,True)]'
+      name: Insert(1,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(1,True,True)
+      resultStatus: 1
+      duration: 0.0001263
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1029
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(1,True,False)]'
+      name: Insert(1,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(1,True,False)
+      resultStatus: 1
+      duration: 0.0001203
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1030
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(1,False,True)]'
+      name: Insert(1,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(1,False,True)
+      resultStatus: 1
+      duration: 0.0001219
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1031
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(1,False,False)]'
+      name: Insert(1,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(1,False,False)
+      resultStatus: 1
+      duration: 0.0001727
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1032
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(2,True,True)]'
+      name: Insert(2,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(2,True,True)
+      resultStatus: 1
+      duration: 0.000126
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1033
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(2,True,False)]'
+      name: Insert(2,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(2,True,False)
+      resultStatus: 1
+      duration: 0.0001211
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1034
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(2,False,True)]'
+      name: Insert(2,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(2,False,True)
+      resultStatus: 1
+      duration: 0.0001277
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1035
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(2,False,False)]'
+      name: Insert(2,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(2,False,False)
+      resultStatus: 1
+      duration: 0.0001226
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1036
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(3,True,True)]'
+      name: Insert(3,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(3,True,True)
+      resultStatus: 1
+      duration: 0.0001188
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1037
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(3,True,False)]'
+      name: Insert(3,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(3,True,False)
+      resultStatus: 1
+      duration: 0.0001267
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1038
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(3,False,True)]'
+      name: Insert(3,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(3,False,True)
+      resultStatus: 1
+      duration: 0.0001203
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1039
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(3,False,False)]'
+      name: Insert(3,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(3,False,False)
+      resultStatus: 1
+      duration: 0.000117
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1040
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(4,True,True)]'
+      name: Insert(4,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(4,True,True)
+      resultStatus: 1
+      duration: 0.0001426
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1041
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(4,True,False)]'
+      name: Insert(4,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(4,True,False)
+      resultStatus: 1
+      duration: 0.0001409
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1042
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(4,False,True)]'
+      name: Insert(4,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(4,False,True)
+      resultStatus: 1
+      duration: 0.0001805
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1043
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(4,False,False)]'
+      name: Insert(4,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(4,False,False)
+      resultStatus: 1
+      duration: 0.0001536
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1044
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(5,True,True)]'
+      name: Insert(5,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(5,True,True)
+      resultStatus: 1
+      duration: 0.0001733
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1045
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(5,True,False)]'
+      name: Insert(5,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(5,True,False)
+      resultStatus: 1
+      duration: 0.0001512
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1046
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(5,False,True)]'
+      name: Insert(5,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(5,False,True)
+      resultStatus: 1
+      duration: 0.0001577
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1047
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Insert/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert(5,False,False)]'
+      name: Insert(5,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Insert(5,False,False)
+      resultStatus: 1
+      duration: 0.0001495
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1048
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Insert][suite]'
+    - id: 1058
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove][suite]'
+      name: Remove
+      fullName: Main.RXs.UnitTest_RXsCollection.Remove
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1007
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Remove/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove(True,True)]'
+      name: Remove(True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Remove(True,True)
+      resultStatus: 1
+      duration: 0.0007019
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove][suite]'
+    - id: 1008
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Remove/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove(True,False)]'
+      name: Remove(True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Remove(True,False)
+      resultStatus: 1
+      duration: 0.0001544
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove][suite]'
+    - id: 1009
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Remove/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove(False,True)]'
+      name: Remove(False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.Remove(False,True)
+      resultStatus: 1
+      duration: 0.0001302
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove][suite]'
+    - id: 1010
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/Remove/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove(False,False)]'
+      name: Remove(False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.Remove(False,False)
+      resultStatus: 1
+      duration: 0.0001263
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.Remove][suite]'
+    - id: 1079
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+      name: RemoveAt
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsCollection][suite]'
+    - id: 1059
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,True,True)]'
+      name: RemoveAt(-1,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,True,True)
+      resultStatus: 1
+      duration: 0.000481
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1060
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,True,False)]'
+      name: RemoveAt(-1,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,True,False)
+      resultStatus: 1
+      duration: 0.0002387
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1061
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,False,True)]'
+      name: RemoveAt(-1,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,False,True)
+      resultStatus: 1
+      duration: 0.0001736
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1062
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,False,False)]'
+      name: RemoveAt(-1,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(-1,False,False)
+      resultStatus: 1
+      duration: 0.0001473
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1063
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(0,True,True)]'
+      name: RemoveAt(0,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(0,True,True)
+      resultStatus: 1
+      duration: 0.000154
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1064
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(0,True,False)]'
+      name: RemoveAt(0,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(0,True,False)
+      resultStatus: 1
+      duration: 0.0001356
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1065
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(0,False,True)]'
+      name: RemoveAt(0,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(0,False,True)
+      resultStatus: 1
+      duration: 0.0001223
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1066
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(0,False,False)]'
+      name: RemoveAt(0,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(0,False,False)
+      resultStatus: 1
+      duration: 0.000121
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1067
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(1,True,True)]'
+      name: RemoveAt(1,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(1,True,True)
+      resultStatus: 1
+      duration: 0.0001265
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1068
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(1,True,False)]'
+      name: RemoveAt(1,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(1,True,False)
+      resultStatus: 1
+      duration: 0.0001235
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1069
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(1,False,True)]'
+      name: RemoveAt(1,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(1,False,True)
+      resultStatus: 1
+      duration: 0.000123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1070
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(1,False,False)]'
+      name: RemoveAt(1,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(1,False,False)
+      resultStatus: 1
+      duration: 0.0001216
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1071
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(2,True,True)]'
+      name: RemoveAt(2,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(2,True,True)
+      resultStatus: 1
+      duration: 0.0001165
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1072
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(2,True,False)]'
+      name: RemoveAt(2,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(2,True,False)
+      resultStatus: 1
+      duration: 0.0001154
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1073
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(2,False,True)]'
+      name: RemoveAt(2,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(2,False,True)
+      resultStatus: 1
+      duration: 0.0001287
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1074
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(2,False,False)]'
+      name: RemoveAt(2,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(2,False,False)
+      resultStatus: 1
+      duration: 0.0001202
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1075
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(3,True,True)]'
+      name: RemoveAt(3,True,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(3,True,True)
+      resultStatus: 1
+      duration: 0.0001683
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1076
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(3,True,False)]'
+      name: RemoveAt(3,True,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(3,True,False)
+      resultStatus: 1
+      duration: 0.0001552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1077
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(3,False,True)]'
+      name: RemoveAt(3,False,True)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(3,False,True)
+      resultStatus: 1
+      duration: 0.0001412
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1078
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/RemoveAt/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt(3,False,False)]'
+      name: RemoveAt(3,False,False)
+      fullName: Main.RXs.UnitTest_RXsCollection.RemoveAt(3,False,False)
+      resultStatus: 1
+      duration: 0.0001359
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsCollection/[EditMode][Main.RXs.UnitTest_RXsCollection.RemoveAt][suite]'
+    - id: 1110
+      uniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsEventHandler][suite]'
+      name: UnitTest_RXsEventHandler
+      fullName: Main.RXs.UnitTest_RXsEventHandler
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1114
+      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.RXs][suite]'
+    - id: 1130
+      uniqueId: 'EditMode.dll/Main/RXs/UnitTest_RXsEventHandler/[EditMode][Main.RXs.UnitTest_RXsEventHandler.InvokeAndRecive]'
+      name: InvokeAndRecive
+      fullName: Main.RXs.UnitTest_RXsEventHandler.InvokeAndRecive
+      resultStatus: 1
+      duration: 0.0005396
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1129
+      parentUniqueId: 'EditMode.dll/Main/RXs/[EditMode][Main.RXs.UnitTest_RXsEventHandler][suite]'
+    - id: 1001
+      uniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Objects_Clone][suite]'
+      name: UnitTest_Objects_Clone
+      fullName: Main.UnitTest_Objects_Clone
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1113
+      parentUniqueId: 'EditMode.dll/[Main][suite]'
+    - id: 1006
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone][suite]'
+      name: Test_Clone
+      fullName: Main.UnitTest_Objects_Clone.Test_Clone
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Objects_Clone][suite]'
+    - id: 1002
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/Test_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+NormalClass,null,null)]'
+      name: Test_Clone(True,Main.UnitTest_Objects_Clone+NormalClass,null,null)
+      fullName: Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+NormalClass,null,null)
+      resultStatus: 1
+      duration: 0.000785
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone][suite]'
+    - id: 1003
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/Test_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCloneable,null,null)]'
+      name: Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCloneable,null,null)
+      fullName: Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCloneable,null,null)
+      resultStatus: 1
+      duration: 0.0017151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone][suite]'
+    - id: 1004
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/Test_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+ClassWithCustom,null,null)]'
+      name: Test_Clone(True,Main.UnitTest_Objects_Clone+ClassWithCustom,null,null)
+      fullName: Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+ClassWithCustom,null,null)
+      resultStatus: 1
+      duration: 0.0001409
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone][suite]'
+    - id: 1005
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/Test_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCustom,Main.UnitTest_Objects_Clone+ClassWithCustomAttribute,null)]'
+      name: Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCustom,Main.UnitTest_Objects_Clone+ClassWithCustomAttribute,null)
+      fullName: Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCustom,Main.UnitTest_Objects_Clone+ClassWithCustomAttribute,null)
+      resultStatus: 1
+      duration: 0.0002054
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_Clone/[EditMode][Main.UnitTest_Objects_Clone.Test_Clone][suite]'
+    - id: 1007
+      uniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Objects_New][suite]'
+      name: UnitTest_Objects_New
+      fullName: Main.UnitTest_Objects_New
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1113
+      parentUniqueId: 'EditMode.dll/[Main][suite]'
+    - id: 1013
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+      name: Test_New
+      fullName: Main.UnitTest_Objects_New.Test_New
+      resultStatus: 1
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: 'EditMode.dll/Main/[EditMode][Main.UnitTest_Objects_New][suite]'
+    - id: 1008
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/Test_New/[EditMode][Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+NormalClass,null,null)]'
+      name: Test_New(False,Main.UnitTest_Objects_New+NormalClass,null,null)
+      fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+NormalClass,null,null)
+      resultStatus: 1
+      duration: 0.0003502
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+    - id: 1003
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/Test_New/[EditMode][Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithAttribute,null,null)]'
+      name: Test_New(False,Main.UnitTest_Objects_New+ClassWithAttribute,null,null)
+      fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithAttribute,null,null)
+      resultStatus: 1
+      duration: 0.0003156
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+    - id: 1004
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/Test_New/[EditMode][Main.UnitTest_Objects_New.Test_New(True,Main.UnitTest_Objects_New+ClassWithCustom,null,null)]'
+      name: Test_New(True,Main.UnitTest_Objects_New+ClassWithCustom,null,null)
+      fullName: Main.UnitTest_Objects_New.Test_New(True,Main.UnitTest_Objects_New+ClassWithCustom,null,null)
+      resultStatus: 1
+      duration: 0.000292
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+    - id: 1005
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/Test_New/[EditMode][Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,null,System.Object[])]'
+      name: Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,null,System.Object[])
+      fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,null,System.Object[])
+      resultStatus: 1
+      duration: 0.0002096
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+    - id: 1006
+      uniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/Test_New/[EditMode][Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,Main.UnitTest_Objects_New+ClassWithCustomAttribute,null)]'
+      name: Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,Main.UnitTest_Objects_New+ClassWithCustomAttribute,null)
+      fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,Main.UnitTest_Objects_New+ClassWithCustomAttribute,null)
+      resultStatus: 1
+      duration: 0.0001779
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: 'EditMode.dll/Main/UnitTest_Objects_New/[EditMode][Main.UnitTest_Objects_New.Test_New][suite]'
+    m_ResultText: BaforeAdd_IsEnable(False) (0.000s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f6a67887c741b7875c876d8869ecb28b71ea378f72c92b9300d4139e052cb39fbbfa99a6cf1f00abd2d304aff43196afa44a39b606a0f4b804a8aeb938368abb054309bd14695dc2ac69f5c26cc478c69f04b7cc6547a4d005b472d349d8f0d73d420ee0f5aa31e15d328be401e22ce778d1dde75a7489e8d49ba8f57d968908add9f00e0408d912279faa17992d0f1c42c2791cf50feb1f32456b232197b328b0afa12b5145ca3313756c3bb1884f401177d640fa2c5f439963494617a49d4de93918528efd67542215e255f6b6ee5527b9e956f9257166ff96e26668426a670f5dbf69a4d19c6d3e9feb6e4b5ea47ccac4c37c6fb0f97effffff7f
+      m_SelectedIDs: 03f1019f
+      m_LastClickedID: -1627262717
+      m_ExpandedIDs: f6a67887c741b7875c876d8869ecb28b71ea378f72c92b931359d19800d4139e052cb39f744017a4bbfa99a6cf1f00abd2d304aff43196afa44a39b606a0f4b804a8aeb9d10811ba38368abb054309bd14695dc2ac69f5c26cc478c655e051ca9f04b7cc6547a4d005b472d349d8f0d73d420ee0f5aa31e15d328be401e22ce778d1dde75a7489e82e6033ecd49ba8f57d968908add9f00e0408d912279faa17992d0f1c42c2791cf50feb1f32456b232197b328b0afa12b5145ca3313756c3bb1884f401177d640fa2c5f439963494617a49d4de93918528efd67542215e255f6b6ee5527b9e9568779d35edfe3d560f9257166ff96e26668426a670f5dbf69a4d19c6d3e9feb6ed5979d6f4b5ea47ccac4c37c6fb0f97effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

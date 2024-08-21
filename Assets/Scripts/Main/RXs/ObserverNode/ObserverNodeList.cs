@@ -19,8 +19,11 @@ namespace Main.RXs
         public IDisposable Subscribe(IObserver<T> observer)
         {
             var node = observer.ToNode();
+            //Self
             node.Next = Last;
             node.Previous = Last.Previous;
+            //Last
+            Last.Previous.Next = node;
             Last.Previous = node;
             return node;
         }

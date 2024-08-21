@@ -5,13 +5,20 @@ using NSubstitute;
 using UnityEngine;
 using UnityEngine.TestTools;
 using System;
+<<<<<<< Updated upstream
 using System.Reflection;
+=======
+>>>>>>> Stashed changes
 
 namespace Main.RXs
 {
     public class UnitTest_RXsCollection
     {
+<<<<<<< Updated upstream
         private static IEnumerable<string> items
+=======
+        private IEnumerable<string> items
+>>>>>>> Stashed changes
         {
             get
             {
@@ -20,7 +27,11 @@ namespace Main.RXs
                 yield return "Item3";
             }
         }
+<<<<<<< Updated upstream
         private static IEnumerable<string> newItems
+=======
+        private IEnumerable<string> newItems
+>>>>>>> Stashed changes
         {
             get
             {
@@ -29,8 +40,13 @@ namespace Main.RXs
                 yield return "NewItem3";
             }
         }
+<<<<<<< Updated upstream
         private static string item => items.First();
         private static string newItem => newItems.First();
+=======
+        private string item => items.First();
+        private string newItem => newItems.First();
+>>>>>>> Stashed changes
         private RXsCollection_SerializeField<string> collection;
         [SetUp]
         public void SetUp()
@@ -130,6 +146,7 @@ namespace Main.RXs
             collection.Insert(index, item);
         }
         [Test]
+<<<<<<< Updated upstream
         public void AfterAdd_Count([Values] bool afterAdd)
         {
             var count = 0;
@@ -139,12 +156,15 @@ namespace Main.RXs
             else Assert.AreEqual(0, count);
         }
         [Test]
+=======
+>>>>>>> Stashed changes
         public void AfterAdd_Immediately()
         {
             var count = 0;
             collection.AfterAdd.Immediately().Subscribe(e => count++);
             Assert.AreEqual(count, collection.Count);
         }
+<<<<<<< Updated upstream
         [Test]
         public void AfterAdd_IsEnable([Values] bool isEnable)
         {
@@ -233,5 +253,7 @@ namespace Main.RXs
             if (isEnable) Assert.AreEqual(1, count);
             else Assert.AreEqual(0, count);
         }
+=======
+>>>>>>> Stashed changes
     }
 }
