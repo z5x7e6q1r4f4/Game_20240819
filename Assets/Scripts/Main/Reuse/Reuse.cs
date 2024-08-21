@@ -27,11 +27,7 @@ namespace Main
             => GetPool(prefab).Get(onGet);
         public static void ReleaseToReusePool<T>(this T item, bool onRelease = true)
             where T : class, IReuseable
-<<<<<<< HEAD
-            => item.Pool?.Release(onRelease);
-=======
             => item.Pool?.Release(item, onRelease);
->>>>>>> 895ccaa (進度 : 完善測試 / 修改 : Reuse)
         //LifeCycle
         public static void Clear()
         {
