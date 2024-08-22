@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-08-22_23-30-14" tag="">
+  <assembly name="EditMode">
+    <class name="Main.RXs.UnitTest_RXsCollection" coveredlines="167" coverablelines="167" totallines="237" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsCollection_Readonly" coveredlines="55" coverablelines="59" totallines="95" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsEventHandler" coveredlines="17" coverablelines="17" totallines="28" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsOperator" coveredlines="29" coverablelines="29" totallines="50" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsProperty" coveredlines="74" coverablelines="74" totallines="105" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsTool" coveredlines="20" coverablelines="28" totallines="47" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.UnitTest_RXsValueOperator" coveredlines="45" coverablelines="48" totallines="71" coveredbranches="0" totalbranches="0" />
+    <class name="Main.UnitTest_Objects_Clone" coveredlines="8" coverablelines="19" totallines="49" coveredbranches="0" totalbranches="0" />
+    <class name="Main.UnitTest_Objects_New" coveredlines="12" coverablelines="21" totallines="58" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Main">
+    <class name="Main.GameComponent" coveredlines="0" coverablelines="65" totallines="118" coveredbranches="0" totalbranches="0" />
+    <class name="Main.GameComponentSingleton[T]" coveredlines="0" coverablelines="2" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="Main.GameComponentTracingList" coveredlines="0" coverablelines="17" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Main.Objects" coveredlines="13" coverablelines="13" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="Main.Reuse" coveredlines="27" coverablelines="28" totallines="48" coveredbranches="0" totalbranches="0" />
+    <class name="Main.ReuseIPool[T]" coveredlines="1" coverablelines="2" totallines="26" coveredbranches="0" totalbranches="0" />
+    <class name="Main.ReuseObjectBase[T]" coveredlines="3" coverablelines="3" totallines="14" coveredbranches="0" totalbranches="0" />
+    <class name="Main.ReusePool[T]" coveredlines="42" coverablelines="48" totallines="69" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.Collection.IRxsCollection_EventArgs_Base[T]" coveredlines="0" coverablelines="2" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.DisposableList" coveredlines="5" coverablelines="6" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.Disposiable" coveredlines="1" coverablelines="2" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsCollection[T]" coveredlines="0" coverablelines="7" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsCollection_BeforeAdd[T]" coveredlines="0" coverablelines="1" totallines="13" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsCollection_Readonly[T]" coveredlines="1" coverablelines="6" totallines="31" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsProperty[T]" coveredlines="0" coverablelines="3" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsProperty_AfterSet[T]" coveredlines="0" coverablelines="3" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsProperty_BeforeSet[T]" coveredlines="0" coverablelines="1" totallines="13" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.IRXsProperty_Readonly[T]" coveredlines="0" coverablelines="2" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.Observable" coveredlines="11" coverablelines="12" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObservableObservableFromAction[T]" coveredlines="2" coverablelines="3" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.Observer" coveredlines="10" coverablelines="13" totallines="127" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObserverNode[T]" coveredlines="12" coverablelines="15" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObserverNodeList[T]" coveredlines="16" coverablelines="20" totallines="33" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObserverObserverFromAction[T]" coveredlines="16" coverablelines="24" totallines="46" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObserverObserverToNode[T]" coveredlines="10" coverablelines="18" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.ObserverObserverToTyped[T]" coveredlines="0" coverablelines="5" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsCollection[T]" coveredlines="79" coverablelines="92" totallines="166" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsCollection_SerializeField[T]" coveredlines="2" coverablelines="2" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsCollection_SerializeReference[T]" coveredlines="0" coverablelines="2" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsEventHandler[T]" coveredlines="5" coverablelines="13" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtension" coveredlines="1" coverablelines="3" totallines="83" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionOfTypeOperator[T]" coveredlines="0" coverablelines="2" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionOfTypeOperatorHandler[T]" coveredlines="0" coverablelines="2" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionRXsOperator[TResult]" coveredlines="0" coverablelines="4" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionRXsOperator[TSource,TResult]" coveredlines="2" coverablelines="4" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionRXsOperatorHandler[TResult]" coveredlines="0" coverablelines="3" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionRXsOperatorHandler[TSource,TResult]" coveredlines="2" coverablelines="3" totallines="38" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionSelectOperator[TSource,TResult]" coveredlines="0" coverablelines="7" totallines="31" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionSelectOperatorHandler[TSource,TResult]" coveredlines="0" coverablelines="4" totallines="31" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionWhereOperator[T]" coveredlines="7" coverablelines="7" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsOperatorExtensionWhereOperatorHandler[T]" coveredlines="4" coverablelines="4" totallines="30" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsProperty[T]" coveredlines="53" coverablelines="53" totallines="112" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsProperty_SerializeField[T]" coveredlines="2" coverablelines="2" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsProperty_SerializeReference[T]" coveredlines="0" coverablelines="2" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtension" coveredlines="28" coverablelines="62" totallines="306" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionConnectCollectionToCollectionOperator[T]" coveredlines="0" coverablelines="3" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionConnectPropertyToPropertyOperator[T]" coveredlines="2" coverablelines="2" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToCollectionOperator[TSource,TResult]" coveredlines="0" coverablelines="11" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToPropertyOperator[TSource,TResult]" coveredlines="11" coverablelines="11" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionOfTypeCollectionToCollectionOperator[T]" coveredlines="2" coverablelines="3" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionOfTypePropertyToPropertyOperator[T]" coveredlines="0" coverablelines="5" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TResult]" coveredlines="3" coverablelines="9" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TSource,TResult]" coveredlines="4" coverablelines="9" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToOperator[TSource]" coveredlines="8" coverablelines="29" totallines="97" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TResult]" coveredlines="0" coverablelines="4" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TSource,TResult]" coveredlines="0" coverablelines="4" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TResult]" coveredlines="0" coverablelines="9" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TSource,TResult]" coveredlines="0" coverablelines="9" totallines="36" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToOperator[TSource]" coveredlines="24" coverablelines="24" totallines="78" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TResult]" coveredlines="0" coverablelines="4" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TSource,TResult]" coveredlines="3" coverablelines="4" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="Main.RXs.RXsValueOperatorExtensionWhereCollectionToCollectionOperator[T]" coveredlines="6" coverablelines="7" totallines="23" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
