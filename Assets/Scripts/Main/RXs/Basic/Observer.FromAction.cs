@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    public static class ObserverFromActionExtension
+    partial class Observer
     {
         private class ObserverFromAction<T> : ObserverNode<T>
         {
@@ -39,8 +39,8 @@ namespace Main.RXs
             }
         }
         public static IDisposable Subscribe<T>(this IObservable<T> observable, Action<T> onNext = null, Action onCompleted = null, Action<Exception> onError = null)
-            => observable.Subscribe(new ObserverFromAction<T>(onNext, onCompleted, onError));
+            => observable.SubscribeToTyped<T>(new ObserverFromAction<T>(onNext, onCompleted, onError));
         public static IDisposable Subscribe<T>(this IObservable<T> observable, Action onNext = null, Action onCompleted = null, Action<Exception> onError = null)
-            => observable.Subscribe(new ObserverFromAction<T>(onNext != null ? (_) => onNext() : null, onCompleted, onError));
+            => observable.SubscribeToTyped<T>(new ObserverFromAction<T>(onNext != null ? (_) => onNext() : null, onCompleted, onError));
     }
 }

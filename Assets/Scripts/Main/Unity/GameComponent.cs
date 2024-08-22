@@ -13,7 +13,7 @@ namespace Main
             => onGameComponentEnableEvent ??= new(this, CheckHasEnable);
         public IObservableImmediately<GameComponent> OnGameComponentDisableEvent
             => onGameComponentDisableEvent ??= new(this, CheckHasDisable);
-        public IObservable<GameComponent> OnGameComponentDestroyEvent
+        public RXs.IObservable<GameComponent> OnGameComponentDestroyEvent
             => onGameComponentDestroyEvent ??= new();
         private EventHandler onGameComponentAwakeEvent;
         private EventHandler onGameComponentEnableEvent;

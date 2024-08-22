@@ -6,7 +6,7 @@ namespace Main.RXs
         private class AfterAddImmediately : EventHandler
         {
             private readonly IRXsCollection_Readonly<T> collection;
-            public override IDisposable Subscribe(IObserver<EventArgs> observer)
+            public override IDisposable Subscribe(System.IObserver<EventArgs> observer)
             {
                 var index = 0;
                 foreach (var item in collection)

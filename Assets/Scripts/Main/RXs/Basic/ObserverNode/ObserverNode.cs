@@ -11,10 +11,10 @@ namespace Main.RXs
             Previous = previous;
             Next = next;
         }
-
-        public virtual void OnNext(T value) => Next?.OnNext(value);
-        public virtual void OnCompleted() => Next?.OnCompleted();
-        public virtual void OnError(Exception error) => Next?.OnError(error);
+        void IObserver.OnNext(object value) => this.OnNextToTyped<T>(value);
+        public virtual void OnNext(T value) => Next?.OnNextToTyped<T>(value);
+        public virtual void OnCompleted() => Next?.OnCompletedToTyped<T>();
+        public virtual void OnError(Exception error) => Next?.OnErrorToTyped<T>(error);
         public virtual void Dispose()
         {
             if (Previous != null) Previous.Next = Next;

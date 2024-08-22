@@ -2,12 +2,12 @@
 
 namespace Main.RXs
 {
-    public static class ObserverToNodeExtension
+    partial class Observer
     {
         private class ObserverToNode<T> : ObserverNode<T>
         {
-            private IObserver<T> observer;
-            public ObserverToNode(IObserver<T> observer) => this.observer = observer;
+            private System.IObserver<T> observer;
+            public ObserverToNode(System.IObserver<T> observer) => this.observer = observer;
             public override void OnNext(T value)
             {
                 observer.OnNext(value);
@@ -30,7 +30,7 @@ namespace Main.RXs
                 base.Dispose();
             }
         }
-        public static IObserverNode<T> ToNode<T>(this IObserver<T> observer)
+        public static IObserverNode<T> ToNode<T>(this System.IObserver<T> observer)
         {
             if (observer is not IObserverNode<T> node) node = new ObserverToNode<T>(observer);
             return node;
