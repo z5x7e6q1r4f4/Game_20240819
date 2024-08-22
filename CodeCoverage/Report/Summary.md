@@ -1,35 +1,25 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2024/8/22 - 下午 11:31:40 |
-| Parser: | MultiReportParser (2x OpenCoverParser) |
-| Assemblies: | 2 |
-| Classes: | 71 |
-| Files: | 62 |
-| Covered lines: | 845 |
-| Uncovered lines: | 356 |
-| Coverable lines: | 1201 |
-| Total lines: | 2402 |
-| Line coverage: | 70.3% (845 of 1201) |
+| Generated on: | 2024/8/23 - 上午 12:35:02 |
+| Parser: | MultiReportParser (3x OpenCoverParser) |
+| Assemblies: | 1 |
+| Classes: | 64 |
+| Files: | 64 |
+| Covered lines: | 418 |
+| Uncovered lines: | 517 |
+| Coverable lines: | 935 |
+| Total lines: | 1721 |
+| Line coverage: | 44.7% (418 of 935) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 246 |
-| Total methods: | 472 |
-| Method coverage: | 52.1% (246 of 472) |
+| Covered methods: | 179 |
+| Total methods: | 512 |
+| Method coverage: | 34.9% (179 of 512) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**EditMode**|**427**|**35**|**462**|**740**|**92.4%**|**0**|**0**|****|**67**|**73**|**91.7%**|
-|Main.RXs.UnitTest_RXsCollection|167|0|167|237|100%|0|0||25|25|100%|
-|Main.RXs.UnitTest_RXsCollection_Readonly|55|4|59|95|93.2%|0|0||9|10|90%|
-|Main.RXs.UnitTest_RXsEventHandler|17|0|17|28|100%|0|0||1|1|100%|
-|Main.RXs.UnitTest_RXsOperator|29|0|29|50|100%|0|0||1|1|100%|
-|Main.RXs.UnitTest_RXsProperty|74|0|74|105|100%|0|0||11|11|100%|
-|Main.RXs.UnitTest_RXsTool|20|8|28|47|71.4%|0|0||2|4|50%|
-|Main.RXs.UnitTest_RXsValueOperator|45|3|48|71|93.7%|0|0||10|10|100%|
-|Main.UnitTest_Objects_Clone|8|11|19|49|42.1%|0|0||3|5|60%|
-|Main.UnitTest_Objects_New|12|9|21|58|57.1%|0|0||5|6|83.3%|
-|**Main**|**418**|**321**|**739**|**2619**|**56.5%**|**0**|**0**|****|**179**|**399**|**44.8%**|
+|**Main**|**418**|**517**|**935**|**2621**|**44.7%**|**0**|**0**|****|**179**|**512**|**34.9%**|
 |Main.GameComponent|0|65|65|118|0%|0|0||0|26|0%|
 |Main.GameComponentSingleton[T]|0|2|2|11|0%|0|0||0|2|0%|
 |Main.GameComponentTracingList|0|17|17|27|0%|0|0||0|18|0%|
@@ -74,21 +64,23 @@
 |Main.RXs.RXsProperty[T]|53|0|53|112|100%|0|0||24|24|100%|
 |Main.RXs.RXsProperty_SerializeField[T]|2|0|2|17|100%|0|0||3|3|100%|
 |Main.RXs.RXsProperty_SerializeReference[T]|0|2|2|17|0%|0|0||0|3|0%|
-|Main.RXs.RXsValueOperatorExtension|28|34|62|306|45.1%|0|0||15|33|45.4%|
-|Main.RXs.RXsValueOperatorExtensionConnectCollectionToCollectionOperator[T]|0|3|3|27|0%|0|0||0|3|0%|
-|Main.RXs.RXsValueOperatorExtensionConnectPropertyToPropertyOperator[T]|2|0|2|27|100%|0|0||2|2|100%|
-|Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToCollectionOperator[TSource,TResult]|0|11|11|54|0%|0|0||0|2|0%|
-|Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToPropertyOperator[TSource,TResult]|11|0|11|54|100%|0|0||2|2|100%|
-|Main.RXs.RXsValueOperatorExtensionOfTypeCollectionToCollectionOperator[T]|2|1|3|27|66.6%|0|0||2|3|66.6%|
-|Main.RXs.RXsValueOperatorExtensionOfTypePropertyToPropertyOperator[T]|0|5|5|27|0%|0|0||0|2|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TResult]|3|6|9|37|33.3%|0|0||3|9|33.3%|
-|Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TSource,TResult]|4|5|9|37|44.4%|0|0||4|9|44.4%|
-|Main.RXs.RXsValueOperatorExtensionRXsCollectionToOperator[TSource]|8|21|29|97|27.5%|0|0||3|12|25%|
-|Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TResult]|0|4|4|24|0%|0|0||0|4|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TSource,TResult]|0|4|4|24|0%|0|0||0|4|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TResult]|0|9|9|36|0%|0|0||0|9|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TSource,TResult]|0|9|9|36|0%|0|0||0|9|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsPropertyToOperator[TSource]|24|0|24|78|100%|0|0||12|12|100%|
-|Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TResult]|0|4|4|24|0%|0|0||0|4|0%|
-|Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TSource,TResult]|3|1|4|24|75%|0|0||3|4|75%|
-|Main.RXs.RXsValueOperatorExtensionWhereCollectionToCollectionOperator[T]|6|1|7|23|85.7%|0|0||2|3|66.6%|
+|Main.RXs.RXsValueOperatorExtension|28|45|73|190|38.3%|0|0||15|44|34%|
+|Main.RXs.RXsValueOperatorExtensionConnectCollectionToCollectionOperator[T]|0|6|6|27|0%|0|0||0|6|0%|
+|Main.RXs.RXsValueOperatorExtensionConnectPropertyToPropertyOperator[T]|2|2|4|27|50%|0|0||2|4|50%|
+|Main.RXs.RXsValueOperatorExtensionLinkCollectionOperator[TItemSelf,TCollection]|0|20|20|59|0%|0|0||0|4|0%|
+|Main.RXs.RXsValueOperatorExtensionLinkItemOperator[TCollectionSelf,TItem]|0|18|18|59|0%|0|0||0|5|0%|
+|Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToCollectionOperator[TSource,TResult]|0|22|22|54|0%|0|0||0|4|0%|
+|Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToPropertyOperator[TSource,TResult]|11|11|22|54|50%|0|0||2|4|50%|
+|Main.RXs.RXsValueOperatorExtensionOfTypeCollectionToCollectionOperator[T]|2|4|6|27|33.3%|0|0||2|6|33.3%|
+|Main.RXs.RXsValueOperatorExtensionOfTypePropertyToPropertyOperator[T]|0|10|10|27|0%|0|0||0|4|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TResult]|3|15|18|37|16.6%|0|0||3|18|16.6%|
+|Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TSource,TResult]|4|14|18|37|22.2%|0|0||4|18|22.2%|
+|Main.RXs.RXsValueOperatorExtensionRXsCollectionToOperator[TSource]|8|50|58|97|13.7%|0|0||3|24|12.5%|
+|Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TResult]|0|8|8|24|0%|0|0||0|8|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TSource,TResult]|0|8|8|24|0%|0|0||0|8|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TResult]|0|18|18|36|0%|0|0||0|18|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TSource,TResult]|0|18|18|36|0%|0|0||0|18|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsPropertyToOperator[TSource]|24|24|48|78|50%|0|0||12|24|50%|
+|Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TResult]|0|8|8|24|0%|0|0||0|8|0%|
+|Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TSource,TResult]|3|5|8|24|37.5%|0|0||3|8|37.5%|
+|Main.RXs.RXsValueOperatorExtensionWhereCollectionToCollectionOperator[T]|6|8|14|23|42.8%|0|0||2|6|33.3%|

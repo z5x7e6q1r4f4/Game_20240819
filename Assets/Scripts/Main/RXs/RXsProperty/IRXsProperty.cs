@@ -4,7 +4,7 @@ namespace Main.RXs
 {
     public interface IRXsProperty : IRXsProperty_Readonly
     {
-        object Value { get; set; }
+        new object Value { get; set; }
         void SetValue(object value, bool beforeSet = true, bool afterSet = true);
         IObservable<IRXsProperty_BeforeSet> BeforeSet { get; }
     }

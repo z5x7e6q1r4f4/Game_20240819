@@ -1,14 +1,13 @@
 {
-    "name": "EditMode",
-    "rootNamespace": "Main",
+    "name": "UnitTest.PlayMode.Game",
+    "rootNamespace": "Main.Game",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Main"
+        "Main",
+        "Main.Game"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
