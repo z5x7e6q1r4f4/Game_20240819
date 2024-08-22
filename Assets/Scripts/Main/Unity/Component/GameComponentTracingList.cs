@@ -6,7 +6,8 @@ namespace Main
 {
     internal class GameComponentTracingList : GameComponent, IRXsCollection<GameComponent>
     {
-        private RXsCollection_SerializeField<GameComponent> gameComponents = new();
+        private readonly RXsCollection_SerializeField<GameComponent> gameComponents = new();
+        protected override void OnGameComponentAwake() => gameComponents.AddRange(GetComponents<GameComponent>());
         GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => gameComponents[index];
         IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterAdd => gameComponents.AfterAdd;
         RXs.IObservable<IRXsCollection_AfterRemove<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterRemove => gameComponents.AfterRemove;

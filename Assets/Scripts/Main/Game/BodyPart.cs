@@ -3,21 +3,15 @@ using UnityEngine;
 
 namespace Main.Game
 {
-    public class Body : GameComponent
-    {
-        [field: SerializeField] public RXsCollection_SerializeField<BodyPart> BodyParts { get; } = new();
-        protected override void OnGameComponentAwake()
-        {
-            BodyParts.LinkItem(this, bodyPart => bodyPart.Body);
-        }
-    }
-
     public class BodyPart : GameComponent
     {
         [field: SerializeField] public RXsProperty_SerializeField<Body> Body { get; } = new();
+        public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
+        private RXsCollection_SerializeField<GameComponent> bodyComponents = new();
         protected override void OnGameComponentAwake()
         {
             Body.LinkCollection(this, body => body.BodyParts);
+            Body.ObserverOn(body => body.BodyComponents).ConnectTo(bodyComponents);
         }
     }
 }

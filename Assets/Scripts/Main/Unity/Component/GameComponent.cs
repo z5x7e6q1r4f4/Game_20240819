@@ -58,7 +58,7 @@ namespace Main
         public IRXsCollection_Readonly<GameComponent> GameComponentList => tracingList;
         private GameComponentTracingList tracingList => _tracingList ??= GetOrAddComponent<GameComponentTracingList>(isTrackable: false);
         private GameComponentTracingList _tracingList;
-        public virtual T AddComponent<T>(HideFlags hideFlags = HideFlags.None, bool isTrackable = true)
+        public T AddComponent<T>(HideFlags hideFlags = HideFlags.None, bool isTrackable = true)
             where T : Component
         {
             var component = gameObject.AddComponent<T>();
@@ -66,10 +66,10 @@ namespace Main
             if (isTrackable && component is GameComponent gameComponent) tracingList.Add(gameComponent);
             return component;
         }
-        public virtual T GetOrAddComponent<T>(HideFlags hideFlags = HideFlags.HideInInspector, bool isTrackable = true)
+        public T GetOrAddComponent<T>(HideFlags hideFlags = HideFlags.HideInInspector, bool isTrackable = true)
             where T : Component
             => GetComponent<T>() ?? AddComponent<T>(hideFlags, isTrackable);
-        public virtual void RemoveComponent<T>(T component, bool isTrackable = true)
+        public void RemoveComponent<T>(T component, bool isTrackable = true)
         {
             component ??= GetComponent<T>();
             if (component == null) return;
