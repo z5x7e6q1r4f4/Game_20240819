@@ -14,7 +14,7 @@ namespace Main.RXs
                 previous = value.Previous;
                 base.OnNext(value);
             }
-            public override IDisposable Subscribe(IObserver<EventArgs> observer)
+            public override IDisposable Subscribe(System.IObserver<EventArgs> observer)
             {
                 using var eventArgs = EventArgs.GetFromReusePool(property, previous, property.Value);
                 observer.OnNext(eventArgs);

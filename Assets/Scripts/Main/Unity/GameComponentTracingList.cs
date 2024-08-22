@@ -1,8 +1,6 @@
 using Main.RXs;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEngine;
 
 namespace Main
 {
@@ -11,10 +9,10 @@ namespace Main
         private RXsCollection_SerializeField<GameComponent> gameComponents = new();
         GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => gameComponents[index];
         IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterAdd => gameComponents.AfterAdd;
-        IObservable<IRXsCollection_AfterRemove<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterRemove => gameComponents.AfterRemove;
+        RXs.IObservable<IRXsCollection_AfterRemove<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterRemove => gameComponents.AfterRemove;
         public int Count => gameComponents.Count;
-        public IObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => gameComponents.BeforeAdd;
-        public IObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => gameComponents.BeforeRemove;
+        public RXs.IObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => gameComponents.BeforeAdd;
+        public RXs.IObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => gameComponents.BeforeRemove;
         public GameComponent this[int index] { get => gameComponents[index]; set => gameComponents[index] = value; }
         bool IRXsCollection_Readonly<GameComponent>.Contains(GameComponent item) => gameComponents.Contains(item);
         public IEnumerator<GameComponent> GetEnumerator() => ((IEnumerable<GameComponent>)gameComponents).GetEnumerator();

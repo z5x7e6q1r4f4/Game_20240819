@@ -2,7 +2,7 @@
 
 namespace Main.RXs
 {
-    public interface IRXsProperty
+    public interface IRXsProperty : IRXsProperty_Readonly
     {
         object Value { get; set; }
         void SetValue(object value, bool beforeSet = true, bool afterSet = true);

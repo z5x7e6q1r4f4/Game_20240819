@@ -11,7 +11,7 @@ namespace Main
             {
                 private readonly GameComponent component;
                 private readonly Func<GameComponent, bool> isImmediately;
-                public override IDisposable Subscribe(IObserver<GameComponent> observer)
+                public override IDisposable Subscribe(System.IObserver<GameComponent> observer)
                 {
                     if (isImmediately(component)) observer.OnNext(component);
                     return base.Subscribe(observer);
@@ -24,7 +24,7 @@ namespace Main
             }
             //
             private readonly EventHandlerImmediately immediately;
-            IObservable<GameComponent> IObservableImmediately<GameComponent>.Immediately() => immediately;
+            RXs.IObservable<GameComponent> IObservableImmediately<GameComponent>.Immediately() => immediately;
             public EventHandler(GameComponent component, Func<GameComponent, bool> isImmediately)
             {
                 immediately = new(component, isImmediately);
