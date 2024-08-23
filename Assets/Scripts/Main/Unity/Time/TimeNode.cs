@@ -1,15 +1,14 @@
 using Codice.Client.BaseCommands;
 using Main.RXs;
+using System;
 using UnityEngine;
 
 namespace Main
 {
-    public enum TimeState : int
-    {
-        Play = 1,
-        Stop = 0
-    }
-    public class TimeNode : GameComponent, ITimeData, ITimeObservable
+    public class TimeNode :
+        GameComponent,
+        ITimeObservable,
+        ITimeData
     {
         //Structur
         [field: SerializeField] public RXsProperty_SerializeField<TimeNode> Parent { get; } = new();
@@ -19,11 +18,11 @@ namespace Main
         [field: SerializeField] public RXsProperty_SerializeField<TimeState> State { get; } = new(TimeState.Play);
         public float Time { get; private set; }
         public float Delta { get; private set; }
-        ////Event
-        IObservable<ITimeData> ITimeObservable.OnNext => onUpdate;
-        public IObservable<TimeNode> OnUpdate => onUpdate;
-
+        //Event
         private readonly RXsEventHandler<TimeNode> onUpdate = new();
+        IDisposable System.IObservable<ITimeData>.Subscribe(System.IObserver<ITimeData> observer) => Subscribe(observer);
+        public IDisposable Subscribe(System.IObserver<TimeNode> observer) => onUpdate.Subscribe(observer);
+        public IDisposable Subscribe(IObserver observer) => this.SubscribeToTyped<TimeNode>(observer);
         protected override void OnGameComponentAwake()
         {
             Parent.LinkCollection(this, timeNode => timeNode.Children);
