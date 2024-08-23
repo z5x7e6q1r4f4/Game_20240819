@@ -22,8 +22,8 @@ namespace Main.RXs
         private abstract class RXsOperator<TSource, TResult> : ObserverNode<TSource>
         {
             protected System.IObserver<TResult> Result { get; }
-            public override void OnCompleted() { Result.OnCompleted(); base.OnCompleted(); }
-            public override void OnError(Exception error) { Result.OnError(error); base.OnError(error); }
+            protected override void OnCompleted() { Result.OnCompleted(); base.OnCompleted(); }
+            protected override void OnError(Exception error) { Result.OnError(error); base.OnError(error); }
             public RXsOperator(System.IObserver<TResult> result) => Result = result;
         }
         private abstract class RXsOperator<TResult> : IObserver

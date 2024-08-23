@@ -10,21 +10,21 @@ namespace Main.RXs
         {
             First = new();
             Last = new();
-            First.Next = Last;
-            Last.Previous = First;
+            First.ToNode().Next = Last;
+            Last.ToNode().Previous = First;
         }
-        public void OnCompleted() => First.OnCompleted();
-        public void OnError(Exception error) => First.OnError(error);
-        public void OnNext(T value) => First.OnNext(value);
+        public void OnCompleted() => First.OnCompletedToTyped<T>();
+        public void OnError(Exception error) => First.OnErrorToTyped<T>(error);
+        public void OnNext(T value) => First.OnNextToTyped<T>(value);
         public IDisposable Subscribe(System.IObserver<T> observer)
         {
             var node = observer.ToNode();
             //Self
             node.Next = Last;
-            node.Previous = Last.Previous;
+            node.Previous = Last.ToNode().Previous;
             //Last
-            Last.Previous.Next = node;
-            Last.Previous = node;
+            Last.ToNode().Previous.Next = node;
+            Last.ToNode().Previous = node;
             return node;
         }
         void IObserver.OnNext(object value) => this.OnNextToTyped<T>(value);

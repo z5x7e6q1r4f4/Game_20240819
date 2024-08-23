@@ -19,7 +19,7 @@ namespace Main.RXs
             public SelectOperator(System.IObserver<TResult> result, Func<TSource, TResult> selector) :
                 base(result)
                 => Selector = selector;
-            public override void OnNext(TSource value)
+            protected override void OnNext(TSource value)
             {
                 Result.OnNext(Selector(value));
                 base.OnNext(value);

@@ -15,7 +15,7 @@ namespace Main.RXs
         private class WhereOperator<T> : RXsOperator<T, T>
         {
             private Predicate<T> Predicate { get; }
-            public override void OnNext(T value)
+            protected override void OnNext(T value)
             {
                 if (Predicate(value)) Result.OnNext(value);
                 base.OnNext(value);
