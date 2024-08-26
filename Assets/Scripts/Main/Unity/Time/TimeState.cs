@@ -3,6 +3,6 @@
     public enum TimeState : int
     {
         Play = 1,
-        Stop = 0
+        Pause = 0
     }
 }

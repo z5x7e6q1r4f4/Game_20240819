@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    public class ObserverNodeList<T> : ISubject<T>
+    public class ObserverNodeList<T> : ISubject<T>, IDisposable
     {
         public readonly ObserverNode<T> First;
         public readonly ObserverNode<T> Last;
@@ -12,6 +12,13 @@ namespace Main.RXs
             Last = new();
             First.ToNode().Next = Last;
             Last.ToNode().Previous = First;
+        }
+        public void Dispose()
+        {
+            while (First.ToNode().Next != Last)
+            {
+                First.ToNode().Next.Dispose();
+            }
         }
         public void OnCompleted() => First.OnCompletedToTyped<T>();
         public void OnError(Exception error) => First.OnErrorToTyped<T>(error);

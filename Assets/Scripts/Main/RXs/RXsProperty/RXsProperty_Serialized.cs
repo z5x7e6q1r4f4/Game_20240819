@@ -14,4 +14,10 @@ namespace Main.RXs
         [field: SerializeReference] protected override T SerializedProperty { get; set; }
         public RXsProperty_SerializeReference(T value = default) : base(value) { }
     }
+    [Serializable]
+    public class RXsProperty_SubClassSelector<T> : RXsProperty<T>
+    {
+        [field: SerializeReference, SubClassSelector] protected override T SerializedProperty { get; set; }
+        public RXsProperty_SubClassSelector(T value = default) : base(value) { }
+    }
 }

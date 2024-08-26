@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-
-namespace Main
+﻿namespace Main
 {
-    public class GameComponentSingleton<T> : GameComponent
+    public abstract class GameComponentSingleton<T> : GameComponent
         where T : GameComponentSingleton<T>
     {
         protected static T Instance => instance = instance != null ? instance : FindFirstObjectByType<T>().AwakeSelf<T>();

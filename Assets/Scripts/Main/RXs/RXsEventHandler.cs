@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    public class RXsEventHandler<T> : ISubject<T>
+    public class RXsEventHandler<T> : ISubject<T>, IDisposable
     {
         protected ObserverNodeList<T> Observers { get; } = new();
         void System.IObserver<T>.OnCompleted() => OnCompleted();
@@ -18,5 +18,6 @@ namespace Main.RXs
         void IObserver.OnCompleted() => this.OnCompletedToTyped<T>();
         void IObserver.OnError(Exception error) => this.OnErrorToTyped<T>(error);
         IDisposable IObservable.Subscribe(IObserver observer) => this.SubscribeToTyped<T>(observer);
+        public virtual void Dispose() => Observers.Dispose();
     }
 }

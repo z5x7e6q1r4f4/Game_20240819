@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Main
 {
-    public partial class GameComponent : MonoBehaviour
+    public abstract partial class GameComponent : MonoBehaviour
     {
         //Event
         public IObservableImmediately<GameComponent> OnGameComponentAwakeEvent
