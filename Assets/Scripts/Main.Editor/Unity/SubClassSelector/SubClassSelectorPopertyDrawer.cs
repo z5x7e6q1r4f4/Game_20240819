@@ -85,8 +85,9 @@ namespace Main
                         property.objectReferenceValue =
                             Objects.New<UnityEngine.Object>(
                                 type,
-                                customNewFallback: Objects.ComponentNewAttribute.Instance,
-                                args: gameObject);
+                                null,
+                                Objects.ComponentNewAttribute.Instance,
+                                gameObject, UnityEngine.HideFlags.HideInInspector);
                         break;
                 }
             }
