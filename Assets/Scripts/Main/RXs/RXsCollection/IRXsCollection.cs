@@ -15,7 +15,9 @@ namespace Main.RXs
         void Clear(bool beforeRemove = true, bool afterRemove = true);
         int Insert(int index, object item, bool beforeAdd = true, bool afterAdd = true);
         int Remove(object item, bool beforeRemove = true, bool afterRemove = true);
+        void RemvoeRange(IEnumerable collection, bool beforeRemove = true, bool afterRemove = true);
         int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true);
+        void SetAt(int index, object value, bool indexCheck = true, bool invokeEvent = true);
     }
     public interface IRXsCollection<T> : IRXsCollection, IRXsCollection_Readonly<T>
     {
@@ -26,6 +28,8 @@ namespace Main.RXs
         void IRXsCollection.AddRange(IEnumerable collection, bool beforeAdd, bool afterAdd) => Add(collection.OfType<T>(), beforeAdd, afterAdd);
         int IRXsCollection.Insert(int index, object item, bool beforeAdd, bool afterAdd) => Insert(index, (T)item, beforeAdd, afterAdd);
         int IRXsCollection.Remove(object item, bool beforeRemove, bool afterRemove) => Remove((T)item, beforeRemove, afterRemove);
+        void IRXsCollection.RemvoeRange(IEnumerable collection, bool beforeRemove, bool afterRemove) => RemoveRange(collection.OfType<T>(), beforeRemove, afterRemove);
+        void IRXsCollection.SetAt(int index, object value, bool indexCheck, bool invokeEvent) => SetAt(index, (T)value, indexCheck, invokeEvent);
         //
         new T this[int index] { get; set; }
         new IObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd { get; }
@@ -34,5 +38,7 @@ namespace Main.RXs
         void AddRange(IEnumerable<T> collection, bool beforeAdd = true, bool afterAdd = true);
         int Insert(int index, T item, bool beforeAdd = true, bool afterAdd = true);
         int Remove(T item, bool beforeRemove = true, bool afterRemove = true);
+        void RemoveRange(IEnumerable<T> collection, bool beforeRemove = true, bool afterRemove = true);
+        void SetAt(int index, T value, bool indexCheck = true, bool invokeEvent = true);
     }
 }

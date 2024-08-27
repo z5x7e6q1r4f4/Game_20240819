@@ -14,40 +14,49 @@ namespace Main.RXs
             set => SetAt(index, value, false);
         }
         //Core
-        private void SetAt(int index, T value, bool indexCheck = true, bool invokeEvent = true)
+        public void SetAt(int index, T value, bool indexCheck = true, bool invokeEvent = true)
         {
             if (indexCheck && (index < 0 || index >= Count)) return;
             RemoveAt(index, invokeEvent, invokeEvent);
             Insert(index, value, invokeEvent, invokeEvent);
         }
-        private T GetAt(int index, bool indexCheck = true)
+        public T GetAt(int index, bool indexCheck = true)
         {
             if (indexCheck && (index < 0 || index >= Count)) return default;
             return SerializedCollection[index];
         }
-        protected int AddCore(int index, T item, bool beforeAdd, bool afterAdd)
+        protected int AddCore(int index, T item, bool beforeAdd, bool afterAdd, bool throwError)
         {
-            if (index < 0 || index > Count) throw new ArgumentOutOfRangeException();
+            if (index < 0 || index > Count)
+            {
+                if (throwError) throw new ArgumentOutOfRangeException();
+                else return -1;
+            }
             if (beforeAdd && !this.beforeAdd.Invoke(this, index, item, out item)) return -1;
             SerializedCollection.Insert(index, item);
             if (afterAdd) this.afterAdd.Invoke(this, index, item, out _);
             return index;
         }
-        protected int RemoveCore(int index, T item, bool beforeRemove, bool afterRemove)
+        protected int RemoveCore(int index, T item, bool beforeRemove, bool afterRemove, bool throwError)
         {
-            if (index < 0 || index >= Count) throw new ArgumentOutOfRangeException();
+            if (index < 0 || index >= Count)
+            {
+                if (throwError) throw new ArgumentOutOfRangeException();
+                else return -1;
+            }
             if (beforeRemove && !this.beforeRemove.Invoke(this, index, item, out _)) return -1;
             SerializedCollection.RemoveAt(index);
             if (afterRemove) this.afterRemove.Invoke(this, index, item, out _);
             return index;
         }
         //Add
-        public int Add(T item, bool beforeAdd = true, bool afterAdd = true) => AddCore(Count, item, beforeAdd, afterAdd);
+        public int Add(T item, bool beforeAdd = true, bool afterAdd = true) => AddCore(Count, item, beforeAdd, afterAdd, false);
         public void AddRange(IEnumerable<T> collection, bool beforeAdd = true, bool afterAdd = true) { foreach (var item in collection) Add(item, beforeAdd, afterAdd); }
-        public int Insert(int index, T item, bool beforeAdd = true, bool afterAdd = true) => AddCore(index, item, beforeAdd, afterAdd);
+        public int Insert(int index, T item, bool beforeAdd = true, bool afterAdd = true) => AddCore(index, item, beforeAdd, afterAdd, true);
         //Remove
-        public int Remove(T item, bool beforeRemove = true, bool afterRemove = true) => RemoveCore(IndexOf(item), item, beforeRemove, afterRemove);
-        public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => RemoveCore(index, GetAt(index), beforeRemove, afterRemove);
+        public int Remove(T item, bool beforeRemove = true, bool afterRemove = true) => RemoveCore(IndexOf(item), item, beforeRemove, afterRemove, false);
+        public void RemoveRange(IEnumerable<T> collection, bool beforeRemove = true, bool afterRemove = true) { foreach (var item in collection) Remove(item, beforeRemove, afterRemove); }
+        public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => RemoveCore(index, GetAt(index), beforeRemove, afterRemove, true);
         public void Clear(bool beforeRemove = true, bool afterRemove = true)
         {
             var index = 0;

@@ -17,6 +17,7 @@ namespace Main.RXs
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);
             int IRXsCollection_Readonly<TResult>.IndexOf(TResult item) => Result.IndexOf(item);
             public IEnumerator<TResult> GetEnumerator() => Result.GetEnumerator();
+            TResult IRXsCollection_Readonly<TResult>.GetAt(int index, bool indexCheck) => Result.GetAt(index, indexCheck);
             protected RXsCollectionToCollectionOperator(IRXsCollection_Readonly<TSource> source, IRXsCollection<TResult> result = null) : base(source) => Result = result ?? new RXsCollection_SerializeField<TResult>();
         }
         private abstract class RXsCollectionToCollectionOperator<TResult> :
@@ -31,6 +32,7 @@ namespace Main.RXs
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);
             int IRXsCollection_Readonly<TResult>.IndexOf(TResult item) => Result.IndexOf(item);
             public IEnumerator<TResult> GetEnumerator() => Result.GetEnumerator();
+            TResult IRXsCollection_Readonly<TResult>.GetAt(int index, bool indexCheck) => Result.GetAt(index, indexCheck);
             protected RXsCollectionToCollectionOperator(IRXsCollection_Readonly source, IRXsCollection<TResult> result = null) : base(source) => Result = result ?? new RXsCollection_SerializeField<TResult>();
         }
     }

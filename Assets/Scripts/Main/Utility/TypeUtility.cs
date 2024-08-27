@@ -7,15 +7,22 @@ namespace Main
 {
     public static class TypeUtility
     {
+        private static readonly Dictionary<Type, List<Type>> Cache = new();
         public static IEnumerable<Type> GetSubClass(Type type)
         {
-            foreach (var assembly in AssemblyUtility.AllAssemblies)
+            if (!Cache.TryGetValue(type, out var result))
             {
-                foreach (var t in assembly.GetTypes())
+                result = new List<Type>();
+                foreach (var assembly in AssemblyUtility.AllAssemblies)
                 {
-                    if (type.IsAssignableFrom(t)) yield return t;
+                    foreach (var t in assembly.GetTypes())
+                    {
+                        if (type.IsAssignableFrom(t)) result.Add(t);
+                    }
                 }
+                Cache.Add(type, result);
             }
+            return result;
         }
         public static IEnumerable<Type> GetSubClassInstanceable(Type type)
             => GetSubClass(type).Where(static t => !t.IsAbstract && !t.IsInterface);

@@ -17,8 +17,9 @@ namespace Main.RXs
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);
             int IRXsCollection_Readonly<TResult>.IndexOf(TResult item) => Result.IndexOf(item);
             IEnumerator<TResult> IEnumerable<TResult>.GetEnumerator() => Result.GetEnumerator();
+            TResult IRXsCollection_Readonly<TResult>.GetAt(int index, bool indexCheck) => Result.GetAt(index, indexCheck);
         }
-        private abstract class RXsPropertyToCollectionOperator< TResult> :
+        private abstract class RXsPropertyToCollectionOperator<TResult> :
          RXsPropertyToOperator,
          IOperatorToCollection<TResult>
         {
@@ -31,6 +32,7 @@ namespace Main.RXs
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);
             int IRXsCollection_Readonly<TResult>.IndexOf(TResult item) => Result.IndexOf(item);
             IEnumerator<TResult> IEnumerable<TResult>.GetEnumerator() => Result.GetEnumerator();
+            TResult IRXsCollection_Readonly<TResult>.GetAt(int index, bool indexCheck) => Result.GetAt(index, indexCheck);
         }
     }
 }

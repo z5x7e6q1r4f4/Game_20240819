@@ -6,23 +6,29 @@ namespace Main
 {
     internal class GameComponentTracingList : GameComponent, IRXsCollection<GameComponent>
     {
+        protected IRXsCollection<GameComponent> GameComponents => AwakeSelf<GameComponentTracingList>().gameComponents;
         private readonly RXsCollection_SerializeField<GameComponent> gameComponents = new();
         protected override void OnGameComponentAwake() => gameComponents.AddRange(GetComponents<GameComponent>());
-        GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => gameComponents[index];
-        IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterAdd => gameComponents.AfterAdd;
-        RXs.IObservable<IRXsCollection_AfterRemove<GameComponent>> IRXsCollection_Readonly<GameComponent>.AfterRemove => gameComponents.AfterRemove;
-        public int Count => gameComponents.Count;
-        public RXs.IObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => gameComponents.BeforeAdd;
-        public RXs.IObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => gameComponents.BeforeRemove;
-        public GameComponent this[int index] { get => gameComponents[index]; set => gameComponents[index] = value; }
-        bool IRXsCollection_Readonly<GameComponent>.Contains(GameComponent item) => gameComponents.Contains(item);
-        public IEnumerator<GameComponent> GetEnumerator() => ((IEnumerable<GameComponent>)gameComponents).GetEnumerator();
-        int IRXsCollection_Readonly<GameComponent>.IndexOf(GameComponent item) => gameComponents.IndexOf(item);
-        public int Add(GameComponent item, bool beforeAdd = true, bool afterAdd = true) => gameComponents.Add(item, beforeAdd, afterAdd);
-        public void AddRange(IEnumerable<GameComponent> collection, bool beforeAdd = true, bool afterAdd = true) => gameComponents.AddRange(collection, beforeAdd, afterAdd);
-        public int Insert(int index, GameComponent item, bool beforeAdd = true, bool afterAdd = true) => gameComponents.Insert(index, item, beforeAdd, afterAdd);
-        public int Remove(GameComponent item, bool beforeRemove = true, bool afterRemove = true) => gameComponents.Remove(item, beforeRemove, afterRemove);
-        public void Clear(bool beforeRemove = true, bool afterRemove = true) => gameComponents.Clear(beforeRemove, afterRemove);
-        public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => gameComponents.RemoveAt(index, beforeRemove, afterRemove);
+        #region IRXsCollection
+        public RXs.IObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
+        public RXs.IObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
+        public IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
+        public RXs.IObservable<IRXsCollection_AfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
+        public int Count => GameComponents.Count;
+        GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => ((IRXsCollection_Readonly<GameComponent>)GameComponents)[index];
+        public GameComponent this[int index] { get => GameComponents[index]; set => GameComponents[index] = value; }
+        public int Add(GameComponent item, bool beforeAdd = true, bool afterAdd = true) => GameComponents.Add(item, beforeAdd, afterAdd);
+        public void AddRange(IEnumerable<GameComponent> collection, bool beforeAdd = true, bool afterAdd = true) => GameComponents.AddRange(collection, beforeAdd, afterAdd);
+        public int Insert(int index, GameComponent item, bool beforeAdd = true, bool afterAdd = true) => GameComponents.Insert(index, item, beforeAdd, afterAdd);
+        public int Remove(GameComponent item, bool beforeRemove = true, bool afterRemove = true) => GameComponents.Remove(item, beforeRemove, afterRemove);
+        public void RemoveRange(IEnumerable<GameComponent> collection, bool beforeRemove = true, bool afterRemove = true) => GameComponents.RemoveRange(collection, beforeRemove, afterRemove);
+        public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => GameComponents.RemoveAt(index, beforeRemove, afterRemove);
+        public void Clear(bool beforeRemove = true, bool afterRemove = true) => GameComponents.Clear(beforeRemove, afterRemove);
+        public bool Contains(GameComponent item) => GameComponents.Contains(item);
+        public int IndexOf(GameComponent item) => GameComponents.IndexOf(item);
+        public GameComponent GetAt(int index, bool indexCheck = true) => GameComponents.GetAt(index, indexCheck);
+        public void SetAt(int index, GameComponent value, bool indexCheck = true, bool invokeEvent = true) => GameComponents.SetAt(index, value, indexCheck, invokeEvent);
+        public IEnumerator<GameComponent> GetEnumerator() => GameComponents.GetEnumerator();
+        #endregion
     }
 }

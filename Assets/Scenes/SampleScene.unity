@@ -339,18 +339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703807259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166b2b5b85e08c74591bc0100ad3018b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &966370031
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,8 +348,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966370033}
-  - component: {fileID: 966370035}
   - component: {fileID: 966370034}
+  - component: {fileID: 966370036}
+  - component: {fileID: 966370035}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -393,33 +382,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 966370031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15a78c06a387a34f8e2925d581b67ac, type: 3}
+  m_Script: {fileID: 11500000, guid: ee676d9b9dda9db4cbcbb7292820c071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Factory>k__BackingField:
+    serializedProperty: {fileID: 0}
+  <FomulaSteps>k__BackingField:
+    serializedCollection:
+    - {fileID: 966370036}
+    - {fileID: 966370035}
+  index:
+    serializedProperty: -1
 --- !u!114 &966370035
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966370031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c567e1025b02794d87e9c7a3058853e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ba881b075850d14e8282cc9495e9f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializeFieldStringCollection:
-    serializedCollection:
-    - 
-    - 
-  serializeFieldStringProperty:
-    serializedProperty: 113
-  MonoClasses:
-    serializedCollection:
-    - {fileID: 966370034}
-  ScriptableObjectClasses:
-    serializedCollection:
-    - {fileID: 703807259}
+  <Items>k__BackingField:
+    serializedCollection: []
+--- !u!114 &966370036
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966370031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cea229187c61849abf3b850da1682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Items>k__BackingField:
+    serializedCollection: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

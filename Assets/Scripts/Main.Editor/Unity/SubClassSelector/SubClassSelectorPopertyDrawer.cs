@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Main
@@ -15,93 +17,105 @@ namespace Main
             => new SubClassSelectorElement(property, fieldInfo, attribute as SubClassSelectorAttribute);
         private class SubClassSelectorElement : VisualElement
         {
-            private enum TargetType
-            {
-                Normal,
-                ScriptableObject,
-                Component
-            }
-            private readonly Type type;
-            private readonly List<Type> types;
-            private PopupField<Type> popupField;
-            private VisualElement propertyField;
+            protected readonly SerializedProperty property;
+            protected readonly Type type;
+            protected readonly bool isArray;
+            protected readonly IReadOnlyCollection<Type> types;
+            protected readonly PopupField<Type> popupField;
+            protected VisualElement propertyField;
             public SubClassSelectorElement(
                 SerializedProperty property,
                 FieldInfo fieldInfo,
                 SubClassSelectorAttribute attribute)
             {
-                type = attribute.type ?? EditorUtility.GetType(fieldInfo);
-                types = TypeUtility.GetSubClassInstanceable(type).ToList();
+                this.property = property.Copy();
+                //
+                type = EditorUtility.GetType(fieldInfo, out isArray);
+                type = attribute.type ?? type;
+                //Types
+                var types = TypeUtility.GetSubClassInstanceable(type).ToList();
                 types.Insert(0, null);
-                //TargetType
-                TargetType targetType = TargetType.Normal;
-                if (typeof(UnityEngine.Object).IsAssignableFrom(type)) targetType = TargetType.ScriptableObject;
-                if (typeof(UnityEngine.Component).IsAssignableFrom(type)) targetType = TargetType.Component;
+                this.types = types;
                 //CurrentValue
-                object currentValue = targetType switch
+                object currentValue = property.propertyType switch
                 {
-                    TargetType.Normal => property.managedReferenceValue,
-                    TargetType.ScriptableObject => property.objectReferenceValue,
-                    TargetType.Component => property.objectReferenceValue,
+                    SerializedPropertyType.ManagedReference => property.managedReferenceValue,
+                    SerializedPropertyType.ObjectReference => property.objectReferenceValue,
                     _ => throw new Exception(),
                 };
-                //
+                //CurrentIndex
                 var index = types.IndexOf(currentValue?.GetType());
-                popupField = new(types, index, Format, Format);
-                //
-                popupField.RegisterValueChangedCallback(e =>
-                {
-                    RemovePreviousValue(property);
-                    AddCurrentValue(targetType, property, e.newValue);
-                    property.serializedObject.ApplyModifiedProperties();
-                    UpdatePropertyField(targetType, property);
-                });
+                //PopupField
+                popupField = new PopupField<Type>(types, index, Format, Format);
+                popupField.RegisterValueChangedCallback(OnValueChange);
                 Add(popupField);
                 //
-                UpdatePropertyField(targetType, property);
+                UpdatePropertyField(property);
+                ArraySetUp();
             }
-            private void RemovePreviousValue(SerializedProperty property)
+            private void ArraySetUp()
             {
-                if (property.objectReferenceValue == null) return;
-                UnityEngine.Object.DestroyImmediate(property.objectReferenceValue);
-                property.objectReferenceValue = null;
+                if (!isArray) return;
+                RegisterCallbackOnce<GeometryChangedEvent>(OnGeometryChange);
             }
-            private void AddCurrentValue(TargetType targetType, SerializedProperty property, Type type)
+            private void OnGeometryChange(GeometryChangedEvent e)
             {
-                if (type == null) return;
-                switch (targetType)
+                var listView = this.QParent<ListView>();
+                if (listView == null) return;
+                listView.onRemove = OnItemRemove;
+                listView.onAdd = OnItemAdd;
+            }
+            private static void OnItemRemove(BaseListView view)
+            {
+                var sp = view.userData as SerializedProperty;
+                UnityEngine.Object.DestroyImmediate(sp.GetArrayElementAtIndex(sp.arraySize - 1).objectReferenceValue);
+                sp.DeleteArrayElementAtIndex(sp.arraySize - 1);
+                sp.serializedObject.ApplyModifiedProperties();
+                view.ScrollToItem(view.itemsSource.Count - 1);
+            }
+            private static void OnItemAdd(BaseListView view)
+            {
+                var sp = view.userData as SerializedProperty;
+                sp.InsertArrayElementAtIndex(sp.arraySize);
+                sp.GetArrayElementAtIndex(sp.arraySize - 1).boxedValue = null;
+                sp.serializedObject.ApplyModifiedProperties();
+                view.RefreshItems();
+                view.ScrollToItem(view.itemsSource.Count - 1);
+            }
+            private void OnValueChange(ChangeEvent<Type> e)
+            {
+                //RemovePreviousValue
+                if (property.propertyType == SerializedPropertyType.ObjectReference &&
+                    property.objectReferenceValue != null)
                 {
-                    case TargetType.Normal:
-                        property.managedReferenceValue = Objects.New<object>(type);
-                        break;
-                    case TargetType.ScriptableObject:
-                        property.objectReferenceValue =
-                            Objects.New<UnityEngine.Object>(
-                                type,
-                                customNewFallback: Objects.ScriptableObjectNewAttribute.Instance);
-                        break;
-                    case TargetType.Component:
-                        var gameObject = (property.serializedObject.targetObject as UnityEngine.Component)?.gameObject;
-                        property.objectReferenceValue =
-                            Objects.New<UnityEngine.Object>(
-                                type,
-                                null,
-                                Objects.ComponentNewAttribute.Instance,
-                                gameObject, UnityEngine.HideFlags.HideInInspector);
-                        break;
+                    UnityEngine.Object.DestroyImmediate(property.objectReferenceValue);
+                    property.objectReferenceValue = null;
                 }
+                //SetNewValue
+                if (e.newValue != null)
+                {
+                    switch (property.propertyType)
+                    {
+                        case SerializedPropertyType.ManagedReference:
+                            property.managedReferenceValue = Objects.New<object>(e.newValue);
+                            break;
+                        case SerializedPropertyType.ObjectReference:
+                            var gameObject = (property.serializedObject.targetObject as Component)?.gameObject;
+                            property.objectReferenceValue =
+                                Objects.New<UnityEngine.Object>(e.newValue, null, Objects.ComponentNewAttribute.Instance, gameObject, HideFlags.HideInInspector);
+                            break;
+                    }
+                }
+                property.serializedObject.ApplyModifiedProperties();
+                UpdatePropertyField(property);
             }
-            private void UpdatePropertyField(TargetType targetType, SerializedProperty property)
+            private void UpdatePropertyField(SerializedProperty property)
             {
                 if (propertyField != null) Remove(propertyField);
-                propertyField = targetType switch
+                propertyField = property.propertyType switch
                 {
-                    TargetType.Normal => new PropertyField(property),
-                    TargetType.ScriptableObject =>
-                        property.objectReferenceValue != null ?
-                            new InspectorElement(property.objectReferenceValue) :
-                            null,
-                    TargetType.Component =>
+                    SerializedPropertyType.ManagedReference => new PropertyField(property),
+                    SerializedPropertyType.ObjectReference =>
                         property.objectReferenceValue != null ?
                             new InspectorElement(property.objectReferenceValue) :
                             null,

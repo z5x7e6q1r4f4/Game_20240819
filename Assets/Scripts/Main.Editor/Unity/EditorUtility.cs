@@ -1,16 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Main
 {
     public static class EditorUtility
     {
-        public static Type GetType(FieldInfo fieldInfo)
+        public static Type GetType(FieldInfo fieldInfo, out bool isArray)
         {
+            isArray = true;
             var type = fieldInfo.FieldType;
             while (type != null)
             {
@@ -20,39 +23,32 @@ namespace Main
                     return type.GetElementType();
                 type = type.BaseType;
             }
+            isArray = false;
             return fieldInfo.FieldType;
         }
-        public static SerializedProperty GetParent(SerializedProperty serializedProperty)
+        public static SerializedProperty GetParent(this SerializedProperty serializedProperty)
         {
-            var first = serializedProperty.serializedObject.GetIterator();
-            return GetParentInternal(first, serializedProperty);
+            var paths = serializedProperty.propertyPath.Split('.').ToList();
+            paths.RemoveAt(paths.Count - 1);
+            if (paths.Last() == "Array") paths.RemoveAt(paths.Count - 1);
+            string path = null;
+            foreach (var p in paths) path += $".{p}";
+            path = path.Remove(0, 1);
+            return serializedProperty.serializedObject.FindProperty(path);
         }
-        private static SerializedProperty GetParentInternal(SerializedProperty from, SerializedProperty target)
-        {
-            var parent = from.Copy();
-            var child = from.Copy();
-            if (!child.Next(true)) return null;
-            do
-            {
-                if (SerializedProperty.EqualContents(child, target)) return parent;
-                var searchChild = GetParentInternal(child, target);
-                if (searchChild != null) return searchChild;
-            } while (parent.Next(false));
-            return null;
-        }
-        public static IEnumerable<SerializedProperty> GetChildren(SerializedProperty serializedProperty)
+        public static IEnumerable<SerializedProperty> GetChildren(this SerializedProperty serializedProperty)
         {
             var child = serializedProperty.Copy();
             if (!child.Next(true)) yield break;
             do { yield return child.Copy(); } while (child.Next(false));
         }
-        public static IEnumerable<SerializedProperty> GetChildrenVisible(SerializedProperty serializedProperty)
+        public static IEnumerable<SerializedProperty> GetChildrenVisible(this SerializedProperty serializedProperty)
         {
             var child = serializedProperty.Copy();
             if (!child.NextVisible(true)) yield break;
             do { yield return child.Copy(); } while (child.NextVisible(false));
         }
-        public static object GetValue(SerializedProperty serializedProperty)
+        public static object GetValue(this SerializedProperty serializedProperty)
         {
             object current = serializedProperty.serializedObject.targetObject;
             var paths = serializedProperty.propertyPath.Split('.').ToList();

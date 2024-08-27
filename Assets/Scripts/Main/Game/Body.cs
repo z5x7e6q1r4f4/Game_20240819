@@ -6,9 +6,9 @@ namespace Main.Game
 {
     public class Body : GameComponent
     {
-        [field: SerializeField] public RXsCollection_SerializeField<BodyPart> BodyParts { get; } = new();
+        [field: SerializeField] public RXsCollection_SerializeField<BodyPart> BodyParts { get; private set; } = new();
         public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
-        private RXsCollection_SerializeField<GameComponent> bodyComponents = new();
+        private readonly RXsCollection_SerializeField<GameComponent> bodyComponents = new();
         private DisposableDictonary disposable = new();
         protected override void OnGameComponentAwake()
         {

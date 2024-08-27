@@ -7,7 +7,7 @@ namespace Main.Game
     {
         [field: SerializeField] public RXsProperty_SerializeField<Body> Body { get; private set; } = new();
         public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
-        private RXsCollection_SerializeField<GameComponent> bodyComponents = new();
+        private readonly RXsCollection_SerializeField<GameComponent> bodyComponents = new();
         protected override void OnGameComponentAwake()
         {
             Body.LinkCollection(this, body => body.BodyParts);
