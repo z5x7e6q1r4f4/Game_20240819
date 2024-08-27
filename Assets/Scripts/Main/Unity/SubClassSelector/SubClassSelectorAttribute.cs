@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace Main 
+namespace Main
 {
-    public class SubClassSelectorAttribute : PropertyAttribute 
+    public class SubClassSelectorAttribute : PropertyAttribute
     {
         public Type type;
     }

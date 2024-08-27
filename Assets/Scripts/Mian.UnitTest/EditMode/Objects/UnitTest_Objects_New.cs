@@ -12,8 +12,8 @@ namespace Main
         [TestCaseSource(nameof(Test_New_Source))]
         public void Test_New(bool isError, Type type, Objects.CustomNewAttribute customNew, object[] args)
         {
-            if (isError) { Assert.Catch(() => Objects.New<object>(type, customNew, args)); return; }
-            else Assert.IsNotNull(Objects.New<object>(type, customNew, args));
+            if (isError) { Assert.Catch(() => Objects.New<object>(type, customNew, args: args)); return; }
+            else Assert.IsNotNull(Objects.New<object>(type, customNew, args: args));
         }
         public static IEnumerable<object[]> Test_New_Source()
         {

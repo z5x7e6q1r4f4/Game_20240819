@@ -10,8 +10,8 @@ namespace Main
         [TestCaseSource(nameof(Test_Clone_Source))]
         public void Test_Clone(bool isError, object item, Objects.CustomCloneAttribute customClone, object[] args)
         {
-            if (isError) Assert.Catch(() => Objects.Clone(item, customClone, args));
-            else Assert.IsNotNull(Objects.Clone(item, customClone, args));
+            if (isError) Assert.Catch(() => Objects.Clone(item, customClone, args:args));
+            else Assert.IsNotNull(Objects.Clone(item, customClone, args: args));
         }
         public static IEnumerable<object[]> Test_Clone_Source()
         {

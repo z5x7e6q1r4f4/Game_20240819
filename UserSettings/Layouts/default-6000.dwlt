@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 49
+  controlID: 212
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 796
     height: 582
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,9 +273,9 @@ MonoBehaviour:
     y: 582
     width: 1316
     height: 357
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
@@ -283,8 +283,8 @@ MonoBehaviour:
   - {fileID: 23}
   - {fileID: 24}
   - {fileID: 25}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: CodeCoverageWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -304,9 +304,9 @@ MonoBehaviour:
     y: 0
     width: 604
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 446, y: 86}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 14}
   - {fileID: 26}
@@ -314,8 +314,8 @@ MonoBehaviour:
   - {fileID: 28}
   - {fileID: 29}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 5
+  m_Selected: 5
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -337,9 +337,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Code Coverage\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1318
-    y: 73
-    width: 601
+    x: 1317
+    y: 19
+    width: 603
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73
+    y: 19
     width: 349
     height: 561
   m_SerializedDataModeController:
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 74af0000
-      m_LastClickedID: 44916
-      m_ExpandedIDs: befaffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: bafaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -488,8 +488,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 350
-    y: 73
+    x: 351
+    y: 19
     width: 168
     height: 561
   m_SerializedDataModeController:
@@ -1202,8 +1202,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 520
-    y: 73
+    x: 521
+    y: 19
     width: 794
     height: 561
   m_SerializedDataModeController:
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 655
+    y: 601
     width: 1315
     height: 336
   m_SerializedDataModeController:
@@ -1364,7 +1364,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Main/Unity/Component
+    - Assets/Scripts/Mian.UnitTest/PlayMode
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1374,16 +1374,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Main/Unity/Component
+  - Assets/Scripts/Mian.UnitTest/PlayMode
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\UnityProject\Game_20240819
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 136}
-    m_SelectedIDs: 24b20000
-    m_LastClickedID: 45604
-    m_ExpandedIDs: 00000000ccaf0000ceaf0000d0af0000d2af0000d4af0000d6af0000d8af00001cb200002cb2000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: eeaf0000
+    m_LastClickedID: 45038
+    m_ExpandedIDs: 000000000cb000000eb0000010b0000012b0000014b0000016b0000018b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1412,7 +1412,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ccaf0000ceaf0000d0af0000d2af0000d4af0000d6af0000d8af0000
+    m_ExpandedIDs: 000000000cb000000eb0000010b0000012b0000014b0000016b0000018b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1438,9 +1438,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 74af0000
-    m_LastClickedInstanceID: 44916
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007c59000000000000beb50000d0b50000d6b50000fed90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2532,10 +2532,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "UnityEditor.UIElements.Debugger.UIElementsDebugger\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 637
-    width: 1660
-    height: 346
+    x: 0
+    y: 655
+    width: 1315
+    height: 336
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2548,9 +2548,9 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_DebuggerImpl:
-    m_LastVisualTreeName: PanelSettings
+    m_LastVisualTreeName: InspectorWindow
   m_DebuggerContext:
-    m_SelectedElementIndex: 7
+    m_SelectedElementIndex: 245
     m_ShowLayoutBound: 0
     m_ShowRepaintOverlay: 0
     m_ShowDrawStats: 0
@@ -2595,7 +2595,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 44916
+  m_LastSelectedObjectID: 44940
 --- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52

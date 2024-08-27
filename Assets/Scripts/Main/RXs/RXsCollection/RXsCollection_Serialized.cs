@@ -1,3 +1,4 @@
+using Main.RXs.Unity;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,31 @@ using UnityEngine;
 namespace Main.RXs
 {
     [Serializable]
-    public class RXsCollection_SerializeField<T> : RXsCollection<T>
+    public class RXsCollection_SerializeField<T> : RXsCollection<T>, IRXsValueInspector
     {
         protected override List<T> SerializedCollection => serializedCollection;
-        [SerializeField] private List<T> serializedCollection = new();
+        [SerializeField, SerializedCollection] private List<T> serializedCollection = new();
         public RXsCollection_SerializeField(IEnumerable<T> collection = null) : base(collection) { }
     }
     [Serializable]
-    public class RXsCollection_SerializeReference<T> : RXsCollection<T>
+    public class RXsCollection_SerializeReference<T> : RXsCollection<T>, IRXsValueInspector
     {
         protected override List<T> SerializedCollection => serializedCollection;
-        [SerializeReference] private List<T> serializedCollection = new();
+        [SerializeReference, SerializedCollection] private List<T> serializedCollection = new();
         public RXsCollection_SerializeReference(IEnumerable<T> collection = null) : base(collection) { }
     }
     [Serializable]
-    public class RXsCollection_SubClassSelector<T> : RXsCollection<T>
+    public class RXsCollection_SerializeReference_SubClassSelector<T> : RXsCollection<T>, IRXsValueInspector
     {
         protected override List<T> SerializedCollection => serializedCollection;
-        [SerializeReference, SubClassSelector] private List<T> serializedCollection = new();
-        public RXsCollection_SubClassSelector(IEnumerable<T> collection = null) : base(collection) { }
+        [SerializeReference, SubClassSelector, SerializedCollection] private List<T> serializedCollection = new();
+        public RXsCollection_SerializeReference_SubClassSelector(IEnumerable<T> collection = null) : base(collection) { }
+    }
+    [Serializable]
+    public class RXsCollection_SerializeField_SubClassSelector<T> : RXsCollection<T>, IRXsValueInspector
+    {
+        protected override List<T> SerializedCollection => serializedCollection;
+        [SerializeField, SubClassSelector, SerializedCollection] private List<T> serializedCollection = new();
+        public RXsCollection_SerializeField_SubClassSelector(IEnumerable<T> collection = null) : base(collection) { }
     }
 }
