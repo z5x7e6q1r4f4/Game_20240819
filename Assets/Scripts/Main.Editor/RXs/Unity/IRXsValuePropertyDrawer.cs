@@ -20,7 +20,7 @@ namespace Main.RXs.Unity
             public IRXsValueElement(SerializedProperty property, FieldInfo fieldInfo)
             {
                 var type = fieldInfo.FieldType;
-                foreach (var child in EditorUtility.GetChildrenVisible(property))
+                foreach (var child in EditorUtility.GetChildren(property))
                 {
                     FieldInfo curFieldInfo = type.GetField(
                         child.name,
@@ -47,16 +47,14 @@ namespace Main.RXs.Unity
             public SerializedPropertyElement(string displayName, SerializedProperty property, FieldInfo fieldInfo)
             {
                 var propertyField = new PropertyField(property, displayName);
-                var RXsProperty = EditorUtility.GetValue(EditorUtility.GetParent(property));
-                var propertyInfo = RXsProperty.GetType().GetProperty("Value");
-                previous = EditorUtility.GetValue(property);
+                var RXsProperty = property.GetParent().GetValue<IRXsProperty>();
+                previous = RXsProperty.Value;
                 propertyField.RegisterValueChangeCallback(e =>
                 {
-                    var current = EditorUtility.GetValue(e.changedProperty);
+                    var current = RXsProperty.Value;
                     if (Equals(previous, current)) return;
-                    fieldInfo.SetValue(RXsProperty, previous);
-                    propertyInfo.SetValue(RXsProperty, current);
-                    Debug.Log($"Change from {previous} to {current}");
+                    RXsProperty.SetValue(previous, false, false);
+                    RXsProperty.SetValue(current);
                     previous = current;
                 });
                 Add(propertyField);

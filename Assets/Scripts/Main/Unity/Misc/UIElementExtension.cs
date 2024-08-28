@@ -62,7 +62,7 @@ namespace Main
             foreach (var v in visualElement.Parents(includeSelf))
                 if (v is T typed) yield return typed;
         }
-        public static T QParent<T>(this VisualElement visualElement,bool includeSelf = false)
+        public static T QParent<T>(this VisualElement visualElement, bool includeSelf = false)
             => visualElement.QuerryParent<T>(includeSelf).FirstOrDefault();
     }
 }

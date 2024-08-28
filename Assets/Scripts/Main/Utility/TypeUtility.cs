@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -26,5 +27,13 @@ namespace Main
         }
         public static IEnumerable<Type> GetSubClassInstanceable(Type type)
             => GetSubClass(type).Where(static t => !t.IsAbstract && !t.IsInterface);
+        public static Type GetArrayType(IList array)
+        {
+            var type = array.GetType();
+            if (type.IsArray) return type.GetElementType();
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>))
+                return type.GenericTypeArguments.First();
+            throw new Exception();
+        }
     }
 }

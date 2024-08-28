@@ -348,9 +348,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966370033}
-  - component: {fileID: 966370034}
   - component: {fileID: 966370036}
   - component: {fileID: 966370035}
+  - component: {fileID: 966370034}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -375,6 +375,34 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &966370034
 MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966370031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba881b075850d14e8282cc9495e9f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Items>k__BackingField:
+    serializedCollection: []
+--- !u!114 &966370035
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966370031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cea229187c61849abf3b850da1682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Items>k__BackingField:
+    serializedCollection: []
+--- !u!114 &966370036
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -389,38 +417,10 @@ MonoBehaviour:
     serializedProperty: {fileID: 0}
   <FomulaSteps>k__BackingField:
     serializedCollection:
-    - {fileID: 966370036}
     - {fileID: 966370035}
+    - {fileID: 966370034}
   index:
     serializedProperty: -1
---- !u!114 &966370035
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966370031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba881b075850d14e8282cc9495e9f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Items>k__BackingField:
-    serializedCollection: []
---- !u!114 &966370036
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966370031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91cea229187c61849abf3b850da1682d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Items>k__BackingField:
-    serializedCollection: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ namespace Main
         {
             public abstract T New<T>(Type type, params object[] args);
         }
+        [Default(typeof(ScriptableObject))]
         public class ScriptableObjectNewAttribute : CustomNewAttribute
         {
             public readonly static ScriptableObjectNewAttribute Instance = new();
@@ -21,6 +22,7 @@ namespace Main
                 throw new Exception("Type error");
             }
         }
+        [Default(typeof(Component))]
         public class ComponentNewAttribute : CustomNewAttribute
         {
             public readonly static ComponentNewAttribute Instance = new();

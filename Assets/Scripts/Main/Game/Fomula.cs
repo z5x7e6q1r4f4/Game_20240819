@@ -11,7 +11,7 @@ namespace Main.Game
         public IRXsProperty<int> Index => AwakeSelf<Fomula>().index;
         [SerializeField] private RXsProperty_SerializeField<int> index = new(-1);
         public IRXsProperty_Readonly<FomulaStep> CurrentStep => AwakeSelf<Fomula>().currentStep;
-        private RXsProperty_SerializeField<FomulaStep> currentStep;
+        private RXsProperty_SerializeField<FomulaStep> currentStep = new();
         protected override void OnGameComponentAwake()
         {
             Factory.LinkCollection(this, factory => factory.Fomulas);
