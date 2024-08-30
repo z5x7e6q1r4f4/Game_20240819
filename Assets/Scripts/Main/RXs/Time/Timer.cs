@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Main.RXs
 {
     public class Timer :
-        ObserverNodeReusable<ITimeData, Timer>,
+        ObserverListSubscriptionReusable<Timer, ITimeData>,
         ITimeData,
         ITimeSubject
     {
@@ -31,8 +31,9 @@ namespace Main.RXs
                 onUpdate.Invoke(this);
                 if (Time >= Target) onArrive.Invoke(this);
             }
-            base.OnNext(value);
         }
+        protected override void OnCompleted() { }
+        protected override void OnError(Exception error) { }
         //Observable
         IDisposable System.IObservable<ITimeData>.Subscribe(System.IObserver<ITimeData> observer) => onUpdate.Subscribe(observer);
         IDisposable IObservable.Subscribe(IObserver observer) => this.SubscribeToTyped<ITimeData>(observer);
@@ -50,7 +51,7 @@ namespace Main.RXs
             timer.Time = time;
             timer.Scale = scale;
             timer.State = state;
-            timeObservable.SubscribeToTyped<ITimeData>(timer);
+            timeObservable.SubscribeToTyped(timer);
             return timer;
         }
         protected override void OnRelease()

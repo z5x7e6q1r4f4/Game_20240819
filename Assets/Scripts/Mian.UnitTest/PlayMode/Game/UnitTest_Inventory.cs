@@ -13,7 +13,9 @@ namespace Main.Game
         public void SetUp()
         {
             inventoryInput = new GameObject().AddComponent<InventoryInput>();
+            inventoryInput.EnableDebug = true;
             inventoryOutput = new GameObject().AddComponent<InventoryOutput>();
+            inventoryOutput.EnableDebug = true;
             testItemA = new GameObject().AddComponent<TestItemA>();
             testItemB = new GameObject().AddComponent<TestItemB>();
         }

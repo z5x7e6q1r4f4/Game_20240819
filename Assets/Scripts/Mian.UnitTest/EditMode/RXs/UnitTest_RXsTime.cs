@@ -11,7 +11,7 @@ namespace Main
         [Test]
         public void UnitTest_Timer([Values(1f, 5f, 10f)] float target, [Values(1f, 5f, 10f)] float delta)
         {
-            ObserverNodeList<ITimeData> timeNode = new();
+            ObserverList<ITimeData> timeNode = new();
             var timer = timeNode.GetTimer(target);
             Assert.AreEqual(0, timer.Time);
             Assert.AreEqual(target, timer.Target);

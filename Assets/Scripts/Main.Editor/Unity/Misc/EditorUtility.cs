@@ -81,7 +81,7 @@ namespace Main
                 switch (path)
                 {
                     default:
-                        fieldInfo = type.GetField(path, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        fieldInfo = type.GetFieldInherit(path, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
                         if (i != last) obj = fieldInfo.GetValue(obj);
                         else { array = null; index = -1; return; }
                         break;

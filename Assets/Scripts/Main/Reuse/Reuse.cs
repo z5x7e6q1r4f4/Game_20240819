@@ -44,5 +44,9 @@ namespace Main
             ReleaseOnClear += () => hasRegister = false;
             hasRegister = true;
         }
+        public static void Log()
+        {
+            foreach (var pool in Pools.Values) Debug.Log(pool);
+        }
     }
 }

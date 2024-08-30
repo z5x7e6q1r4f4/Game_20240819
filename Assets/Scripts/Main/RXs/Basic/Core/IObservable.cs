@@ -7,6 +7,8 @@ namespace Main.RXs
     public static partial class Observable
     {
         public static IDisposable SubscribeToTyped<T>(this IObservable observable, IObserver observer)
-          => (observable as System.IObservable<T>).Subscribe(observer.ToTyped<T>());
+            => (observable as System.IObservable<T>).Subscribe(observer.ToTyped<T>());
+        public static IDisposable SubscribeToTyped<T>(this IObservable observable, System.IObserver<T> observer)
+            => (observable as System.IObservable<T>).Subscribe(observer);
     }
 }

@@ -6,6 +6,9 @@ namespace Main
 {
     public abstract partial class GameComponent : MonoBehaviour
     {
+        public bool EnableDebug { get => enableDebug.Value; set => enableDebug.Value = value; }
+        [SerializeField, DisableRXsValueDebug] private RXsProperty_SerializeField<bool> enableDebug = new();
+        private readonly DisposableList debugSubscription = new();
         //Event
         public IObservableImmediately<GameComponent> OnGameComponentAwakeEvent
             => onGameComponentAwakeEvent ??= new(this, CheckHasAwake);
@@ -29,10 +32,19 @@ namespace Main
             if (!hasAwake)
             {
                 hasAwake = true;
+                AwakeGameComponentDebug();
                 OnGameComponentAwake();
                 onGameComponentAwakeEvent?.Invoke(this);
             }
             return (T)this;
+        }
+        private void AwakeGameComponentDebug()
+        {
+            enableDebug.AfterSet.Immediately().Subscribe(e =>
+            {
+                if (e.Current) { RXsValueDebugUtility.EnableDebug(this, debugSubscription); }
+                else { debugSubscription.Dispose(); }
+            });
         }
         protected virtual void OnGameComponentAwake() { }
         protected virtual void OnGameComponentEnable() { }
@@ -57,7 +69,7 @@ namespace Main
         //Component
         public IRXsCollection_Readonly<GameComponent> GameComponentList => tracingList;
         private GameComponentTracingList tracingList => _tracingList ??= GetOrAddComponent<GameComponentTracingList>(isTrackable: false);
-        private GameComponentTracingList _tracingList;
+        [DisableRXsValueDebug] private GameComponentTracingList _tracingList;
         public T AddComponent<T>(HideFlags hideFlags = HideFlags.None, bool isTrackable = true)
             where T : Component
         {

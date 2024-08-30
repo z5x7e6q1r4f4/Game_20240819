@@ -22,14 +22,9 @@ namespace Main
                     this.isImmediately = isImmediately;
                 }
             }
-            //
-            private readonly EventHandlerImmediately immediately;
-            RXs.IObservable<GameComponent> IObservableImmediately<GameComponent>.Immediately() => immediately;
-            public EventHandler(GameComponent component, Func<GameComponent, bool> isImmediately)
-            {
-                immediately = new(component, isImmediately);
-                Subscribe(immediately);
-            }
+            public EventHandler(GameComponent component, Func<GameComponent, bool> isImmediately) : base(
+                observer => { if (isImmediately(component)) observer.OnNext(component); })
+            { }
         }
     }
 }

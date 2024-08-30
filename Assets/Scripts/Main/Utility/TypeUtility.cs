@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 namespace Main
@@ -34,6 +35,23 @@ namespace Main
             if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>))
                 return type.GenericTypeArguments.First();
             throw new Exception();
+        }
+        public static FieldInfo GetFieldInherit(this Type type, string name, BindingFlags bindingFlags = BindingFlags.Default)
+        {
+            while (type != null)
+            {
+                var fieldInfo = type.GetField(name, bindingFlags);
+                if (fieldInfo != null) return fieldInfo;
+                type = type.BaseType;
+            }
+            return null;
+        }
+        // <Name>k__BackingField
+        public static string Name(this FieldInfo fieldInfo, bool withoutBackingField = true)
+        {
+            var result = fieldInfo.Name;
+            if (withoutBackingField) result = result.Replace("<", string.Empty).Replace(">k__BackingField", string.Empty);
+            return result;
         }
     }
 }

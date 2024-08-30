@@ -2,9 +2,12 @@ using System;
 
 namespace Main.RXs
 {
-    public class RXsEventHandler<T> : ISubject<T>, IDisposable
+    public class RXsEventHandler<T> : IRXsEventHandler<T>
     {
-        protected ObserverNodeList<T> Observers { get; } = new();
+        protected ObserverList<T> Observers { get; } = new();
+        Action<System.IObserver<T>> IObservableImmediately<T>.ImmediatelyAction => immediatelyAction;
+        private readonly Action<System.IObserver<T>> immediatelyAction;
+        public RXsEventHandler(Action<System.IObserver<T>> immediatelyAction = null) => this.immediatelyAction = immediatelyAction;
         void System.IObserver<T>.OnCompleted() => OnCompleted();
         protected virtual void OnCompleted() => Observers.OnCompleted();
         void System.IObserver<T>.OnError(Exception error) => OnError(error);

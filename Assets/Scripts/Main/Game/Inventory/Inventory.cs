@@ -43,7 +43,7 @@ namespace Main.Game
         public IEnumerator<Item> GetEnumerator() => Items.GetEnumerator();
         //Test
         protected RXsCollection_SerializeField<Item> testItems { get; } = new();
-        private bool testResult = false;
+        private bool testResult = true;
         public IInventoryTest Test()
         {
             testResult = true;

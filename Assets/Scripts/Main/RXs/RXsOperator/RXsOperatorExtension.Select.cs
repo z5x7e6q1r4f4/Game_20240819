@@ -7,7 +7,7 @@ namespace Main.RXs
         private class SelectOperatorHandler<TSource, TResult> : RXsOperatorHandler<TSource, TResult>
         {
             private Func<TSource, TResult> Selector { get; }
-            public SelectOperatorHandler(IObservable<TSource> source, Func<TSource, TResult> selector) :
+            public SelectOperatorHandler(System.IObservable<TSource> source, Func<TSource, TResult> selector) :
                 base(source)
                 => Selector = selector;
             public override IDisposable Subscribe(System.IObserver<TResult> observer)
@@ -19,13 +19,9 @@ namespace Main.RXs
             public SelectOperator(System.IObserver<TResult> result, Func<TSource, TResult> selector) :
                 base(result)
                 => Selector = selector;
-            protected override void OnNext(TSource value)
-            {
-                Result.OnNext(Selector(value));
-                base.OnNext(value);
-            }
+            protected override void OnNext(TSource value) => Result.OnNext(Selector(value));
         }
-        public static IObservable<TResult> Select<TSource, TResult>(this IObservable<TSource> observable, Func<TSource, TResult> selector)
+        public static IObservable<TResult> Select<TSource, TResult>(this System.IObservable<TSource> observable, Func<TSource, TResult> selector)
             => new SelectOperatorHandler<TSource, TResult>(observable, selector);
     }
 }
