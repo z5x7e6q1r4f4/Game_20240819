@@ -70,6 +70,19 @@ namespace Main.RXs
             Assert.AreEqual(expectCount, way2Count);
         }
         [Test]
+        public void OfType()
+        {
+            var observable = Observable.Return<object>(true, 0, "test", new object());
+            observable.OfType<string>().Subscribe(x => Assert.AreEqual("test", x));
+            observable.OfType<int>().Subscribe(x => Assert.AreEqual(0, x));
+            observable.OfType<bool>().Subscribe(x => Assert.AreEqual(true, x));
+        }
+        [Test]
+        public void Select()
+        {
+            Observable.Return(1).Select(x => x + 1).Subscribe(x => Assert.AreEqual(2, x));
+        }
+        [Test]
         public void Dispose()
         {
             Reuse.Clear();
