@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Main.RXs
 {
     public class Timer :
-        ObserverListSubscriptionReusable<Timer, ITimeData>,
+        RXsObserverItemReusable<Timer, ITimeData>,
         ITimeData,
         ITimeSubject
     {
@@ -17,9 +17,9 @@ namespace Main.RXs
         private float scale;
         public TimeState State { get; set; }
         //Event
-        public IObservable<Timer> OnUpdate => onUpdate;
+        public IRXsObservable<Timer> OnUpdate => onUpdate;
         private readonly RXsEventHandler<Timer> onUpdate = new();
-        public IObservable<Timer> OnArrive => onArrive;
+        public IRXsObservable<Timer> OnArrive => onArrive;
         private readonly RXsEventHandler<Timer> onArrive = new();
         //Observer
         protected override void OnNext(ITimeData value)
@@ -35,11 +35,11 @@ namespace Main.RXs
         protected override void OnCompleted() { }
         protected override void OnError(Exception error) { }
         //Observable
-        IDisposable System.IObservable<ITimeData>.Subscribe(System.IObserver<ITimeData> observer) => onUpdate.Subscribe(observer);
+        IDisposable IObservable<ITimeData>.Subscribe(IObserver<ITimeData> observer) => onUpdate.Subscribe(observer);
         IDisposable IObservable.Subscribe(IObserver observer) => this.SubscribeToTyped<ITimeData>(observer);
         //Reuse
         public static Timer GetFromReusePool(
-            IObservable<ITimeData> timeObservable,
+            IRXsObservable<ITimeData> timeObservable,
             float targt,
             float time = 0,
             float scale = 1,

@@ -10,7 +10,7 @@ namespace Main.RXs
         public void Where([Values(3, 25)] int from, [Values(68, 12)] int to, [Values(10, 32)] int grater)
         {
             var collection = new RXsCollection_SerializeField<int>();
-            Observable.Range(from, to).Subscribe(e => collection.Add(e));
+            RXsObservable.FromRange(from, to).Subscribe(e => collection.Add(e));
             var where = collection.Where(x => x > grater);
             foreach (var x in where)
             { Assert.IsTrue(x > grater); }

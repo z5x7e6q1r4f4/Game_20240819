@@ -3,7 +3,7 @@ namespace Main.RXs
     public static class TimeExtension
     {
         public static Timer GetTimer(
-            this IObservable<ITimeData> timeObservable,
+            this IRXsObservable<ITimeData> timeObservable,
             float targt,
             float time = 0,
             float scale = 1,

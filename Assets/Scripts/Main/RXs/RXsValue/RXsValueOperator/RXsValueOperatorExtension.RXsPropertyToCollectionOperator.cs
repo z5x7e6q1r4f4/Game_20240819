@@ -10,7 +10,7 @@ namespace Main.RXs
         {
             protected IRXsCollection<TResult> Result { get; }
             IObservableImmediately<IRXsCollection_AfterAdd<TResult>> IRXsCollection_Readonly<TResult>.AfterAdd => Result.AfterAdd;
-            IObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
+            IRXsObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
             int IRXsCollection_Readonly.Count => Result.Count;
             TResult IRXsCollection_Readonly<TResult>.this[int index] => Result[index];
             protected RXsPropertyToCollectionOperator(IRXsProperty_Readonly<TSource> source, IRXsCollection<TResult> result) : base(source) => Result = result ?? new RXsCollection_SerializeField<TResult>();
@@ -30,7 +30,7 @@ namespace Main.RXs
         {
             protected IRXsCollection<TResult> Result { get; }
             IObservableImmediately<IRXsCollection_AfterAdd<TResult>> IRXsCollection_Readonly<TResult>.AfterAdd => Result.AfterAdd;
-            IObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
+            IRXsObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
             int IRXsCollection_Readonly.Count => Result.Count;
             TResult IRXsCollection_Readonly<TResult>.this[int index] => Result[index];
             protected RXsPropertyToCollectionOperator(IRXsProperty_Readonly source, IRXsCollection<TResult> result) : base(source) => Result = result ?? new RXsCollection_SerializeField<TResult>();

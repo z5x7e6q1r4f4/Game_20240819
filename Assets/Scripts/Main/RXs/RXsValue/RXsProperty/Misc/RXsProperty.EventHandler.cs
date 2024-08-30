@@ -15,9 +15,9 @@ namespace Main.RXs
                 modified = eventArgs.Modified;
                 return eventArgs.IsEnable;
             }
-            public EventHandler(Action<System.IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
+            public EventHandler(Action<IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
         }
-        private void AfterSetImmediately(System.IObserver<EventArgs> observer)
+        private void AfterSetImmediately(IObserver<EventArgs> observer)
         {
             using var eventArgs = EventArgs.GetFromReusePool(this, default, Value);
             observer.OnNext(eventArgs);

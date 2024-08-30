@@ -11,7 +11,7 @@ namespace Main.RXs
         public void Range(int from, int to, int expectCount, IEnumerable<int> expectResult)
         {
             List<int> result = new();
-            var range = Observable.Range(from, to);
+            var range = RXsObservable.FromRange(from, to);
             range.Subscribe(x => result.Add(x));
             //
             Assert.AreEqual(expectCount, result.Count);
@@ -30,7 +30,7 @@ namespace Main.RXs
         public void Return(IEnumerable<object> input)
         {
             List<object> result = new();
-            var _return = Observable.Return(input);
+            var _return = RXsObservable.FromReturn(input);
             _return.Subscribe(x => result.Add(x));
             Assert.AreEqual(input.Count(), result.Count);
             for (int i = 0; i < result.Count; i++)

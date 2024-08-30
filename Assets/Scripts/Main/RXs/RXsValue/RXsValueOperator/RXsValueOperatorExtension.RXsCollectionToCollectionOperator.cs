@@ -11,7 +11,7 @@ namespace Main.RXs
         {
             protected IRXsCollection<TResult> Result { get; }
             IObservableImmediately<IRXsCollection_AfterAdd<TResult>> IRXsCollection_Readonly<TResult>.AfterAdd => Result.AfterAdd;
-            IObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
+            IRXsObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
             public int Count => Result.Count;
             TResult IRXsCollection_Readonly<TResult>.this[int index] => Result[index];
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);
@@ -31,7 +31,7 @@ namespace Main.RXs
         {
             protected IRXsCollection<TResult> Result { get; }
             IObservableImmediately<IRXsCollection_AfterAdd<TResult>> IRXsCollection_Readonly<TResult>.AfterAdd => Result.AfterAdd;
-            IObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
+            IRXsObservable<IRXsCollection_AfterRemove<TResult>> IRXsCollection_Readonly<TResult>.AfterRemove => Result.AfterRemove;
             public int Count => Result.Count;
             TResult IRXsCollection_Readonly<TResult>.this[int index] => Result[index];
             bool IRXsCollection_Readonly<TResult>.Contains(TResult item) => Result.Contains(item);

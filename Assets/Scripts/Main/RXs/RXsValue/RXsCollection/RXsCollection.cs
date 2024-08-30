@@ -69,10 +69,10 @@ namespace Main.RXs
         public int IndexOf(T item) => SerializedCollection.IndexOf(item);
         public bool Contains(T item) => SerializedCollection.Contains(item);
         //Event
-        public IObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd => beforeAdd;
+        public IRXsObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd => beforeAdd;
         public IObservableImmediately<IRXsCollection_AfterAdd<T>> AfterAdd => afterAdd;
-        public IObservable<IRXsCollection_BeforeRemove<T>> BeforeRemove => beforeRemove;
-        public IObservable<IRXsCollection_AfterRemove<T>> AfterRemove => afterRemove;
+        public IRXsObservable<IRXsCollection_BeforeRemove<T>> BeforeRemove => beforeRemove;
+        public IRXsObservable<IRXsCollection_AfterRemove<T>> AfterRemove => afterRemove;
         private readonly EventHandler beforeAdd;
         private readonly EventHandler afterAdd;
         private readonly EventHandler beforeRemove;

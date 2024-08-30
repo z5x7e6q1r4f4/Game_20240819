@@ -8,7 +8,7 @@ namespace Main.RXs
             RXsEventHandler<EventArgs>,
             IObservableImmediately<EventArgs>
         {
-            private readonly ISubject<EventArgs> immediately;
+            private readonly IRXsSubject<EventArgs> immediately;
             public bool Invoke(IRXsCollection_Readonly<T> collection, int index, T item, out T modified)
             {
                 using var eventArgs = EventArgs.GetFromReusePool(collection, index, item);
@@ -16,9 +16,9 @@ namespace Main.RXs
                 modified = eventArgs.Modified;
                 return eventArgs.IsEnable;
             }
-            public EventHandler(Action<System.IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
+            public EventHandler(Action<IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
         }
-        private void AfterAddImmediately(System.IObserver<EventArgs> observer)
+        private void AfterAddImmediately(IObserver<EventArgs> observer)
         {
             var index = 0;
             foreach (var item in this)

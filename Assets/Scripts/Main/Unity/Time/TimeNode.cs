@@ -19,8 +19,8 @@ namespace Main
         public float Delta { get; private set; }
         //Event
         private readonly RXsEventHandler<TimeNode> onUpdate = new();
-        IDisposable System.IObservable<ITimeData>.Subscribe(System.IObserver<ITimeData> observer) => Subscribe(observer);
-        public IDisposable Subscribe(System.IObserver<TimeNode> observer) => onUpdate.Subscribe(observer);
+        IDisposable IObservable<ITimeData>.Subscribe(IObserver<ITimeData> observer) => Subscribe(observer);
+        public IDisposable Subscribe(IObserver<TimeNode> observer) => onUpdate.Subscribe(observer);
         public IDisposable Subscribe(IObserver observer) => this.SubscribeToTyped<TimeNode>(observer);
         protected override void OnGameComponentAwake()
         {

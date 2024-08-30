@@ -11,7 +11,7 @@ namespace Main
             {
                 private readonly GameComponent component;
                 private readonly Func<GameComponent, bool> isImmediately;
-                public override IDisposable Subscribe(System.IObserver<GameComponent> observer)
+                public override IDisposable Subscribe(IObserver<GameComponent> observer)
                 {
                     if (isImmediately(component)) observer.OnNext(component);
                     return base.Subscribe(observer);

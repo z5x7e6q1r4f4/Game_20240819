@@ -1,4 +1,4 @@
 ﻿namespace Main.RXs
 {
-    public interface ITimeObserver : IObserverListSubscription<ITimeData> { }
+    public interface ITimeObserver : IRXsObserverItem<ITimeData> { }
 }

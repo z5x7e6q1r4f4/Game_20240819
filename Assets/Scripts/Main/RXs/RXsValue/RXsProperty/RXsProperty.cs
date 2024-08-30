@@ -6,7 +6,7 @@ namespace Main.RXs
     {
         protected abstract T SerializedProperty { get; set; }
         public T Value { get => SerializedProperty; set => SetValue(value); }
-        public IObservable<IRXsProperty_BeforeSet<T>> BeforeSet => beforeSet;
+        public IRXsObservable<IRXsProperty_BeforeSet<T>> BeforeSet => beforeSet;
         public IObservableImmediately<IRXsProperty_AfterSet<T>> AfterSet => afterSet;
         private readonly EventHandler beforeSet;
         private readonly EventHandler afterSet;

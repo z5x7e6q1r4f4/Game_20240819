@@ -11,7 +11,7 @@ namespace Main.RXs
             int result = default;
             bool onCompleted = false;
             bool onError = false;
-            ObserverList<int> observerList = new();
+            RXsObserverList<int> observerList = new();
             observerList.Subscribe(e => result = e, () => onCompleted = true, e => onError = true);
             //
             observerList.OnNext(1);
@@ -30,7 +30,7 @@ namespace Main.RXs
         public void Dispose()
         {
             Reuse.Clear();
-            ObserverList<int> observerList = new();
+            RXsObserverList<int> observerList = new();
             var observer = observerList.Subscribe(() => { });
             Reuse.Log();
             observerList.Dispose();
