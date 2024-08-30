@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using static PlasticPipe.PlasticProtocol.Messages.Serialization.ItemHandlerMessagesSerialization;
 
 namespace Main
 {
@@ -63,6 +62,16 @@ namespace Main
             {
                 item.Pool = null;
                 if (item is IReuseable.IOnDestroy destroy) destroy.OnDestroy();
+            }
+            public override string ToString()
+            {
+                var type = typeof(T).Name;
+                var prefab = Prefab?.ToString() ?? "Null";
+                return $"Pool<<color=green>{type}</color>>," +
+                    $"Prefab=<color=green>{prefab}</color>," +
+                    $"All=<color=green>{AllCount}</color>," +
+                    $"Active=<color=green>{ActiveCount}</color>," +
+                    $"Inactive=<color=green>{InactiveCount}</color>";
             }
         }
     }

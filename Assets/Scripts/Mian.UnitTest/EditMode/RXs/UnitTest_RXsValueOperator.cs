@@ -25,14 +25,19 @@ namespace Main.RXs
         }
         public void OfType_Tester<T>(params object[] source)
         {
-            var collection = new RXsCollection_SerializeField<object>(source);
-            var typedCollection = collection.OfType<T>();
+            var collection = new RXsCollection_SerializeField<object>();
+            collection.EnableDebug("Collection");
+            var typedCollection = new RXsCollection_SerializeField<T>();
+            typedCollection.EnableDebug("TypedCollection");
+            var subscription = collection.OfType(typedCollection);
+            collection.AddRange(source);
             var typedSource = source.OfType<T>();
             for (int i = 0; i < typedCollection.Count; i++)
             {
+                UnityEngine.Debug.Log($"TestType : {typeof(T)} , Value : {typedCollection[i]} , ValueType : {typedCollection[i].GetType()}");
                 Assert.AreEqual(typedSource.ElementAt(i), typedCollection[i]);
             }
-            typedCollection.Dispose();
+            subscription.Dispose();
             Assert.AreEqual(0, typedCollection.Count);
         }
         [Test]

@@ -2,19 +2,29 @@
 
 namespace Main.RXs
 {
-    public static partial class Observer 
+    public static partial class Observer
     {
-        private class ObserverToTyped<T> : ObserverNode<T>
+        private class ObserverToTyped<T> : ObserverListSubscriptionReusable<ObserverToTyped<T>, T>
         {
-            private IObserver Observer { get; }
-            public override void OnCompleted() { Observer.OnCompleted(); base.OnCompleted(); }
-            public override void OnError(Exception error) { Observer.OnError(error); base.OnError(error); }
-            public override void OnNext(T value) { Observer.OnNext(value); base.OnNext(value); }
-            public ObserverToTyped(IObserver observer) => Observer = observer;
+            private IObserver observer;
+            protected override void OnCompleted() => observer.OnCompleted();
+            protected override void OnError(Exception error) => observer.OnError(error);
+            protected override void OnNext(T value) => observer.OnNext(value);
+            public static ObserverToTyped<T> GetFromReusePool(IObserver observer)
+            {
+                var node = GetFromReusePool();
+                node.observer = observer;
+                return node;
+            }
+            protected override void OnRelease()
+            {
+                (observer as IDisposable)?.Dispose();
+                base.OnRelease();
+            }
         }
         public static IObserver<T> ToTyped<T>(this IObserver observer)
         {
-            if (observer is not IObserver<T> typed) typed = new ObserverToTyped<T>(observer);
+            if (observer is not IObserver<T> typed) typed = ObserverToTyped<T>.GetFromReusePool(observer);
             return typed;
         }
     }

@@ -4,43 +4,36 @@ namespace Main.RXs
 {
     partial class Observer
     {
-        private class ObserverFromAction<T> : ObserverNode<T>
+        private class ObserverFromAction<T> : ObserverListSubscriptionReusable<ObserverFromAction<T>,T>
         {
             private Action<T> onNext;
             private Action onCompleted;
             private Action<Exception> onError;
-            public override void OnNext(T value)
-            {
-                onNext?.Invoke(value);
-                base.OnNext(value);
-            }
-            public override void OnCompleted()
-            {
-                onCompleted?.Invoke();
-                base.OnCompleted();
-            }
-            public override void OnError(Exception error)
-            {
-                onError?.Invoke(error);
-                base.OnError(error);
-            }
-            public override void Dispose()
+            protected override void OnNext(T value) => onNext?.Invoke(value);
+            protected override void OnCompleted() => onCompleted?.Invoke();
+            protected override void OnError(Exception error) => onError?.Invoke(error);
+            protected override void OnRelease()
             {
                 onNext = null;
                 onCompleted = null;
                 onError = null;
-                base.Dispose();
+                base.OnRelease();
             }
-            public ObserverFromAction(Action<T> onNext = null, Action onCompleted = null, Action<Exception> onError = null)
+            public static ObserverFromAction<T> GetFromReusePool(
+                Action<T> onNext,
+                Action onCompleted,
+                Action<Exception> onError)
             {
-                this.onNext = onNext;
-                this.onCompleted = onCompleted;
-                this.onError = onError;
+                var observer = GetFromReusePool();
+                observer.onNext = onNext;
+                observer.onCompleted = onCompleted;
+                observer.onError = onError;
+                return observer;
             }
         }
         public static IDisposable Subscribe<T>(this IObservable<T> observable, Action<T> onNext = null, Action onCompleted = null, Action<Exception> onError = null)
-            => observable.SubscribeToTyped<T>(new ObserverFromAction<T>(onNext, onCompleted, onError));
+            => observable.SubscribeToTyped(ObserverFromAction<T>.GetFromReusePool(onNext, onCompleted, onError));
         public static IDisposable Subscribe<T>(this IObservable<T> observable, Action onNext = null, Action onCompleted = null, Action<Exception> onError = null)
-            => observable.SubscribeToTyped<T>(new ObserverFromAction<T>(onNext != null ? (_) => onNext() : null, onCompleted, onError));
+            => observable.SubscribeToTyped(ObserverFromAction<T>.GetFromReusePool(onNext != null ? (_) => onNext() : null, onCompleted, onError));
     }
 }

@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2024/8/22 - 下午 11:31:40</Generatedon>
-    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
-    <Assemblies>2</Assemblies>
-    <Classes>71</Classes>
-    <Files>62</Files>
-    <Coveredlines>845</Coveredlines>
-    <Uncoveredlines>356</Uncoveredlines>
-    <Coverablelines>1201</Coverablelines>
-    <Totallines>2402</Totallines>
-    <Linecoverage>70.3</Linecoverage>
+    <Generatedon>2024/8/23 - 上午 12:35:02</Generatedon>
+    <Parser>MultiReportParser (3x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>64</Classes>
+    <Files>64</Files>
+    <Coveredlines>418</Coveredlines>
+    <Uncoveredlines>517</Uncoveredlines>
+    <Coverablelines>935</Coverablelines>
+    <Totallines>1721</Totallines>
+    <Linecoverage>44.7</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>246</Coveredmethods>
-    <Totalmethods>472</Totalmethods>
-    <Methodcoverage>52.1</Methodcoverage>
+    <Coveredmethods>179</Coveredmethods>
+    <Totalmethods>512</Totalmethods>
+    <Methodcoverage>34.9</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="EditMode" classes="9" coverage="92.4" coveredlines="427" coverablelines="462" totallines="740" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="67" totalmethods="73" methodcoverage="91.7">
-      <Class name="Main.RXs.UnitTest_RXsCollection" coverage="100" coveredlines="167" coverablelines="167" totallines="237" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="25" totalmethods="25" methodcoverage="100" />
-      <Class name="Main.RXs.UnitTest_RXsCollection_Readonly" coverage="93.2" coveredlines="55" coverablelines="59" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="9" totalmethods="10" methodcoverage="90" />
-      <Class name="Main.RXs.UnitTest_RXsEventHandler" coverage="100" coveredlines="17" coverablelines="17" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="Main.RXs.UnitTest_RXsOperator" coverage="100" coveredlines="29" coverablelines="29" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="Main.RXs.UnitTest_RXsProperty" coverage="100" coveredlines="74" coverablelines="74" totallines="105" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="11" methodcoverage="100" />
-      <Class name="Main.RXs.UnitTest_RXsTool" coverage="71.4" coveredlines="20" coverablelines="28" totallines="47" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
-      <Class name="Main.RXs.UnitTest_RXsValueOperator" coverage="93.7" coveredlines="45" coverablelines="48" totallines="71" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="10" methodcoverage="100" />
-      <Class name="Main.UnitTest_Objects_Clone" coverage="42.1" coveredlines="8" coverablelines="19" totallines="49" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="5" methodcoverage="60" />
-      <Class name="Main.UnitTest_Objects_New" coverage="57.1" coveredlines="12" coverablelines="21" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="6" methodcoverage="83.3" />
-    </Assembly>
-    <Assembly name="Main" classes="62" coverage="56.5" coveredlines="418" coverablelines="739" totallines="2619" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="179" totalmethods="399" methodcoverage="44.8">
+    <Assembly name="Main" classes="64" coverage="44.7" coveredlines="418" coverablelines="935" totallines="2621" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="179" totalmethods="512" methodcoverage="34.9">
       <Class name="Main.GameComponent" coverage="0" coveredlines="0" coverablelines="65" totallines="118" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="26" methodcoverage="0" />
       <Class name="Main.GameComponentSingleton[T]" coverage="0" coveredlines="0" coverablelines="2" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
       <Class name="Main.GameComponentTracingList" coverage="0" coveredlines="0" coverablelines="17" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="18" methodcoverage="0" />
@@ -74,24 +63,26 @@
       <Class name="Main.RXs.RXsProperty[T]" coverage="100" coveredlines="53" coverablelines="53" totallines="112" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="24" totalmethods="24" methodcoverage="100" />
       <Class name="Main.RXs.RXsProperty_SerializeField[T]" coverage="100" coveredlines="2" coverablelines="2" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
       <Class name="Main.RXs.RXsProperty_SerializeReference[T]" coverage="0" coveredlines="0" coverablelines="2" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtension" coverage="45.1" coveredlines="28" coverablelines="62" totallines="306" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="15" totalmethods="33" methodcoverage="45.4" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionConnectCollectionToCollectionOperator[T]" coverage="0" coveredlines="0" coverablelines="3" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionConnectPropertyToPropertyOperator[T]" coverage="100" coveredlines="2" coverablelines="2" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToCollectionOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="11" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToPropertyOperator[TSource,TResult]" coverage="100" coveredlines="11" coverablelines="11" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionOfTypeCollectionToCollectionOperator[T]" coverage="66.6" coveredlines="2" coverablelines="3" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="3" methodcoverage="66.6" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionOfTypePropertyToPropertyOperator[T]" coverage="0" coveredlines="0" coverablelines="5" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TResult]" coverage="33.3" coveredlines="3" coverablelines="9" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="9" methodcoverage="33.3" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TSource,TResult]" coverage="44.4" coveredlines="4" coverablelines="9" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="9" methodcoverage="44.4" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToOperator[TSource]" coverage="27.5" coveredlines="8" coverablelines="29" totallines="97" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="12" methodcoverage="25" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TResult]" coverage="0" coveredlines="0" coverablelines="4" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="4" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TResult]" coverage="0" coveredlines="0" coverablelines="9" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="9" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="9" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToOperator[TSource]" coverage="100" coveredlines="24" coverablelines="24" totallines="78" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="12" methodcoverage="100" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TResult]" coverage="0" coveredlines="0" coverablelines="4" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TSource,TResult]" coverage="75" coveredlines="3" coverablelines="4" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="4" methodcoverage="75" />
-      <Class name="Main.RXs.RXsValueOperatorExtensionWhereCollectionToCollectionOperator[T]" coverage="85.7" coveredlines="6" coverablelines="7" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="3" methodcoverage="66.6" />
+      <Class name="Main.RXs.RXsValueOperatorExtension" coverage="38.3" coveredlines="28" coverablelines="73" totallines="190" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="15" totalmethods="44" methodcoverage="34" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionConnectCollectionToCollectionOperator[T]" coverage="0" coveredlines="0" coverablelines="6" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionConnectPropertyToPropertyOperator[T]" coverage="50" coveredlines="2" coverablelines="4" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionLinkCollectionOperator[TItemSelf,TCollection]" coverage="0" coveredlines="0" coverablelines="20" totallines="59" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionLinkItemOperator[TCollectionSelf,TItem]" coverage="0" coveredlines="0" coverablelines="18" totallines="59" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToCollectionOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="22" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionObserverOnPropertyToPropertyOperator[TSource,TResult]" coverage="50" coveredlines="11" coverablelines="22" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionOfTypeCollectionToCollectionOperator[T]" coverage="33.3" coveredlines="2" coverablelines="6" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="6" methodcoverage="33.3" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionOfTypePropertyToPropertyOperator[T]" coverage="0" coveredlines="0" coverablelines="10" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TResult]" coverage="16.6" coveredlines="3" coverablelines="18" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="18" methodcoverage="16.6" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToCollectionOperator[TSource,TResult]" coverage="22.2" coveredlines="4" coverablelines="18" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="18" methodcoverage="22.2" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToOperator[TSource]" coverage="13.7" coveredlines="8" coverablelines="58" totallines="97" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="24" methodcoverage="12.5" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TResult]" coverage="0" coveredlines="0" coverablelines="8" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsCollectionToPropertyOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="8" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TResult]" coverage="0" coveredlines="0" coverablelines="18" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="18" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToCollectionOperator[TSource,TResult]" coverage="0" coveredlines="0" coverablelines="18" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="18" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToOperator[TSource]" coverage="50" coveredlines="24" coverablelines="48" totallines="78" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="24" methodcoverage="50" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TResult]" coverage="0" coveredlines="0" coverablelines="8" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionRXsPropertyToPropertyOperator[TSource,TResult]" coverage="37.5" coveredlines="3" coverablelines="8" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="8" methodcoverage="37.5" />
+      <Class name="Main.RXs.RXsValueOperatorExtensionWhereCollectionToCollectionOperator[T]" coverage="42.8" coveredlines="6" coverablelines="14" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="6" methodcoverage="33.3" />
     </Assembly>
   </Coverage>
 </CoverageReport>
