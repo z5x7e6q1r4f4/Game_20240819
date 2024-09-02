@@ -16,7 +16,7 @@ namespace Main.RXs
                 invokeCount++;
                 Assert.AreEqual(input, e);
             };
-            eventHandler.Subscribe(action);
+            using var _ = eventHandler.Subscribe(action);
             eventHandler.Invoke(input);
             Assert.AreEqual(1, invokeCount);
             eventHandler.Invoke(input);
@@ -25,13 +25,13 @@ namespace Main.RXs
             Assert.AreEqual(3, invokeCount);
         }
         [Test]
-        public void Dispose()
+        public void Clear()
         {
             Reuse.Clear();
             var eventHandler = new RXsEventHandler<string>();
             eventHandler.Subscribe(() => { });
             Reuse.Log();
-            eventHandler.Dispose();
+            eventHandler.Clear();
             Reuse.Log();
         }
     }

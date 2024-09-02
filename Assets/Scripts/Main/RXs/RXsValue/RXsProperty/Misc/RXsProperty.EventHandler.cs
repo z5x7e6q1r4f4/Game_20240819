@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main.RXs.RXsProperties;
+using System;
 
 namespace Main.RXs
 {
@@ -8,9 +9,9 @@ namespace Main.RXs
         private class EventHandler : RXsEventHandler<EventArgs>
         {
 
-            public bool Invoke(IRXsProperty<T> property, T previous, T current, out T modified)
+            public bool Invoke(IRXsProperty<T> property, RXsPropertyEventArgsType type, T previous, T current, out T modified)
             {
-                using var eventArgs = EventArgs.GetFromReusePool(property, previous, current);
+                using var eventArgs = EventArgs.GetFromReusePool(property, type, previous, current);
                 Invoke(eventArgs);
                 modified = eventArgs.Modified;
                 return eventArgs.IsEnable;
@@ -19,7 +20,7 @@ namespace Main.RXs
         }
         private void AfterSetImmediately(IObserver<EventArgs> observer)
         {
-            using var eventArgs = EventArgs.GetFromReusePool(this, default, Value);
+            using var eventArgs = EventArgs.GetFromReusePool(this, RXsPropertyEventArgsType.AfterSet, default, Value);
             observer.OnNext(eventArgs);
         }
     }

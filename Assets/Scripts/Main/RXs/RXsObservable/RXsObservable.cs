@@ -4,9 +4,9 @@ namespace Main.RXs
 {
     public static partial class RXsObservable
     {
-        public static IDisposable SubscribeToTyped<T>(this IObservable observable, IObserver observer)
-            => (observable as IObservable<T>).Subscribe(observer.ToTyped<T>());
-        public static IDisposable SubscribeToTyped<T>(this IObservable observable, IObserver<T> observer)
-            => (observable as IObservable<T>).Subscribe(observer);
+        public static IRXsSubscription SubscribeToTyped<T>(this IRXsObservable observable, IRXsObserver observer)
+            => (observable as IRXsObservable<T>).Subscribe(observer.ToRXsObserverSubscription<T>());
+        public static IRXsSubscription SubscribeToTyped<T>(this IRXsObservable observable, IObserver<T> observer)
+            => (observable as IRXsObservable<T>).Subscribe(observer.ToRXsObserverSubscription());
     }
 }

@@ -6,8 +6,8 @@ namespace Main
 {
     public class TimeNode :
         GameComponent,
-        ITimeObservable,
-        ITimeData
+        IRXsTimeObservable,
+        IRXsTimeData
     {
         //Structur
         [field: SerializeField] public RXsProperty_SerializeField<TimeNode> Parent { get; } = new();
@@ -19,9 +19,10 @@ namespace Main
         public float Delta { get; private set; }
         //Event
         private readonly RXsEventHandler<TimeNode> onUpdate = new();
-        IDisposable IObservable<ITimeData>.Subscribe(IObserver<ITimeData> observer) => Subscribe(observer);
-        public IDisposable Subscribe(IObserver<TimeNode> observer) => onUpdate.Subscribe(observer);
-        public IDisposable Subscribe(IObserver observer) => this.SubscribeToTyped<TimeNode>(observer);
+        public IRXsSubscription Subscribe(IRXsObserver<TimeNode> observer) => onUpdate.SubscribeToTyped(observer);
+        public IRXsSubscription Subscribe(IRXsObserver<IRXsTimeData> observer) => onUpdate.SubscribeToTyped(observer);
+        public IDisposable Subscribe(IObserver<IRXsTimeData> observer) => onUpdate.SubscribeToTyped(observer);
+        public IRXsSubscription Subscribe(IRXsObserver observer) => onUpdate.SubscribeToTyped<IRXsTimeData>(observer);
         protected override void OnGameComponentAwake()
         {
             Parent.LinkCollection(this, timeNode => timeNode.Children);

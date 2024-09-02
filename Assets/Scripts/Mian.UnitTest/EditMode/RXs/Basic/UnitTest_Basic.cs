@@ -8,10 +8,12 @@ namespace Main.RXs
         [Test]
         public void Test_SubscribeToTyped()
         {
-            var observer = Substitute.For<IObserver>();
-            var observable = Substitute.For<IRXsObservable<int>>();
-            observable.SubscribeToTyped<int>(observer);
-            observable.Received(1).Subscribe(Arg.Any<IObserver<int>>());
+            var target = 5;
+            var count = 0;
+            using var observer = RXsObserver.FromAction<int>(x => { Assert.AreEqual(target, x); count++; });
+            using var observable = RXsObservable.FromReturn(target);
+            observable.SubscribeToTyped(observer);
+            Assert.AreEqual(1, count);
         }
         [Test]
         public void Test_OnNextToTyped()
@@ -33,6 +35,27 @@ namespace Main.RXs
             var observer = Substitute.For<IRXsObserver<int>>();
             observer.OnErrorToTyped<int>(null);
             (observer as IObserver<int>).Received(1).OnError(null);
+        }
+        [Test]
+        public void Test_Reusable()
+        {
+            var test = TestRXsObserverBaseReuseable.GetFromReusePool();
+            (test as IDisposable).Dispose();
+            Assert.AreEqual(true, test.isRelease);
+        }
+        public class TestRXsObserverBaseReuseable : RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>
+        {
+            public bool isRelease = false;
+            protected override void OnCompleted() { }
+            protected override void OnError(Exception error) { }
+            protected override void OnNext(object value) { }
+            protected override void OnRelease()
+            {
+                isRelease = true;
+                base.OnRelease();
+            }
+            public new static TestRXsObserverBaseReuseable GetFromReusePool()
+                => RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>.GetFromReusePool();
         }
     }
 }

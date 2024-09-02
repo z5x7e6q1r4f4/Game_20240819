@@ -65,10 +65,10 @@ namespace Main
             }
             public override string ToString()
             {
-                var type = typeof(T).Name;
+                var type = typeof(T);
                 var prefab = Prefab?.ToString() ?? "Null";
-                return $"Pool<<color=green>{type}</color>>," +
-                    $"Prefab=<color=green>{prefab}</color>," +
+                return $"Pool<<color=yellow>{type}</color>>," +
+                    $"Prefab=<color=yellow>{prefab}</color>," +
                     $"All=<color=green>{AllCount}</color>," +
                     $"Active=<color=green>{ActiveCount}</color>," +
                     $"Inactive=<color=green>{InactiveCount}</color>";

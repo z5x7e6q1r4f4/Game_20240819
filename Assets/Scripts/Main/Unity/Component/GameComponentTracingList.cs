@@ -12,7 +12,7 @@ namespace Main
         #region IRXsCollection
         public IRXsObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
         public IRXsObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
-        public IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
+        public IRXsObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
         public IRXsObservable<IRXsCollection_AfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
         public int Count => GameComponents.Count;
         GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => ((IRXsCollection_Readonly<GameComponent>)GameComponents)[index];

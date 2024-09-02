@@ -5,7 +5,7 @@ namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_OutputItem : FomulaStep_ComponentBase<InventoryOutput>
     {
-        private readonly DisposableList disposableList = new();
+        private readonly RXsSubscriptionList disposableList = new();
         [field: SerializeField] public RXsCollection_SerializeField<Item> Items { get; private set; } = new();
         public override void EnterStep() => CheckOutput();
         public override void ExitStep() => disposableList.Dispose();

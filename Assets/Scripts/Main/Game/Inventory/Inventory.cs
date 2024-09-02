@@ -32,7 +32,7 @@ namespace Main.Game
         public void RemoveRange(IEnumerable<Item> collection, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveRange(collection, beforeRemove, afterRemove);
         public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveAt(index, beforeRemove, afterRemove);
         public void Clear(bool beforeRemove = true, bool afterRemove = true) => Items.Clear(beforeRemove, afterRemove);
-        public IObservableImmediately<IRXsCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
+        public IRXsObservableImmediately<IRXsCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
         public IRXsObservable<IRXsCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
         public IRXsObservable<IRXsCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
         public IRXsObservable<IRXsCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;

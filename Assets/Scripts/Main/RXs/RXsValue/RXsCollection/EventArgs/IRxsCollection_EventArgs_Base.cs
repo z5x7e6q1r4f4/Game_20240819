@@ -1,7 +1,8 @@
-﻿namespace Main.RXs.Collection
+﻿namespace Main.RXs.RXsCollections
 {
     public interface IRxsCollection_EventArgs_Base
     {
+        RXsCollectionEventArgsType Type { get; }
         IRXsCollection_Readonly Collection { get; }
         int Index { get; }
         object Item { get; }

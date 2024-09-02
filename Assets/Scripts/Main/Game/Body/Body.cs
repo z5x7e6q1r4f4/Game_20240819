@@ -9,7 +9,7 @@ namespace Main.Game
         [field: SerializeField] public RXsCollection_SerializeField<BodyPart> BodyParts { get; private set; } = new();
         public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
         private readonly RXsCollection_SerializeField<GameComponent> bodyComponents = new();
-        private readonly DisposableDictonary disposable = new();
+        private readonly RXsSubscriptionDictonary disposable = new();
         protected override void OnGameComponentAwake()
         {
             BodyParts.LinkItem(this, bodyPart => bodyPart.Body);

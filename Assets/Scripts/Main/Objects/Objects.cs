@@ -1,6 +1,6 @@
 using System;
+using System.Globalization;
 using System.Reflection;
-using UnityEngine;
 
 namespace Main
 {
@@ -14,7 +14,7 @@ namespace Main
             type ??= typeof(T);
             customNew ??= type.GetCustomAttribute<CustomNewAttribute>(true) ?? GetDefaultNew(type);
             if (customNew != null) return customNew.New<T>(type, args);
-            else return (T)Activator.CreateInstance(type, args: args);
+            else return (T)Activator.CreateInstance(type, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, args: args, null);
         }
         public static T Clone<T>(
             T item,

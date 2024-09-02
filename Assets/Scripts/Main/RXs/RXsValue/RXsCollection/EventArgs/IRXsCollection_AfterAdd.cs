@@ -1,4 +1,4 @@
-﻿using Main.RXs.Collection;
+﻿using Main.RXs.RXsCollections;
 
 namespace Main.RXs
 {

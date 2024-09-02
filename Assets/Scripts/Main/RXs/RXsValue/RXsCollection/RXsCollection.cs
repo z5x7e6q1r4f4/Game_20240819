@@ -1,3 +1,4 @@
+using Main.RXs.RXsCollections;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,9 +33,9 @@ namespace Main.RXs
                 if (throwError) throw new ArgumentOutOfRangeException();
                 else return -1;
             }
-            if (beforeAdd && !this.beforeAdd.Invoke(this, index, item, out item)) return -1;
+            if (beforeAdd && !this.beforeAdd.Invoke(this, RXsCollectionEventArgsType.BeforeAdd, index, item, out item)) return -1;
             SerializedCollection.Insert(index, item);
-            if (afterAdd) this.afterAdd.Invoke(this, index, item, out _);
+            if (afterAdd) this.afterAdd.Invoke(this, RXsCollectionEventArgsType.AfterAdd, index, item, out _);
             return index;
         }
         protected int RemoveCore(int index, T item, bool beforeRemove, bool afterRemove, bool throwError)
@@ -44,9 +45,9 @@ namespace Main.RXs
                 if (throwError) throw new ArgumentOutOfRangeException();
                 else return -1;
             }
-            if (beforeRemove && !this.beforeRemove.Invoke(this, index, item, out _)) return -1;
+            if (beforeRemove && !this.beforeRemove.Invoke(this, RXsCollectionEventArgsType.BeforeRemove, index, item, out _)) return -1;
             SerializedCollection.RemoveAt(index);
-            if (afterRemove) this.afterRemove.Invoke(this, index, item, out _);
+            if (afterRemove) this.afterRemove.Invoke(this, RXsCollectionEventArgsType.AfterRemove, index, item, out _);
             return index;
         }
         //Add
@@ -70,7 +71,7 @@ namespace Main.RXs
         public bool Contains(T item) => SerializedCollection.Contains(item);
         //Event
         public IRXsObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd => beforeAdd;
-        public IObservableImmediately<IRXsCollection_AfterAdd<T>> AfterAdd => afterAdd;
+        public IRXsObservableImmediately<IRXsCollection_AfterAdd<T>> AfterAdd => afterAdd;
         public IRXsObservable<IRXsCollection_BeforeRemove<T>> BeforeRemove => beforeRemove;
         public IRXsObservable<IRXsCollection_AfterRemove<T>> AfterRemove => afterRemove;
         private readonly EventHandler beforeAdd;

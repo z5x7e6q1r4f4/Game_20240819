@@ -1,4 +1,4 @@
-﻿namespace Main.RXs.Collection
+﻿namespace Main.RXs.RXsCollections
 {
     public interface IRXsCollection_EventArgs_ModifyBase :
         IRxsCollection_EventArgs_Base
