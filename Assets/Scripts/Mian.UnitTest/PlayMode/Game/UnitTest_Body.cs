@@ -8,7 +8,7 @@ namespace Main.Game
     public class UnitTest_Body
     {
         [Test]
-        public void UnitTest_Body_BodyPart_Link()
+        public void Test_Body_BodyPart_Link()
         {
             var body = new GameObject().AddComponent<Body>();
             Assert.IsNotNull(body);
@@ -28,7 +28,7 @@ namespace Main.Game
             Assert.IsFalse(body.BodyParts.Contains(bodyPart));
         }
         [Test]
-        public void UnitTest_Body_BodyPart_Component()
+        public void Test_Body_BodyPart_Component()
         {
             var body = new GameObject().AddComponent<Body>();
             var bodyPart = new GameObject().AddComponent<BodyPart>();

@@ -28,7 +28,6 @@ namespace Main.RXs
             while (0 < Observers.Count)
             { Observers[0].Dispose(); }
             Observers.Clear();
-            Observers = null;
             base.Dispose();
         }
     }

@@ -41,8 +41,8 @@ namespace Main.Game.FomulaSteps
         {
             subscription.Add(Timer.AfterSet.Immediately().Subscribe(e =>
             {
-                if (e.Property != null) e.Previous.Stop();
-                if (e.Current != null) e.Current.Start();
+                e.Previous?.Stop();
+                e.Current?.Start();
             }));
         }
         public override void ExitStep() => subscription.Dispose();

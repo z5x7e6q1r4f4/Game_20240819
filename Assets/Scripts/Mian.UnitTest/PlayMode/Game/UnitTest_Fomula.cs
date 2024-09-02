@@ -10,6 +10,7 @@ namespace Main.Game
     {
         Item item;
         Body body;
+        TimeNode timeNode;
         BodyPart bodyPart;
         Factory factory;
         InventoryInput inventoryInput;
@@ -18,25 +19,21 @@ namespace Main.Game
         FomulaStep_InputItem inputItem;
         FomulaStep_OutputItem outputItem;
         FomulaStep_Stop stop;
+        FomulaStep_Timer timer;
         [SetUp]
         public void SetUp()
         {
-            Debug.Log("======BeginSetUp======");
             //Item
             item ??= new GameObject("Item").AddComponent<Item>();
             //Body
             if (body == null)
             {
                 body = new GameObject("Body").AddComponent<Body>();
-                body.EnableDebug = true;
+                timeNode = body.AddComponent<TimeNode>();
                 bodyPart = new GameObject("BodyPart").AddComponent<BodyPart>();
-                bodyPart.EnableDebug = true;
                 inventoryInput = bodyPart.AddComponent<InventoryInput>();
-                inventoryInput.EnableDebug = true;
                 inventoryOutput = bodyPart.AddComponent<InventoryOutput>();
-                inventoryOutput.EnableDebug = true;
                 factory = bodyPart.AddComponent<Factory>();
-                factory.EnableDebug = true;
                 body.BodyParts.Add(bodyPart);
                 Assert.IsTrue(bodyPart.BodyComponents.Contains(factory));
                 Assert.IsTrue(bodyPart.BodyComponents.Contains(inventoryInput));
@@ -58,18 +55,15 @@ namespace Main.Game
             if (fomula == null)
             {
                 fomula = new GameObject("Fomula").AddComponent<Fomula>();
-                fomula.EnableDebug = true;
                 inputItem = fomula.AddComponent<FomulaStep_InputItem>();
-                inputItem.EnableDebug = true;
                 outputItem = fomula.AddComponent<FomulaStep_OutputItem>();
-                outputItem.EnableDebug = true;
                 stop = fomula.AddComponent<FomulaStep_Stop>();
+                timer = fomula.AddComponent<FomulaStep_Timer>();
             }
             fomula.FomulaSteps.Clear();
             fomula.FomulaStop();
             inputItem.Items.Clear();
             outputItem.Items.Clear();
-            Debug.Log("======EndSetUp======");
         }
         [Test]
         public void Test_Input()
@@ -101,6 +95,19 @@ namespace Main.Game
             //
             Assert.AreEqual(-1, fomula.Index.Value);
             Assert.IsTrue(inventoryOutput.Contains(item));
+        }
+        [Test]
+        public void Test_Timer()
+        {
+            fomula.FomulaSteps.Add(timer);
+            timer.Target.Value = 10f;
+            fomula.FomulaSteps.Add(stop);
+            //
+            factory.Fomulas.Add(fomula);
+            timeNode.UpdateTime(5f);
+            Assert.AreEqual(0, fomula.Index.Value);
+            timeNode.UpdateTime(5f);
+            Assert.AreEqual(-1, fomula.Index.Value);
         }
     }
 }
