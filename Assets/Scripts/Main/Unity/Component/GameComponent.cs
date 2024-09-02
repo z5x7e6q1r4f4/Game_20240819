@@ -8,23 +8,20 @@ namespace Main
     {
         public bool EnableDebug { get => enableDebug.Value; set => enableDebug.Value = value; }
         [SerializeField, DisableRXsValueDebug] private RXsProperty_SerializeField<bool> enableDebug = new();
-        private readonly DisposableList debugSubscription = new();
+        private readonly RXsSubscriptionList debugSubscription = new();
         //Event
-        public IObservableImmediately<GameComponent> OnGameComponentAwakeEvent
-            => onGameComponentAwakeEvent ??= new(this, CheckHasAwake);
-        public IObservableImmediately<GameComponent> OnGameComponentEnableEvent
-            => onGameComponentEnableEvent ??= new(this, CheckHasEnable);
-        public IObservableImmediately<GameComponent> OnGameComponentDisableEvent
-            => onGameComponentDisableEvent ??= new(this, CheckHasDisable);
-        public RXs.IObservable<GameComponent> OnGameComponentDestroyEvent
+        public IRXsObservableImmediately<GameComponent> OnGameComponentAwakeEvent
+            => onGameComponentAwakeEvent ??= new(observer => { if (hasAwake) observer.OnNext(this); });
+        public IRXsObservableImmediately<GameComponent> OnGameComponentEnableEvent
+            => onGameComponentEnableEvent ??= new(observer => { if (isActiveAndEnabled && hasAwake) observer.OnNext(this); });
+        public IRXsObservableImmediately<GameComponent> OnGameComponentDisableEvent
+            => onGameComponentDisableEvent ??= new(observer => { if (!isActiveAndEnabled) observer.OnNext(this); });
+        public IRXsObservable<GameComponent> OnGameComponentDestroyEvent
             => onGameComponentDestroyEvent ??= new();
-        private EventHandler onGameComponentAwakeEvent;
-        private EventHandler onGameComponentEnableEvent;
-        private EventHandler onGameComponentDisableEvent;
+        private RXsEventHandler<GameComponent> onGameComponentAwakeEvent;
+        private RXsEventHandler<GameComponent> onGameComponentEnableEvent;
+        private RXsEventHandler<GameComponent> onGameComponentDisableEvent;
         private RXsEventHandler<GameComponent> onGameComponentDestroyEvent;
-        private static bool CheckHasAwake(GameComponent gameComponent) => gameComponent.hasAwake;
-        private static bool CheckHasEnable(GameComponent gameComponent) => gameComponent.isActiveAndEnabled;
-        private static bool CheckHasDisable(GameComponent gameComponent) => !gameComponent.isActiveAndEnabled;
         //LifeCycle
         private bool hasAwake = false;
         protected T AwakeSelf<T>() where T : GameComponent
@@ -42,7 +39,7 @@ namespace Main
         {
             enableDebug.AfterSet.Immediately().Subscribe(e =>
             {
-                if (e.Current) { RXsValueDebugUtility.EnableDebug(this, debugSubscription); }
+                if (e.Current) { RXsOperation.EnableDebug(this, debugSubscription); }
                 else { debugSubscription.Dispose(); }
             });
         }

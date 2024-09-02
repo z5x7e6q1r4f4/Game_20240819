@@ -10,10 +10,10 @@ namespace Main
         private readonly RXsCollection_SerializeField<GameComponent> gameComponents = new();
         protected override void OnGameComponentAwake() => gameComponents.AddRange(GetComponents<GameComponent>());
         #region IRXsCollection
-        public RXs.IObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
-        public RXs.IObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
-        public IObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
-        public RXs.IObservable<IRXsCollection_AfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
+        public IRXsObservable<IRXsCollection_BeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
+        public IRXsObservable<IRXsCollection_BeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
+        public IRXsObservableImmediately<IRXsCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
+        public IRXsObservable<IRXsCollection_AfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
         public int Count => GameComponents.Count;
         GameComponent IRXsCollection_Readonly<GameComponent>.this[int index] => ((IRXsCollection_Readonly<GameComponent>)GameComponents)[index];
         public GameComponent this[int index] { get => GameComponents[index]; set => GameComponents[index] = value; }

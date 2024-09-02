@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Main.RXs.RXsCollections;
+using System;
 
 namespace Main.RXs
 {
@@ -6,24 +7,23 @@ namespace Main.RXs
     {
         private class EventHandler :
             RXsEventHandler<EventArgs>,
-            IObservableImmediately<EventArgs>
+            IRXsObservableImmediately<EventArgs>
         {
-            private readonly ISubject<EventArgs> immediately;
-            public bool Invoke(IRXsCollection_Readonly<T> collection, int index, T item, out T modified)
+            public bool Invoke(IRXsCollection_Readonly<T> collection, RXsCollectionEventArgsType type, int index, T item, out T modified)
             {
-                using var eventArgs = EventArgs.GetFromReusePool(collection, index, item);
+                using var eventArgs = EventArgs.GetFromReusePool(collection, type, index, item);
                 Invoke(eventArgs);
                 modified = eventArgs.Modified;
                 return eventArgs.IsEnable;
             }
-            public EventHandler(Action<System.IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
+            public EventHandler(Action<IObserver<EventArgs>> immediatelyAction = null) : base(immediatelyAction) { }
         }
-        private void AfterAddImmediately(System.IObserver<EventArgs> observer)
+        private void AfterAddImmediately(IObserver<EventArgs> observer)
         {
             var index = 0;
             foreach (var item in this)
             {
-                using var eventArgs = EventArgs.GetFromReusePool(this, index, item);
+                using var eventArgs = EventArgs.GetFromReusePool(this, RXsCollectionEventArgsType.AfterAdd, index, item);
                 observer.OnNext(eventArgs);
                 index++;
             }

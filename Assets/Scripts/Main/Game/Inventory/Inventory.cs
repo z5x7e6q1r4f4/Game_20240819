@@ -32,10 +32,10 @@ namespace Main.Game
         public void RemoveRange(IEnumerable<Item> collection, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveRange(collection, beforeRemove, afterRemove);
         public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveAt(index, beforeRemove, afterRemove);
         public void Clear(bool beforeRemove = true, bool afterRemove = true) => Items.Clear(beforeRemove, afterRemove);
-        public IObservableImmediately<IRXsCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
-        public IObservable<IRXsCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
-        public IObservable<IRXsCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
-        public IObservable<IRXsCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
+        public IRXsObservableImmediately<IRXsCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
+        public IRXsObservable<IRXsCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
+        public IRXsObservable<IRXsCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
+        public IRXsObservable<IRXsCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
         public bool Contains(Item item) => Items.Contains(item);
         public int IndexOf(Item item) => Items.IndexOf(item);
         public Item GetAt(int index, bool indexCheck = true) => Items.GetAt(index, indexCheck);

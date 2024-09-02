@@ -7,17 +7,17 @@ namespace Main.Game.FomulaSteps
     {
         [field: SerializeField] public RXsProperty_SerializeField<float> Target { get; private set; } = new();
         private RXsProperty_SerializeField<TimeNode> timeNode = new();
-        protected IRXsProperty_Readonly<Timer> Timer => timer;
-        private readonly RXsProperty_SerializeField<Timer> timer = new();
-        private DisposableList subscription = new();
+        protected IRXsProperty_Readonly<RXsTimer> Timer => timer;
+        private readonly RXsProperty_SerializeField<RXsTimer> timer = new();
+        private RXsSubscriptionList subscription = new();
         protected override void OnGameComponentAwake()
         {
             base.OnGameComponentAwake();
             BodyComponents.FirstOrDefault(timeNode);
-            DisposableList timerSubscription = new();
+            RXsSubscriptionList timerSubscription = new();
             timeNode.AfterSet.Immediately().Subscribe(e =>
             {
-                Timer t = timer.Value;
+                RXsTimer t = timer.Value;
                 if (t != null)
                 {
                     t.ReleaseToReusePool();

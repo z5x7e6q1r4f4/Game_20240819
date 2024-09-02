@@ -1,7 +1,10 @@
-﻿namespace Main.RXs
+﻿using Main.RXs.RXsProperties;
+
+namespace Main.RXs
 {
     public interface IRXsProperty_AfterSet
     {
+        RXsPropertyEventArgsType Type { get; }
         IRXsProperty_Readonly Property { get; }
         object Previous { get; }
         object Current { get; }

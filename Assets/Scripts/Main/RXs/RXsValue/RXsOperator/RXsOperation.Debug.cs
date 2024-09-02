@@ -1,0 +1,48 @@
+using System;
+using UnityEngine;
+using System.Reflection;
+
+namespace Main.RXs
+{
+    public class DisableRXsValueDebugAttribute : Attribute { }
+    partial class RXsOperation
+    {
+        public static IRXsSubscription EnableDebug(this IRXsCollection_Readonly collection, string name = null)
+        {
+            return new RXsSubscriptionList(
+                collection.AfterAdd.Order(int.MinValue).EnableDebug(name),
+                collection.AfterRemove.Order(int.MinValue).EnableDebug(name)
+                );
+        }
+        public static IRXsSubscription EnableDebug(this IRXsProperty_Readonly property, string name = null)
+        {
+            return property.AfterSet.Order(int.MinValue).EnableDebug(name);
+        }
+        public static IRXsSubscription EnableDebug(object obj, RXsSubscriptionList disposableList = null)
+        {
+            disposableList ??= new();
+            disposableList.Dispose();
+            var type = obj.GetType();
+            while (type != null)
+            {
+                foreach (var fieldInfo in type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance))
+                {
+                    if (fieldInfo.GetCustomAttribute<DisableRXsValueDebugAttribute>() != null) continue;
+                    var value = fieldInfo.GetValue(obj);
+                    if (value is IRXsProperty_Readonly property)
+                    {
+                        disposableList.Add(property.EnableDebug($"<color=white>{obj}</color> <color=green>{fieldInfo.Name()}</color>"));
+                        continue;
+                    }
+                    if (value is IRXsCollection_Readonly collection)
+                    {
+                        disposableList.Add(collection.EnableDebug($"<color=white>{obj}</color> <color=green>{fieldInfo.Name()}</color>"));
+                        continue;
+                    }
+                }
+                type = type.BaseType;
+            }
+            return disposableList;
+        }
+    }
+}

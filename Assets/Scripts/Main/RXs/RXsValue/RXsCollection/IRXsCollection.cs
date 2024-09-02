@@ -8,8 +8,8 @@ namespace Main.RXs
     public interface IRXsCollection : IRXsCollection_Readonly
     {
         new object this[int index] { get; set; }
-        IObservable<IRXsCollection_BeforeAdd> BeforeAdd { get; }
-        IObservable<IRXsCollection_BeforeRemove> BeforeRemove { get; }
+        IRXsObservable<IRXsCollection_BeforeAdd> BeforeAdd { get; }
+        IRXsObservable<IRXsCollection_BeforeRemove> BeforeRemove { get; }
         int Add(object item, bool beforeAdd = true, bool afterAdd = true);
         void AddRange(IEnumerable collection, bool beforeAdd = true, bool afterAdd = true);
         void Clear(bool beforeRemove = true, bool afterRemove = true);
@@ -22,8 +22,8 @@ namespace Main.RXs
     public interface IRXsCollection<T> : IRXsCollection, IRXsCollection_Readonly<T>
     {
         object IRXsCollection.this[int index] { get => this[index]; set => this[index] = (T)value; }
-        IObservable<IRXsCollection_BeforeAdd> IRXsCollection.BeforeAdd => BeforeAdd;
-        IObservable<IRXsCollection_BeforeRemove> IRXsCollection.BeforeRemove => BeforeRemove;
+        IRXsObservable<IRXsCollection_BeforeAdd> IRXsCollection.BeforeAdd => BeforeAdd;
+        IRXsObservable<IRXsCollection_BeforeRemove> IRXsCollection.BeforeRemove => BeforeRemove;
         int IRXsCollection.Add(object item, bool beforeAdd, bool afterAdd) => Add((T)item, beforeAdd, afterAdd);
         void IRXsCollection.AddRange(IEnumerable collection, bool beforeAdd, bool afterAdd) => Add(collection.OfType<T>(), beforeAdd, afterAdd);
         int IRXsCollection.Insert(int index, object item, bool beforeAdd, bool afterAdd) => Insert(index, (T)item, beforeAdd, afterAdd);
@@ -32,8 +32,8 @@ namespace Main.RXs
         void IRXsCollection.SetAt(int index, object value, bool indexCheck, bool invokeEvent) => SetAt(index, (T)value, indexCheck, invokeEvent);
         //
         new T this[int index] { get; set; }
-        new IObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd { get; }
-        new IObservable<IRXsCollection_BeforeRemove<T>> BeforeRemove { get; }
+        new IRXsObservable<IRXsCollection_BeforeAdd<T>> BeforeAdd { get; }
+        new IRXsObservable<IRXsCollection_BeforeRemove<T>> BeforeRemove { get; }
         int Add(T item, bool beforeAdd = true, bool afterAdd = true);
         void AddRange(IEnumerable<T> collection, bool beforeAdd = true, bool afterAdd = true);
         int Insert(int index, T item, bool beforeAdd = true, bool afterAdd = true);
