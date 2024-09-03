@@ -21,6 +21,7 @@ namespace Main.RXs
             //Property
             T IRXsProperty_Readonly<T>.Value => property.Value;
             IRXsObservableImmediately<IRXsProperty_AfterSet<T>> IRXsProperty_Readonly<T>.AfterSet => property.AfterSet;
+            T IRXsProperty_Readonly<T>.GetValue(bool beforeGet) => property.GetValue(beforeGet);
             //Reuse
             void IDisposable.Dispose() => this.ReleaseToReusePool();
             void IReuseable.IOnRelease.OnRelease()
