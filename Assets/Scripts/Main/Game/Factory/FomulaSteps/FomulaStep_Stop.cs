@@ -1,8 +1,12 @@
+using Main.RXs;
 namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_Stop : FomulaStep
     {
-        public override void EnterStep() => Fomula.FomulaStop();
-        public override void ExitStep() { }
+        protected override void OnGameComponentEnable()
+        {
+            base.OnGameComponentEnable();
+            OnEnterStep.Subscribe(Fomula.FomulaStop);
+        }
     }
 }

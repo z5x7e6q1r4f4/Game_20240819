@@ -8,7 +8,6 @@ namespace Main
     {
         public bool EnableDebug { get => enableDebug.Value; set => enableDebug.Value = value; }
         [SerializeField, DisableRXsValueDebug] private RXsProperty_SerializeField<bool> enableDebug = new();
-        private readonly RXsSubscriptionList debugSubscription = new();
         //Event
         public IRXsObservableImmediately<GameComponent> OnGameComponentAwakeEvent
             => onGameComponentAwakeEvent ??= new(observer => { if (hasAwake) observer.OnNext(this); });
@@ -37,11 +36,13 @@ namespace Main
         }
         private void AwakeGameComponentDebug()
         {
-            enableDebug.AfterSet.Immediately().Subscribe(e =>
-            {
-                if (e.Current) { RXsOperation.EnableDebug(this, debugSubscription); }
-                else { debugSubscription.Dispose(); }
-            });
+            enableDebug.AfterSet.
+                Immediately().
+                Where(e => e.Current).
+                Subscribe(() =>
+                    RXsOperation.EnableDebug(this).
+                    Until(enableDebug.AfterSet.Immediately().Where(e => !e.Current))
+                );
         }
         protected virtual void OnGameComponentAwake() { }
         protected virtual void OnGameComponentEnable() { }

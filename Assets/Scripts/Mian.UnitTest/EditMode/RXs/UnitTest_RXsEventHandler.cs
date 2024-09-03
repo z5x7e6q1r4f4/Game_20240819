@@ -6,7 +6,7 @@ namespace Main.RXs
     public class UnitTest_RXsEventHandler
     {
         [Test]
-        public void Subscribe()
+        public void Test_Subscribe()
         {
             var input = "input";
             var eventHandler = new RXsEventHandler<string>();
@@ -25,7 +25,7 @@ namespace Main.RXs
             Assert.AreEqual(3, invokeCount);
         }
         [Test]
-        public void Clear()
+        public void Test_Clear()
         {
             Reuse.Clear();
             var eventHandler = new RXsEventHandler<string>();

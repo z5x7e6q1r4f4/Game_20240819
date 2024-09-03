@@ -3,18 +3,8 @@ using NUnit.Framework;
 using System;
 namespace Main.RXs
 {
-    public class UnitTest_Basic
+    public class UnitTest_RXsObserver
     {
-        [Test]
-        public void Test_SubscribeToTyped()
-        {
-            var target = 5;
-            var count = 0;
-            using var observer = RXsObserver.FromAction<int>(x => { Assert.AreEqual(target, x); count++; });
-            using var observable = RXsObservable.FromReturn(target);
-            observable.SubscribeToTyped(observer);
-            Assert.AreEqual(1, count);
-        }
         [Test]
         public void Test_OnNextToTyped()
         {
@@ -35,6 +25,35 @@ namespace Main.RXs
             var observer = Substitute.For<IRXsObserver<int>>();
             observer.OnErrorToTyped<int>(null);
             (observer as IObserver<int>).Received(1).OnError(null);
+        }
+        [Test]
+        public void Test_FromAction()
+        {
+            int nextValue = default;
+            bool hasOnNext = default;
+            bool hasOnCompleted = default;
+            bool hasOnError = default;
+            bool hasDispose = default;
+            var observer = RXsObserver.FromAction<int>(
+                e => { hasOnNext = true; nextValue = e; },
+                () => hasOnCompleted = true,
+                e => hasOnError = true,
+                () => hasDispose = true
+                );
+            Assert.AreEqual(default(int), nextValue);
+            Assert.AreEqual(false, hasOnNext);
+            Assert.AreEqual(false, hasOnCompleted);
+            Assert.AreEqual(false, hasOnError);
+            Assert.AreEqual(false, hasDispose);
+            observer.OnNext(1);
+            observer.OnCompletedToTyped<int>();
+            observer.OnErrorToTyped<int>(null);
+            observer.Dispose();
+            Assert.AreEqual(1, nextValue);
+            Assert.AreEqual(true, hasOnNext);
+            Assert.AreEqual(true, hasOnCompleted);
+            Assert.AreEqual(true, hasOnError);
+            Assert.AreEqual(true, hasDispose);
         }
         [Test]
         public void Test_Reusable()

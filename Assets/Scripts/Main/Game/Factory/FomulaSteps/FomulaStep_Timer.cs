@@ -1,4 +1,5 @@
 using Main.RXs;
+using System;
 using UnityEngine;
 
 namespace Main.Game.FomulaSteps
@@ -9,42 +10,31 @@ namespace Main.Game.FomulaSteps
         private RXsProperty_SerializeField<TimeNode> timeNode = new();
         protected IRXsProperty_Readonly<RXsTimer> Timer => timer;
         private readonly RXsProperty_SerializeField<RXsTimer> timer = new();
-        private RXsSubscriptionList subscription = new();
         protected override void OnGameComponentAwake()
         {
             base.OnGameComponentAwake();
             BodyComponents.FirstOrDefault(timeNode);
-            RXsSubscriptionList timerSubscription = new();
-            timeNode.AfterSet.Immediately().Subscribe(e =>
-            {
-                RXsTimer t = timer.Value;
-                if (t != null)
-                {
-                    t.ReleaseToReusePool();
-                    timerSubscription.Dispose();
-                }
-                if (e.Current != null)
-                {
-                    t = e.Current.GetTimer(0, state: TimeState.Pause);
-                    timerSubscription.Add(Target.AfterSet.Immediately().Subscribe(e => t.Target = e.Current));
-                    timerSubscription.Add(t.OnArrive.Subscribe(timer =>
-                    {
-                        Fomula.FomulaNext();
-                        timer.Stop();
-                    }));
-                    timer.Value = t;
-                }
-                else { timer.Value = null; }
-            });
+            timeNode.AfterSet.Immediately().Subscribe(SetUpTimer);
+            OnEnterStep.Subscribe(StartTimer);
         }
-        public override void EnterStep()
+        private void SetUpTimer(IRXsProperty_AfterSet<TimeNode> e)
         {
-            subscription.Add(Timer.AfterSet.Immediately().Subscribe(e =>
+            timer.Value?.ReleaseToReusePool();
+            if (e.Current != null)
+            {
+                timer.Value = e.Current.GetTimer(0, state: TimeState.Pause);
+                Target.AfterSet.Immediately().Subscribe(e => timer.Value.Target = e.Current).Until(timer.AfterSet);
+                timer.Value.OnArrive.Subscribe(timer => { Fomula.FomulaNext(); timer.Stop(); }).Until(timer.AfterSet);
+            }
+            else { timer.Value = null; }
+        }
+        private void StartTimer()
+        {
+            Timer.AfterSet.Immediately().Subscribe((e) =>
             {
                 e.Previous?.Stop();
                 e.Current?.Start();
-            }));
+            }).Until(OnExitStep);
         }
-        public override void ExitStep() => subscription.Dispose();
     }
 }

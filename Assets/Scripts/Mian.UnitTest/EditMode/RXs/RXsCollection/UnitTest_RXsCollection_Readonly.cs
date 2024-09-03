@@ -8,7 +8,7 @@ namespace Main.RXs.RXsCollections
     {
         private new IRXsCollection_Readonly<string> collection => base.collection;
         [Test]
-        public void AfterAdd_Data([Values(0, 1, 2)] int index, [Values("a", "b", "c")] string item)
+        public void Test_AfterAdd_Data([Values(0, 1, 2)] int index, [Values("a", "b", "c")] string item)
         {
             using var _ = collection.AfterAdd.Subscribe(e =>
                 {
@@ -19,7 +19,7 @@ namespace Main.RXs.RXsCollections
             (collection as RXsCollection_SerializeField<string>).Insert(index, item);
         }
         [Test]
-        public void AfterAdd_Count([Values] bool afterAdd)
+        public void Test_AfterAdd_Count([Values] bool afterAdd)
         {
             var count = 0;
             using var _ = collection.AfterAdd.Subscribe(e => count++);
@@ -28,14 +28,14 @@ namespace Main.RXs.RXsCollections
             else Assert.AreEqual(0, count);
         }
         [Test]
-        public void AfterAdd_Immediately()
+        public void Test_AfterAdd_Immediately()
         {
             var count = 0;
             using var _ = collection.AfterAdd.Immediately().Subscribe(e => count++);
             Assert.AreEqual(count, collection.Count);
         }
         [Test]
-        public void AfterRemove_Data([ValueSource(nameof(items))] string item)
+        public void Test_AfterRemove_Data([ValueSource(nameof(items))] string item)
         {
             var index = collection.IndexOf(item);
             using var _ = collection.AfterRemove.Subscribe(e =>
@@ -47,7 +47,7 @@ namespace Main.RXs.RXsCollections
             (collection as RXsCollection_SerializeField<string>).Remove(item);
         }
         [Test]
-        public void AfterRemove_Count([Values] bool afterRemove)
+        public void Test_AfterRemove_Count([Values] bool afterRemove)
         {
             var count = 0;
             using var _ = collection.AfterRemove.Subscribe(e => count++);

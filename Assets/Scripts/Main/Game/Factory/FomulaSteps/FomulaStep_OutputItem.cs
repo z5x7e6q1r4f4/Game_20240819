@@ -5,10 +5,12 @@ namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_OutputItem : FomulaStep_ComponentBase<InventoryOutput>
     {
-        private readonly RXsSubscriptionList disposableList = new();
         [field: SerializeField] public RXsCollection_SerializeField<Item> Items { get; private set; } = new();
-        public override void EnterStep() => CheckOutput();
-        public override void ExitStep() => disposableList.Dispose();
+        protected override void OnGameComponentAwake()
+        {
+            base.OnGameComponentAwake();
+            OnEnterStep.Subscribe(CheckOutput);
+        }
         private void CheckOutput()
         {
             foreach (var inventory in BodyPartComponents)
@@ -20,13 +22,14 @@ namespace Main.Game.FomulaSteps
                     return;
                 }
             }
-            if (disposableList.Count != 0) return;
-            disposableList.Add(BodyComponents.AfterAdd.Subscribe(CheckOutput));
-            disposableList.Add(BodyComponents.AfterAdd.Immediately().Subscribe(e =>
-            {
-                disposableList.Add(e.Item.AfterRemove.Subscribe(CheckOutput));
-                disposableList.Add(e.Item.Capacity.AfterSet.Subscribe(CheckOutput));
-            }));
+            RXsSubscription.FromList(
+                BodyComponents.AfterAdd.Subscribe(CheckOutput),
+                BodyComponents.AfterAdd.Immediately().Subscribe(e =>
+                {
+                    e.Item.AfterRemove.Subscribe(CheckOutput).Until(OnExitStep);
+                    e.Item.Capacity.AfterSet.Subscribe(CheckOutput).Until(OnExitStep);
+                })).
+            Until(OnExitStep);
         }
     }
 }

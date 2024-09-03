@@ -6,7 +6,7 @@ namespace Main.RXs.RXsCollections
     public class UnitTest_RXsCollection_BeforeRemove : UnitTest_RXsCollection_Base
     {
         [Test]
-        public void BeforeRemove_Data([ValueSource(nameof(items))] string item)
+        public void Test_BeforeRemove_Data([ValueSource(nameof(items))] string item)
         {
             var index = collection.IndexOf(item);
             using var _ = collection.BeforeRemove.Subscribe(e =>
@@ -19,7 +19,7 @@ namespace Main.RXs.RXsCollections
             collection.Remove(item);
         }
         [Test]
-        public void BeforeRemove_Count([Values] bool beforeRemove)
+        public void Test_BeforeRemove_Count([Values] bool beforeRemove)
         {
             var count = 0;
             using var _ = collection.BeforeRemove.Subscribe(e => count++);
@@ -28,7 +28,7 @@ namespace Main.RXs.RXsCollections
             else Assert.AreEqual(0, count);
         }
         [Test]
-        public void BeforeRemove_IsEnable([Values] bool isEnable)
+        public void Test_BeforeRemove_IsEnable([Values] bool isEnable)
         {
             using var _ = collection.BeforeRemove.Subscribe(e => e.IsEnable = isEnable);
             collection.RemoveAt(1);

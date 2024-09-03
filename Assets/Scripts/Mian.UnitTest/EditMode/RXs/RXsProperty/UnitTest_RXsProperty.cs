@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Main.RXs.Property
+namespace Main.RXs.RXsProperty
 {
     public class UnitTest_RXsProperty
     {
@@ -14,7 +14,7 @@ namespace Main.RXs.Property
             Assert.AreEqual(value, property.Value);
         }
         [Test]
-        public void SetValue([Values] bool beforeSet, [Values] bool afterSet)
+        public void Test_SetValue([Values] bool beforeSet, [Values] bool afterSet)
         {
             property.SetValue(newValue, beforeSet, afterSet);
             Assert.AreEqual(newValue, property.Value);
@@ -23,7 +23,7 @@ namespace Main.RXs.Property
         }
         //Event
         [Test]
-        public void BeforeSet_Data()
+        public void Test_BeforeSet_Data()
         {
             using var _ = property.BeforeSet.Subscribe(e =>
               {
@@ -35,14 +35,14 @@ namespace Main.RXs.Property
             property.Value = newValue;
         }
         [Test]
-        public void BeforeSet_Count([Values] bool beforeSet)
+        public void Test_BeforeSet_Count([Values] bool beforeSet)
         {
             var count = 0;
             using var _ = property.BeforeSet.Subscribe(e => count++);
             property.SetValue(newValue, beforeSet: beforeSet);
         }
         [Test]
-        public void BeforeSet_Modified([Values(null, "modified")] string modified)
+        public void Test_BeforeSet_Modified([Values(null, "modified")] string modified)
         {
             var useModified = modified != null;
             using var _ = property.BeforeSet.Subscribe(e => { if (useModified) e.Modified = modified; });
@@ -51,7 +51,7 @@ namespace Main.RXs.Property
             else Assert.AreEqual(newValue, property.Value);
         }
         [Test]
-        public void BeforeSet_IsEnable([Values] bool isEnable)
+        public void Test_BeforeSet_IsEnable([Values] bool isEnable)
         {
             using var _ = property.BeforeSet.Subscribe(e => e.IsEnable = isEnable);
             property.SetValue(newValue);
@@ -60,7 +60,7 @@ namespace Main.RXs.Property
         }
         //
         [Test]
-        public void AfterSet_Data()
+        public void Test_AfterSet_Data()
         {
             using var _ = property.AfterSet.Subscribe(e =>
             {
@@ -71,7 +71,7 @@ namespace Main.RXs.Property
             property.Value = newValue;
         }
         [Test]
-        public void AfterSet_Count([Values] bool afterSet)
+        public void Test_AfterSet_Count([Values] bool afterSet)
         {
             var count = 0;
             using var _ = property.AfterSet.Subscribe(e => count++);
@@ -80,7 +80,7 @@ namespace Main.RXs.Property
             else Assert.AreEqual(0, count);
         }
         [Test]
-        public void AfterSet_IsEnable([Values] bool isEnable)
+        public void Test_AfterSet_IsEnable([Values] bool isEnable)
         {
             var count = 0;
             using var _1 = property.BeforeSet.Subscribe(e => e.IsEnable = isEnable);
@@ -90,7 +90,7 @@ namespace Main.RXs.Property
             else Assert.AreEqual(0, count);
         }
         [Test]
-        public void AfterSet_Modified([Values(null, "modified")] string modified)
+        public void Test_AfterSet_Modified([Values(null, "modified")] string modified)
         {
             var useModified = modified != null;
             using var _1 = property.BeforeSet.Subscribe(e => { if (useModified) e.Modified = modified; });

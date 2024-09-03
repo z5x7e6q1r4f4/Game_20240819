@@ -5,7 +5,7 @@ namespace Main.RXs.RXsCollections
     public class UnitTest_RXsCollection_AfterRemove : UnitTest_RXsCollection_Base
     {
         [Test]
-        public void AfterRemove_Data([ValueSource(nameof(items))] string item)
+        public void Test_AfterRemove_Data([ValueSource(nameof(items))] string item)
         {
             var index = collection.IndexOf(item);
             using var _ = collection.AfterRemove.Subscribe(e =>
@@ -17,7 +17,7 @@ namespace Main.RXs.RXsCollections
             collection.Remove(item);
         }
         [Test]
-        public void AfterRemove_Count([Values] bool afterRemove)
+        public void Test_AfterRemove_Count([Values] bool afterRemove)
         {
             var count = 0;
             using var _ = collection.AfterRemove.Subscribe(e => count++);
@@ -26,7 +26,7 @@ namespace Main.RXs.RXsCollections
             else Assert.AreEqual(0, count);
         }
         [Test]
-        public void AfterRemove_IsEnable([Values] bool isEnable)
+        public void Test_AfterRemove_IsEnable([Values] bool isEnable)
         {
             var count = 0;
             using var _1 = collection.BeforeRemove.Subscribe(e => e.IsEnable = isEnable);
