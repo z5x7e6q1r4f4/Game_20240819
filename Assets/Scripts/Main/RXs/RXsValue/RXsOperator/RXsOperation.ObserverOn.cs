@@ -12,13 +12,11 @@ namespace Main.RXs
             result ??= new RXsCollection_SerializeField<TResult>();
             IRXsSubscription subscription = null;
             return RXsOperatorToCollection<TResult>.GetFromReusePool(
-                RXsSubscription.FromList(
                     source.AfterSet.Immediately().Subscribe(e =>
                     {
                         if (subscription != null) { subscription.Dispose(); subscription = null; }
                         if (e.Current != null) { var target = func(e.Current); subscription = target.ConnectTo(result); }
-                    }),
-                    RXsSubscription.FromAction(onRelease: () => subscription?.Dispose())),
+                    }).Add(onRelease: () => subscription?.Dispose()),
                     result);
         }
         public static IRXsOperatorToProperty<TResult> ObserverOn<TSource, TResult>(
@@ -29,13 +27,11 @@ namespace Main.RXs
             result ??= new RXsProperty_SerializeField<TResult>();
             IRXsSubscription subscription = null;
             return RXsOperatorToProperty<TResult>.GetFromReusePool(
-                  RXsSubscription.FromList(
                   source.AfterSet.Immediately().Subscribe(e =>
                   {
                       if (subscription != null) { subscription.Dispose(); subscription = null; }
                       if (e.Current != null) { var target = func(e.Current); subscription = target.ConnectTo(result); }
-                  }),
-                  RXsSubscription.FromAction(onRelease: () => subscription?.Dispose())),
+                  }).Add(onRelease: () => subscription?.Dispose()),
                   result);
         }
     }

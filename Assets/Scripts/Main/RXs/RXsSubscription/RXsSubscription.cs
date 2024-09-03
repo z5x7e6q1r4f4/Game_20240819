@@ -48,5 +48,13 @@ namespace Main.RXs
         }
         public static IRXsSubscription FromList(params IRXsSubscription[] subscriptions)
             => FromList(subscriptions.AsEnumerable());
+        public static IRXsSubscription Add(this IRXsSubscription subscription, params IRXsSubscription[] subscriptions)
+            => FromList(subscription, FromList(subscriptions));
+        public static IRXsSubscription Add(this IRXsSubscription subscription, Action onSubscribe = null, Action onUnsubscribe = null, Action onRelease = null)
+            => FromList(subscription, FromAction(onSubscribe, onUnsubscribe, onRelease));
+        public static void Until<T>(this IRXsSubscription subscription, IRXsObservable<T> onNext)
+            => onNext.Take(1).Subscribe((self, _) => { subscription.Dispose(); self.Dispose(); });
+        public static void Until<T>(this IRXsSubscription subscription, IRXsObservable onNext)
+            => onNext.Take(1).Subscribe((self, _) => { subscription.Dispose(); self.Dispose(); });
     }
 }

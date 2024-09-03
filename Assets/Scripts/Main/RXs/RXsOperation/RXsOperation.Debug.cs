@@ -11,7 +11,7 @@ namespace Main.RXs
                 {
                     UnityEngine.Debug.Log($"{(name != null ? name + " " : string.Empty)}{e}");
                     observer.OnNext(e);
-                }, onRelease: observer is IDisposable disposable ? disposable.Dispose : null);
+                }, onDispose: observer.Dispose);
                 if (autoDispose) self.Dispose();
                 return sub;
             });
@@ -22,7 +22,7 @@ namespace Main.RXs
                  {
                      UnityEngine.Debug.Log($"{(name != null ? name + " " : string.Empty)}{e}");
                      observer.OnNext(e);
-                 }, onRelease: observer is IDisposable disposable ? disposable.Dispose : null);
+                 }, onDispose: observer.Dispose);
                 if (autoDispose) self.Dispose();
                 return sub;
             });

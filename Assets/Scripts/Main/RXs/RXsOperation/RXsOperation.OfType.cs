@@ -11,7 +11,7 @@ namespace Main.RXs
                 {
                     if (e is T typed) { observer.OnNext(typed); return; }
                     if (Equals(e, default(T))) { observer.OnNext(default); return; }
-                }, onRelease: observer is IDisposable disposable ? disposable.Dispose : null);
+                }, onDispose: observer.Dispose);
                 if (autoDispose) self.Dispose();
                 return sub;
             });
