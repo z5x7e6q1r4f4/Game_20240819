@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using System.Reflection;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace Main.RXs
 {
@@ -9,7 +11,7 @@ namespace Main.RXs
     {
         public static IRXsSubscription EnableDebug(this IRXsCollection_Readonly collection, string name = null)
         {
-            return new RXsSubscriptionList(
+            return RXsSubscription.FromList(
                 collection.AfterAdd.Order(int.MinValue).EnableDebug(name),
                 collection.AfterRemove.Order(int.MinValue).EnableDebug(name)
                 );
@@ -18,10 +20,9 @@ namespace Main.RXs
         {
             return property.AfterSet.Order(int.MinValue).EnableDebug(name);
         }
-        public static IRXsSubscription EnableDebug(object obj, RXsSubscriptionList disposableList = null)
+        public static IRXsSubscription EnableDebug(object obj)
         {
-            disposableList ??= new();
-            disposableList.Dispose();
+            List<IRXsSubscription> disposableList = new();
             var type = obj.GetType();
             while (type != null)
             {
@@ -42,7 +43,7 @@ namespace Main.RXs
                 }
                 type = type.BaseType;
             }
-            return disposableList;
+            return RXsSubscription.FromList(disposableList);
         }
     }
 }

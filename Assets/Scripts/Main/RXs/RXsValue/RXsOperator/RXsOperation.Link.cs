@@ -5,7 +5,7 @@ namespace Main.RXs
     partial class RXsOperation
     {
         public static IRXsSubscription LinkItem<TCollectionSelf, TItem>(this IRXsCollection_Readonly<TItem> source, TCollectionSelf self, Func<TItem, IRXsProperty<TCollectionSelf>> func)
-            => new RXsSubscriptionList(
+            => RXsSubscription.FromList(
                     source.AfterAdd.Immediately().Subscribe(e =>
                     {
                         if (e.Item == null) return;

@@ -30,6 +30,7 @@ namespace Main.RXs
         {
             beforeSet = new();
             afterSet = new(AfterSetImmediately);
+            beforeGet = new();
             Value = value;
         }
     }

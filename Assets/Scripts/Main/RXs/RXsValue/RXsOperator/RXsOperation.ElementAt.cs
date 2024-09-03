@@ -6,7 +6,7 @@ namespace Main.RXs
         {
             result ??= new RXsProperty_SerializeField<T>();
             return RXsOperatorToProperty<T>.GetFromReusePool(
-                  new RXsSubscriptionList(
+                   RXsSubscription.FromList(
                       source.AfterAdd.Immediately().Subscribe(e => { if (e.Index == index) result.Value = e.Item; }),
                       source.AfterRemove.Subscribe(e => { if (e.Index == index) result.Value = source.GetAt(index); })),
                   result);

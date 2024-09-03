@@ -17,7 +17,7 @@ namespace Main.RXs
         {
             result ??= new RXsCollection_SerializeField<T>();
             return RXsOperatorToCollection<T>.GetFromReusePool(
-                new RXsSubscriptionList(
+                 RXsSubscription.FromList(
                     source.AfterAdd.Immediately().Subscribe(e =>
                     {
                         if (e.Item is T typed) { result.Add(typed); return; }

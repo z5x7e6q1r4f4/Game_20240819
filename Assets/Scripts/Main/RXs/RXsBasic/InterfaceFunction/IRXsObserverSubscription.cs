@@ -4,7 +4,8 @@ namespace Main.RXs
 {
     public interface IRXsObserverSubscription : IRXsObserver, IRXsSubscription
     {
-        IRXsSubscription Subscription { get; set; }
+        void AddSubscription(IRXsSubscription subscription);
+        void RemoveSubscription(IRXsSubscription subscription, bool autoDispose = true);
     }
     public interface IRXsObserverSubscription<in T> : IRXsObserver<T>, IRXsSubscription, IRXsObserverSubscription { }
 }

@@ -6,7 +6,7 @@ namespace Main.RXs
     {
         public static IRXsOperatorToCollection<T> ConnectTo<T>(this IRXsCollection_Readonly<T> source, IRXsCollection<T> result)
             => RXsOperatorToCollection<T>.GetFromReusePool(
-                new RXsSubscriptionList(
+                 RXsSubscription.FromList(
                     source.AfterAdd.Immediately().Subscribe(e => result.Add(e.Item)),
                     source.AfterRemove.Subscribe(e => result.Remove(e.Item))),
                 result);

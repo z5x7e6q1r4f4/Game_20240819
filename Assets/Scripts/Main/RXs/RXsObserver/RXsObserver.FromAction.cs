@@ -4,7 +4,7 @@ namespace Main.RXs
 {
     partial class RXsObserver
     {
-        public class ObserverFromAction<T> :
+        private class ObserverFromAction<T> :
             RXsObserverBaseReusable<ObserverFromAction<T>, T>
         {
             private Action<IRXsSubscription, T> onNext;
@@ -39,13 +39,13 @@ namespace Main.RXs
             private ObserverFromAction() { }
         }
         //FromActionTyped
-        public static IRXsObserver<T> FromAction<T>(
+        public static IRXsObserverSubscription<T> FromAction<T>(
             Action<IRXsSubscription, T> onNext = null,
             Action<IRXsSubscription> onCompleted = null,
             Action<IRXsSubscription, Exception> onError = null,
             Action onDispose = null)
             => ObserverFromAction<T>.GetFromReusePool(onNext, onCompleted, onError, onDispose);
-        public static IRXsObserver<T> FromAction<T>(
+        public static IRXsObserverSubscription<T> FromAction<T>(
             Action<T> onNext = null,
             Action onCompleted = null,
             Action<Exception> onError = null,
@@ -55,7 +55,7 @@ namespace Main.RXs
                 onCompleted != null ? _ => onCompleted() : null,
                 onError != null ? (_, e) => onError(e) : null,
                 onDispose);
-        public static IRXsObserver<T> FromAction<T>(
+        public static IRXsObserverSubscription<T> FromAction<T>(
             Action onNext = null,
             Action onCompleted = null,
             Action onError = null,
@@ -66,13 +66,13 @@ namespace Main.RXs
                 onError != null ? _ => onError() : null,
                 onDispose);
         //FromActionUntyped
-        public static IRXsObserver FromAction(
+        public static IRXsObserverSubscription FromAction(
             Action<IRXsSubscription, object> onNext = null,
             Action<IRXsSubscription> onCompleted = null,
             Action<IRXsSubscription, Exception> onError = null,
             Action onDispose = null)
             => ObserverFromAction<object>.GetFromReusePool(onNext, onCompleted, onError, onDispose);
-        public static IRXsObserver FromAction(
+        public static IRXsObserverSubscription FromAction(
             Action<object> onNext = null,
             Action onCompleted = null,
             Action<Exception> onError = null,
@@ -82,7 +82,7 @@ namespace Main.RXs
                 onCompleted != null ? _ => onCompleted() : null,
                 onError != null ? (_, e) => onError(e) : null,
                 onDispose);
-        public static IRXsObserver FromAction(
+        public static IRXsObserverSubscription FromAction(
             Action onNext = null,
             Action onCompleted = null,
             Action onError = null,

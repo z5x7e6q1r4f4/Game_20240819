@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Main.RXs
 {
-    public static class RXsSubscription
+    public  static partial class RXsSubscription
     {
         private class RXsSubscriptionFromAction :
             Reuse.ObjectBase<RXsSubscriptionFromAction>,

@@ -34,11 +34,19 @@ namespace Main.RXs
         public static IRXsObservableDisposable<T> FromAction<T>(Func<IRXsObservableDisposable<T>, IRXsObserverSubscription<T>, IRXsSubscription> action, Action onRelease = null)
             => ObservableFromAction<T>.GetFromReusePool(action, onRelease);
         public static IRXsObservableDisposable<T> FromAction<T>(Func<IRXsObserverSubscription<T>, IRXsSubscription> action, Action onRelease = null)
-            => FromAction<T>((_, o) => action?.Invoke(o), onRelease);
+            => FromAction<T>((_, observer) => action(observer), onRelease);
+        public static IRXsObservableDisposable<T> FromAction<T>(Action<IRXsObservableDisposable<T>, IRXsObserverSubscription<T>> action, Action onRelease = null)
+            => FromAction<T>((self, observer) => { action(self, observer); return observer; }, onRelease);
+        public static IRXsObservableDisposable<T> FromAction<T>(Action<IRXsObserverSubscription<T>> action, Action onRelease = null)
+            => FromAction<T>((_, observer) => { action(observer); return observer; }, onRelease);
         //Untyped
-        public static IRXsObservableDisposable FromAction(Func<IRXsObservableDisposable<object>, IRXsObserverSubscription, IRXsSubscription> action, Action onRelease = null)
+        public static IRXsObservableDisposable FromAction(Func<IRXsObservableDisposable, IRXsObserverSubscription, IRXsSubscription> action, Action onRelease = null)
             => FromAction<object>(action, onRelease);
         public static IRXsObservableDisposable FromAction(Func<IRXsObserverSubscription, IRXsSubscription> action, Action onRelease = null)
-            => FromAction((_, o) => action?.Invoke(o), onRelease);
+            => FromAction((_, observer) => action?.Invoke(observer), onRelease);
+        public static IRXsObservableDisposable FromAction(Action<IRXsObservableDisposable, IRXsObserverSubscription> action, Action onRelease = null)
+            => FromAction((self, observer) => { action(self, observer); return observer; }, onRelease);
+        public static IRXsObservableDisposable FromAction(Action<IRXsObserverSubscription> action, Action onRelease = null)
+            => FromAction((_, observer) => { action(observer); return observer; }, onRelease);
     }
 }

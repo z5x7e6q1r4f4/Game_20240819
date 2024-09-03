@@ -18,9 +18,9 @@ namespace Main.RXs
         protected virtual IRXsSubscription Subscribe(IRXsObserverSubscription<TObservable> observer)
         {
             Observers.Add(observer);
-            observer.Subscription = RXsSubscription.FromAction(
+            observer.AddSubscription(RXsSubscription.FromAction(
                 () => { if (!Observers.Contains(observer)) Observers.Add(observer); },
-                () => Observers.Remove(observer));
+                () => Observers.Remove(observer)));
             return observer;
         }
         protected override void Dispose()
