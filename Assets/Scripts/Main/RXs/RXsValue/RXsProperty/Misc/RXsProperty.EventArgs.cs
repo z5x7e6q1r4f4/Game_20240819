@@ -41,6 +41,7 @@ namespace Main.RXs
                 {
                     RXsPropertyEventArgsType.BeforeSet => $"{type}{isEnable}{previous}{current}{modified}",
                     RXsPropertyEventArgsType.AfterSet => $"{type}{previous}{current}",
+                    RXsPropertyEventArgsType.BeforeGet => $"{type}{isEnable}{previous}{current}{modified}",
                     _ => throw new Exception(),
                 };
             }

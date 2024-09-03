@@ -2,6 +2,6 @@ namespace Main.RXs.RXsProperties
 {
     public enum RXsPropertyEventArgsType
     {
-        BeforeSet, AfterSet,
+        BeforeSet, AfterSet,BeforeGet
     }
 }
