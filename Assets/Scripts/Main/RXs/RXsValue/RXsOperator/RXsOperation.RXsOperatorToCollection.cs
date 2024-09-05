@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         private sealed class RXsOperatorToCollection<T> :
             Reuse.ObjectBase<RXsOperatorToCollection<T>>,

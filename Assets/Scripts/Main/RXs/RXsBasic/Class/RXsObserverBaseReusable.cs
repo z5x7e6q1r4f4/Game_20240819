@@ -1,7 +1,7 @@
 ﻿namespace Main.RXs
 {
     public abstract class RXsObserverBaseReusable<TName, T> :
-        RXsObserverBase<T>,
+        ObserverSubscriptionHandlerBase<T>,
         IReuseable
         where TName : RXsObserverBaseReusable<TName, T>
     {

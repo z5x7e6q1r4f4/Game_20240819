@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsOperatorToCollection<TResult> ObserverOn<TSource, TResult>(
             this IRXsProperty_Readonly<TSource> source,

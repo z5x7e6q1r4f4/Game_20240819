@@ -40,7 +40,7 @@ namespace Main
                 Immediately().
                 Where(e => e.Current).
                 Subscribe(() =>
-                    RXsOperation.EnableDebug(this).
+                    Operation.EnableDebug(this).
                     Until(enableDebug.AfterSet.Immediately().Where(e => !e.Current))
                 );
         }

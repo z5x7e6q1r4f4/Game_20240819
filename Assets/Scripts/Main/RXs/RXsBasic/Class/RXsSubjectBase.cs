@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Main.RXs
 {
     public abstract class RXsSubjectBase<TObserver, TObservable> :
-        RXsObserverBase<TObserver>,
+        ObserverSubscriptionHandlerBase<TObserver>,
         IRXsSubject<TObserver, TObservable>
     {
         protected List<IRXsObserverSubscription<TObservable>> Observers = new();

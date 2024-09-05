@@ -1,6 +1,6 @@
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsOperatorToProperty<T> OfType<T>(this IRXsProperty_Readonly source, IRXsProperty<T> result = null)
         {

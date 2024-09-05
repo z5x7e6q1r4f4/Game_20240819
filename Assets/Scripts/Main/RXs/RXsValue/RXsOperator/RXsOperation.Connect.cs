@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsOperatorToCollection<T> ConnectTo<T>(this IRXsCollection_Readonly<T> source, IRXsCollection<T> result)
             => RXsOperatorToCollection<T>.GetFromReusePool(

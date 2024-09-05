@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsOperatorToCollection<T> Where<T>(this IRXsCollection_Readonly<T> source, Predicate<T> predicate, IRXsCollection<T> result = null)
         {

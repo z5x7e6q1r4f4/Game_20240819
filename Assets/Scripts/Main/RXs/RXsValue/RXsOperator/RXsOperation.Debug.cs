@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace Main.RXs
 {
     public class DisableRXsValueDebugAttribute : Attribute { }
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsDisposable EnableDebug(this IRXsCollection_Readonly collection, string name = null)
         {

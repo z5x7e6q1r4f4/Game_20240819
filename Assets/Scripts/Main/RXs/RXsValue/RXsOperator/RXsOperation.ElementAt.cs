@@ -1,6 +1,6 @@
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsOperatorToProperty<T> ElementAt<T>(this IRXsCollection_Readonly<T> source, int index, IRXsProperty<T> result = null)
         {

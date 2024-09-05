@@ -2,7 +2,7 @@
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         private sealed class RXsOperatorToProperty<T> :
             Reuse.ObjectBase<RXsOperatorToProperty<T>>,

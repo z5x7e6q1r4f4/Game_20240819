@@ -12,8 +12,8 @@ namespace Main
             public int InactiveCount => inactive.Count;
             public object Key { get; }
             public bool IsPrefab { get; }
-            private readonly List<T> active = new();
-            private readonly List<T> inactive = new();
+            private readonly ReuseList<T> active = new();
+            private readonly ReuseList<T> inactive = new();
             private T Prefab { get; }
             public Pool(T prefab)
             {

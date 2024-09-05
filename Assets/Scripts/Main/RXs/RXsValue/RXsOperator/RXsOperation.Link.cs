@@ -2,7 +2,7 @@ using System;
 
 namespace Main.RXs
 {
-    partial class RXsOperation
+    partial class Operation
     {
         public static IRXsDisposable LinkItem<TCollectionSelf, TItem>(this IRXsCollection_Readonly<TItem> source, TCollectionSelf self, Func<TItem, IRXsProperty<TCollectionSelf>> func)
             => RXsSubscription.FromList(
