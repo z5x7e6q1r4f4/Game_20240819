@@ -55,11 +55,11 @@ namespace Main.RXs
             timeObservable.SubscribeToTyped(timer);
             return timer;
         }
-        protected override void OnRelease()
+        protected override void Dispose()
         {
             onArrive.Clear();
             onUpdate.Clear();
-            base.OnRelease();
+            base.Dispose();
         }
         //Function
         public void Stop()

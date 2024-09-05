@@ -60,18 +60,18 @@ namespace Main.RXs
         {
             var test = TestRXsObserverBaseReuseable.GetFromReusePool();
             (test as IDisposable).Dispose();
-            Assert.AreEqual(true, test.isRelease);
+            Assert.AreEqual(true, test.isDispose);
         }
         public class TestRXsObserverBaseReuseable : RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>
         {
-            public bool isRelease = false;
+            public bool isDispose = false;
             protected override void OnCompleted() { }
             protected override void OnError(Exception error) { }
             protected override void OnNext(object value) { }
-            protected override void OnRelease()
+            protected override void Dispose()
             {
-                isRelease = true;
-                base.OnRelease();
+                isDispose = true;
+                base.Dispose();
             }
             public new static TestRXsObserverBaseReuseable GetFromReusePool()
                 => RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>.GetFromReusePool();

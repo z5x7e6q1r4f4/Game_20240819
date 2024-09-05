@@ -14,14 +14,14 @@ namespace Main.RXs
             protected override void OnNext(T value) => onNext?.Invoke(this, value);
             protected override void OnCompleted() => onCompleted?.Invoke(this);
             protected override void OnError(Exception error) => onError?.Invoke(this, error);
-            protected override void OnRelease()
+            protected override void Dispose()
             {
-                base.OnRelease();
                 onDispose?.Invoke();
                 onDispose = null;
                 onNext = null;
                 onCompleted = null;
                 onError = null;
+                base.Dispose();
             }
             public static ObserverFromAction<T> GetFromReusePool(
                 Action<IRXsSubscription, T> onNext,

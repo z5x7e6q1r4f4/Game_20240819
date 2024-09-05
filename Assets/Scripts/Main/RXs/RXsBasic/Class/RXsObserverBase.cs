@@ -7,7 +7,13 @@ namespace Main.RXs
         IRXsObserverSubscription<T>
     {
         private List<IRXsSubscription> subscriptions = new();
-        void IDisposable.Dispose() => Dispose();
+        protected bool hasDisposed;
+        void IDisposable.Dispose()
+        {
+            if (hasDisposed) throw new Exception();
+            Dispose();
+        }
+
         protected virtual void Dispose()
         {
             foreach (var subscription in subscriptions) subscription.Dispose();
