@@ -9,15 +9,8 @@ namespace Main.RXs
             IRXsOperatorToProperty<T>,
             IReuseable.IOnRelease
         {
-            private IRXsSubscription subscription;
+            private IRXsDisposable subscription;
             private IRXsProperty<T> property;
-            //Subscription
-            void IRXsSubscription.Subscribe() => subscription.Subscribe();
-            void IRXsSubscription.Unsubscribe()
-            {
-                subscription.Unsubscribe();
-                property.Value = default;
-            }
             //Property
             T IRXsProperty_Readonly<T>.Value => property.Value;
             IRXsObservableImmediately<IRXsProperty_AfterSet<T>> IRXsProperty_Readonly<T>.AfterSet => property.AfterSet;
@@ -31,7 +24,7 @@ namespace Main.RXs
                 property.Value = default;
                 property = null;
             }
-            public static RXsOperatorToProperty<T> GetFromReusePool(IRXsSubscription subscription, IRXsProperty<T> property)
+            public static RXsOperatorToProperty<T> GetFromReusePool(IRXsDisposable subscription, IRXsProperty<T> property)
             {
                 var propertySubscription = GetFromReusePool();
                 propertySubscription.subscription = subscription;

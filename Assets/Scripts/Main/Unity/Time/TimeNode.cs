@@ -19,10 +19,10 @@ namespace Main
         public float Delta { get; private set; }
         //Event
         private readonly RXsEventHandler<TimeNode> onUpdate = new();
-        public IRXsSubscription Subscribe(IRXsObserver<TimeNode> observer) => onUpdate.SubscribeToTyped(observer);
-        public IRXsSubscription Subscribe(IRXsObserver<IRXsTimeData> observer) => onUpdate.SubscribeToTyped(observer);
+        public IRXsDisposable Subscribe(IRXsObserver<TimeNode> observer) => onUpdate.SubscribeToTyped(observer);
+        public IRXsDisposable Subscribe(IRXsObserver<IRXsTimeData> observer) => onUpdate.SubscribeToTyped(observer);
         public IDisposable Subscribe(IObserver<IRXsTimeData> observer) => onUpdate.SubscribeToTyped(observer);
-        public IRXsSubscription Subscribe(IRXsObserver observer) => onUpdate.SubscribeToTyped<IRXsTimeData>(observer);
+        public IRXsDisposable Subscribe(IRXsObserver observer) => onUpdate.SubscribeToTyped<IRXsTimeData>(observer);
         protected override void OnGameComponentAwake()
         {
             Parent.LinkCollection(this, timeNode => timeNode.Children);

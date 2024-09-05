@@ -26,7 +26,7 @@ namespace Main.RXs
                 if (autoDispose) self.Dispose();
                 return sub;
             });
-        public static IRXsSubscription EnableDebug<T>(this IRXsObservable<T> observable, string name = null)
+        public static IRXsDisposable EnableDebug<T>(this IRXsObservable<T> observable, string name = null)
             => observable.Subscribe(e => UnityEngine.Debug.Log($"{(name != null ? name + " " : string.Empty)}{e}"));
     }
 }

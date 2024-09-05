@@ -9,20 +9,20 @@ namespace Main.RXs
     public class DisableRXsValueDebugAttribute : Attribute { }
     partial class RXsOperation
     {
-        public static IRXsSubscription EnableDebug(this IRXsCollection_Readonly collection, string name = null)
+        public static IRXsDisposable EnableDebug(this IRXsCollection_Readonly collection, string name = null)
         {
             return RXsSubscription.FromList(
                 collection.AfterAdd.Order(int.MinValue).EnableDebug(name),
                 collection.AfterRemove.Order(int.MinValue).EnableDebug(name)
                 );
         }
-        public static IRXsSubscription EnableDebug(this IRXsProperty_Readonly property, string name = null)
+        public static IRXsDisposable EnableDebug(this IRXsProperty_Readonly property, string name = null)
         {
             return property.AfterSet.Order(int.MinValue).EnableDebug(name);
         }
-        public static IRXsSubscription EnableDebug(object obj)
+        public static IRXsDisposable EnableDebug(object obj)
         {
-            List<IRXsSubscription> disposableList = new();
+            List<IRXsDisposable> disposableList = new();
             var type = obj.GetType();
             while (type != null)
             {

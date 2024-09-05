@@ -2,10 +2,10 @@ using System;
 
 namespace Main.RXs
 {
-    public interface IRXsObserverSubscription : IRXsObserver, IRXsSubscription
+    public interface IRXsObserverSubscription : IRXsObserver, IRXsDisposable
     {
-        void AddSubscription(IRXsSubscription subscription);
-        void RemoveSubscription(IRXsSubscription subscription, bool autoDispose = true);
+        void AddSubscription(IRXsDisposable subscription);
+        void RemoveSubscription(IRXsDisposable subscription, bool autoDispose = true);
     }
-    public interface IRXsObserverSubscription<in T> : IRXsObserver<T>, IRXsSubscription, IRXsObserverSubscription { }
+    public interface IRXsObserverSubscription<in T> : IRXsObserver<T>, IRXsDisposable, IRXsObserverSubscription { }
 }

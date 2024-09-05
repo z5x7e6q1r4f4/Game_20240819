@@ -2,6 +2,6 @@ namespace Main.RXs
 {
     partial class RXsOperation
     {
-        public interface IRXsOperatorToProperty<T> : IRXsProperty_Readonly<T>, IRXsSubscription { }
+        public interface IRXsOperatorToProperty<T> : IRXsProperty_Readonly<T>, IRXsDisposable { }
     }
 }

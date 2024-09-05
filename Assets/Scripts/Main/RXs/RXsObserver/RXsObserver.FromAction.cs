@@ -7,9 +7,9 @@ namespace Main.RXs
         private class ObserverFromAction<T> :
             RXsObserverBaseReusable<ObserverFromAction<T>, T>
         {
-            private Action<IRXsSubscription, T> onNext;
-            private Action<IRXsSubscription> onCompleted;
-            private Action<IRXsSubscription, Exception> onError;
+            private Action<IRXsDisposable, T> onNext;
+            private Action<IRXsDisposable> onCompleted;
+            private Action<IRXsDisposable, Exception> onError;
             private Action onDispose;
             protected override void OnNext(T value) => onNext?.Invoke(this, value);
             protected override void OnCompleted() => onCompleted?.Invoke(this);
@@ -24,9 +24,9 @@ namespace Main.RXs
                 base.Dispose();
             }
             public static ObserverFromAction<T> GetFromReusePool(
-                Action<IRXsSubscription, T> onNext,
-                Action<IRXsSubscription> onCompleted,
-                Action<IRXsSubscription, Exception> onError,
+                Action<IRXsDisposable, T> onNext,
+                Action<IRXsDisposable> onCompleted,
+                Action<IRXsDisposable, Exception> onError,
                 Action onDispose)
             {
                 var observer = GetFromReusePool();
@@ -40,9 +40,9 @@ namespace Main.RXs
         }
         //FromActionTyped
         public static IRXsObserverSubscription<T> FromAction<T>(
-            Action<IRXsSubscription, T> onNext = null,
-            Action<IRXsSubscription> onCompleted = null,
-            Action<IRXsSubscription, Exception> onError = null,
+            Action<IRXsDisposable, T> onNext = null,
+            Action<IRXsDisposable> onCompleted = null,
+            Action<IRXsDisposable, Exception> onError = null,
             Action onDispose = null)
             => ObserverFromAction<T>.GetFromReusePool(onNext, onCompleted, onError, onDispose);
         public static IRXsObserverSubscription<T> FromAction<T>(
@@ -67,9 +67,9 @@ namespace Main.RXs
                 onDispose);
         //FromActionUntyped
         public static IRXsObserverSubscription FromAction(
-            Action<IRXsSubscription, object> onNext = null,
-            Action<IRXsSubscription> onCompleted = null,
-            Action<IRXsSubscription, Exception> onError = null,
+            Action<IRXsDisposable, object> onNext = null,
+            Action<IRXsDisposable> onCompleted = null,
+            Action<IRXsDisposable, Exception> onError = null,
             Action onDispose = null)
             => ObserverFromAction<object>.GetFromReusePool(onNext, onCompleted, onError, onDispose);
         public static IRXsObserverSubscription FromAction(
@@ -93,21 +93,21 @@ namespace Main.RXs
                 onError != null ? _ => onError() : null,
                 onDispose);
         //SubscribeTyped
-        public static IRXsSubscription Subscribe<T>(
+        public static IRXsDisposable Subscribe<T>(
             this IRXsObservable<T> observable,
-            Action<IRXsSubscription, T> onNext = null,
-            Action<IRXsSubscription> onCompleted = null,
-            Action<IRXsSubscription, Exception> onError = null,
+            Action<IRXsDisposable, T> onNext = null,
+            Action<IRXsDisposable> onCompleted = null,
+            Action<IRXsDisposable, Exception> onError = null,
             Action onDispose = null)
             => observable.SubscribeToTyped(FromAction(onNext, onCompleted, onError, onDispose));
-        public static IRXsSubscription Subscribe<T>(
+        public static IRXsDisposable Subscribe<T>(
             this IRXsObservable<T> observable,
             Action<T> onNext = null,
             Action onCompleted = null,
             Action<Exception> onError = null,
             Action onDispose = null)
             => observable.SubscribeToTyped(FromAction(onNext, onCompleted, onError, onDispose));
-        public static IRXsSubscription Subscribe<T>(
+        public static IRXsDisposable Subscribe<T>(
             this IRXsObservable<T> observable,
             Action onNext = null,
             Action onCompleted = null,
@@ -115,21 +115,21 @@ namespace Main.RXs
             Action onDispose = null)
             => observable.SubscribeToTyped(FromAction<T>(onNext, onCompleted, onError, onDispose));
         //SubscribeUntyped
-        public static IRXsSubscription Subscribe(
+        public static IRXsDisposable Subscribe(
             this IRXsObservable observable,
-            Action<IRXsSubscription, object> onNext = null,
-            Action<IRXsSubscription> onCompleted = null,
-            Action<IRXsSubscription, Exception> onError = null,
+            Action<IRXsDisposable, object> onNext = null,
+            Action<IRXsDisposable> onCompleted = null,
+            Action<IRXsDisposable, Exception> onError = null,
             Action onDispose = null)
             => observable.Subscribe(FromAction(onNext, onCompleted, onError, onDispose));
-        public static IRXsSubscription Subscribe(
+        public static IRXsDisposable Subscribe(
             this IRXsObservable observable,
             Action<object> onNext = null,
             Action onCompleted = null,
             Action<Exception> onError = null,
             Action onDispose = null)
             => observable.Subscribe(FromAction(onNext, onCompleted, onError, onDispose));
-        public static IRXsSubscription Subscribe(
+        public static IRXsDisposable Subscribe(
             this IRXsObservable observable,
             Action onNext = null,
             Action onCompleted = null,

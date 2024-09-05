@@ -4,7 +4,7 @@ namespace Main.RXs
 {
     partial class RXsOperation
     {
-        public static IRXsSubscription LinkItem<TCollectionSelf, TItem>(this IRXsCollection_Readonly<TItem> source, TCollectionSelf self, Func<TItem, IRXsProperty<TCollectionSelf>> func)
+        public static IRXsDisposable LinkItem<TCollectionSelf, TItem>(this IRXsCollection_Readonly<TItem> source, TCollectionSelf self, Func<TItem, IRXsProperty<TCollectionSelf>> func)
             => RXsSubscription.FromList(
                     source.AfterAdd.Immediately().Subscribe(e =>
                     {
@@ -19,7 +19,7 @@ namespace Main.RXs
                         if (self.Equals(target.Value)) target.Value = default;
                     })
                 );
-        public static IRXsSubscription LinkCollection<TItemSelf, TCollection>(this IRXsProperty_Readonly<TCollection> source, TItemSelf self, Func<TCollection, IRXsCollection<TItemSelf>> func)
+        public static IRXsDisposable LinkCollection<TItemSelf, TCollection>(this IRXsProperty_Readonly<TCollection> source, TItemSelf self, Func<TCollection, IRXsCollection<TItemSelf>> func)
             => source.AfterSet.Immediately().Subscribe(e =>
             {
                 if (e.Previous != null)

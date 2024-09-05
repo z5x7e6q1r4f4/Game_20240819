@@ -4,14 +4,12 @@ namespace Main.RXs
 {
     partial class RXsSubscription
     {
-        public static IRXsSubscription AsSubscription(object obj)
-            => obj as IRXsSubscription ?? Empty;
-        public static readonly IRXsSubscription Empty = new RXsSubscriptionEmpty();
-        private class RXsSubscriptionEmpty : IRXsSubscription
+        public static IRXsDisposable AsSubscription(object obj)
+            => obj as IRXsDisposable ?? Empty;
+        public static readonly IRXsDisposable Empty = new RXsSubscriptionEmpty();
+        private class RXsSubscriptionEmpty : IRXsDisposable
         {
             void IDisposable.Dispose() { }
-            void IRXsSubscription.Subscribe() { }
-            void IRXsSubscription.Unsubscribe() { }
         }
     }
 }

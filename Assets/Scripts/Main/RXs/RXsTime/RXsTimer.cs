@@ -36,8 +36,8 @@ namespace Main.RXs
         protected override void OnError(Exception error) { }
         //Observable
         IDisposable IObservable<IRXsTimeData>.Subscribe(IObserver<IRXsTimeData> observer) => this.SubscribeToTyped(observer);
-        IRXsSubscription IRXsObservable.Subscribe(IRXsObserver observer) => this.SubscribeToTyped<IRXsTimeData>(observer);
-        IRXsSubscription IRXsObservable<IRXsTimeData>.Subscribe(IRXsObserver<IRXsTimeData> observer) => OnUpdate.Subscribe(observer);
+        IRXsDisposable IRXsObservable.Subscribe(IRXsObserver observer) => this.SubscribeToTyped<IRXsTimeData>(observer);
+        IRXsDisposable IRXsObservable<IRXsTimeData>.Subscribe(IRXsObserver<IRXsTimeData> observer) => OnUpdate.Subscribe(observer);
         //Reuse
         public static RXsTimer GetFromReusePool(
             IRXsObservable<IRXsTimeData> timeObservable,

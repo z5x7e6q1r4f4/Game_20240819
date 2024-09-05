@@ -10,7 +10,7 @@ namespace Main.RXs
             IRXsCollection<TResult> result = null)
         {
             result ??= new RXsCollection_SerializeField<TResult>();
-            IRXsSubscription subscription = null;
+            IRXsDisposable subscription = null;
             return RXsOperatorToCollection<TResult>.GetFromReusePool(
                     source.AfterSet.Immediately().Subscribe(e =>
                     {
@@ -25,7 +25,7 @@ namespace Main.RXs
             IRXsProperty<TResult> result = null)
         {
             result ??= new RXsProperty_SerializeField<TResult>();
-            IRXsSubscription subscription = null;
+            IRXsDisposable subscription = null;
             return RXsOperatorToProperty<TResult>.GetFromReusePool(
                   source.AfterSet.Immediately().Subscribe(e =>
                   {

@@ -6,14 +6,13 @@ namespace Main.RXs
     public abstract class RXsObserverBase<T> :
         IRXsObserverSubscription<T>
     {
-        private List<IRXsSubscription> subscriptions = new();
+        private List<IRXsDisposable> subscriptions = new();
         protected bool hasDisposed;
         void IDisposable.Dispose()
         {
             if (hasDisposed) throw new Exception();
             Dispose();
         }
-
         protected virtual void Dispose()
         {
             foreach (var subscription in subscriptions) subscription.Dispose();
@@ -25,15 +24,11 @@ namespace Main.RXs
         protected abstract void OnError(Exception error);
         void IRXsObserver.OnNext(object value) => OnNext((T)value);
         protected abstract void OnNext(T value);
-        void IRXsSubscription.Subscribe() => Subscribe();
-        protected virtual void Subscribe() { foreach (var subscription in subscriptions) subscription.Subscribe(); }
-        void IRXsSubscription.Unsubscribe() => Unsubscribe();
-        protected virtual void Unsubscribe() { foreach (var subscription in subscriptions) subscription.Unsubscribe(); }
         void IObserver<T>.OnCompleted() => OnCompleted();
         void IObserver<T>.OnError(Exception error) => OnError(error);
         void IObserver<T>.OnNext(T value) => OnNext(value);
-        void IRXsObserverSubscription.AddSubscription(IRXsSubscription subscription) => subscriptions.Add(subscription);
-        void IRXsObserverSubscription.RemoveSubscription(IRXsSubscription subscription, bool autoDispose)
+        void IRXsObserverSubscription.AddSubscription(IRXsDisposable subscription) => subscriptions.Add(subscription);
+        void IRXsObserverSubscription.RemoveSubscription(IRXsDisposable subscription, bool autoDispose)
         { if (subscriptions.Remove(subscription) && autoDispose) subscription.Dispose(); }
     }
 }

@@ -7,7 +7,7 @@ namespace Main.RXs
         public static IRXsObservable<object> Merge(this IRXsObservable observable, bool autoDispose, params IRXsObservable[] merges)
             => RXsObservable.FromAction<object>((self, observer) =>
             {
-                List<IRXsSubscription> subs = new() { observable.Subscribe(observer) };
+                List<IRXsDisposable> subs = new() { observable.Subscribe(observer) };
                 foreach (var observable in merges) subs.Add(observable.Subscribe(observer));
                 var sub = RXsSubscription.FromList(subs);
                 subs.Clear();
