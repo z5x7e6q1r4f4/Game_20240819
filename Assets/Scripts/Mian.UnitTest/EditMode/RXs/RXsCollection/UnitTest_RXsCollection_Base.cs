@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Main.RXs.RXsCollections
+namespace Main.RXs.ObservableCollections
 {
     public abstract class UnitTest_RXsCollection_Base
     {
@@ -26,7 +26,7 @@ namespace Main.RXs.RXsCollections
         }
         protected static string item => items.First();
         protected static string newItem => newItems.First();
-        protected RXsCollection_SerializeField<string> collection;
+        protected ObservableCollection_SerializeField<string> collection;
         [SetUp]
         public void SetUp()
         {

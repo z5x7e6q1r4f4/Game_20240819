@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Linq;
 
-namespace Main.RXs.RXsCollections
+namespace Main.RXs.ObservableCollections
 {
     public class UnitTest_RXsCollection_BeforeAdd : UnitTest_RXsCollection_Base
     {

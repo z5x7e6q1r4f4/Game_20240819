@@ -6,10 +6,10 @@ namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_Timer : FomulaStep_ComponentBase<TimeNode>
     {
-        [field: SerializeField] public RXsProperty_SerializeField<float> Target { get; private set; } = new();
-        private RXsProperty_SerializeField<TimeNode> timeNode = new();
-        protected IRXsProperty_Readonly<RXsTimer> Timer => timer;
-        private readonly RXsProperty_SerializeField<RXsTimer> timer = new();
+        [field: SerializeField] public ObservableProperty_SerializeField<float> Target { get; private set; } = new();
+        private ObservableProperty_SerializeField<TimeNode> timeNode = new();
+        protected IObservableProperty_Readonly<RXsTimer> Timer => timer;
+        private readonly ObservableProperty_SerializeField<RXsTimer> timer = new();
         protected override void OnGameComponentAwake()
         {
             base.OnGameComponentAwake();
@@ -17,7 +17,7 @@ namespace Main.Game.FomulaSteps
             timeNode.AfterSet.Immediately().Subscribe(SetUpTimer);
             OnEnterStep.Subscribe(StartTimer);
         }
-        private void SetUpTimer(IRXsProperty_AfterSet<TimeNode> e)
+        private void SetUpTimer(IObservableProperty_AfterSet<TimeNode> e)
         {
             timer.Value?.ReleaseToReusePool();
             if (e.Current != null)

@@ -6,12 +6,12 @@ namespace Main.Game
 {
     public class Fomula : GameComponent
     {
-        [field: SerializeField] public RXsProperty_SerializeField<Factory> Factory { get; private set; } = new();
-        [field: SerializeField] public RXsCollection_SerializeField_SubClassSelector<FomulaStep> FomulaSteps { get; private set; } = new();
-        public IRXsProperty<int> Index => AwakeSelf<Fomula>().index;
-        [SerializeField] private RXsProperty_SerializeField<int> index = new(-1);
-        public IRXsProperty_Readonly<FomulaStep> CurrentStep => AwakeSelf<Fomula>().currentStep;
-        private RXsProperty_SerializeField<FomulaStep> currentStep = new();
+        [field: SerializeField] public ObservableProperty_SerializeField<Factory> Factory { get; private set; } = new();
+        [field: SerializeField] public ObservableCollection_SerializeField_SubClassSelector<FomulaStep> FomulaSteps { get; private set; } = new();
+        public IObservableProperty<int> Index => AwakeSelf<Fomula>().index;
+        [SerializeField] private ObservableProperty_SerializeField<int> index = new(-1);
+        public IObservableProperty_Readonly<FomulaStep> CurrentStep => AwakeSelf<Fomula>().currentStep;
+        private ObservableProperty_SerializeField<FomulaStep> currentStep = new();
         protected override void OnGameComponentAwake()
         {
             Factory.LinkCollection(this, factory => factory.Fomulas);

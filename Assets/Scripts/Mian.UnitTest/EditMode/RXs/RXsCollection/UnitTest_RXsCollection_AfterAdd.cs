@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Main.RXs.RXsCollections
+namespace Main.RXs.ObservableCollections
 {
     public class UnitTest_RXsCollection_AfterAdd : UnitTest_RXsCollection_Base
     {

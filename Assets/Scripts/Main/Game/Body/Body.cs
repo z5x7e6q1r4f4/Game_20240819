@@ -6,10 +6,10 @@ namespace Main.Game
 {
     public class Body : GameComponent
     {
-        [field: SerializeField] public RXsCollection_SerializeField<BodyPart> BodyParts { get; private set; } = new();
+        [field: SerializeField] public ObservableCollection_SerializeField<BodyPart> BodyParts { get; private set; } = new();
         //Component
-        public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
-        private readonly RXsCollection_SerializeField<GameComponent> bodyComponents = new();
+        public IObservableCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
+        private readonly ObservableCollection_SerializeField<GameComponent> bodyComponents = new();
         //TimeNode
         public TimeNode TimeNode => timeNode = timeNode != null ? timeNode : GetComponent<TimeNode>();
         private TimeNode timeNode;

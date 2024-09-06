@@ -5,9 +5,9 @@ namespace Main.Game
 {
     public interface IMoveable
     {
-        IRXsProperty<Vector3> Direction { get; }
-        IRXsProperty<float> Speed { get; }
-        IRXsProperty<Vector3> Delta { get; }
-        IRXsProperty<ITransformHandler> TransformHandler { get; }
+        IObservableProperty<Vector3> Direction { get; }
+        IObservableProperty<float> Speed { get; }
+        IObservableProperty<Vector3> Delta { get; }
+        IObservableProperty<ITransformHandler> TransformHandler { get; }
     }
 }

@@ -12,10 +12,10 @@ namespace Main.Game
             Enable,
             Disable,
         }
-        public RXsProperty_SerializeField<FilterMode> Mode { get; private set; } = new();
-        public RXsCollection_SerializeField<Item> Items { get; private set; } = new();
-        public void FilterBeforeAdd(IRXsCollection_BeforeAdd<Item> e) => e.IsEnable = IsEnable(e.Item);
-        public void FilterBeforeRemove(IRXsCollection_BeforeRemove<Item> e) => e.IsEnable = IsEnable(e.Item);
+        public ObservableProperty_SerializeField<FilterMode> Mode { get; private set; } = new();
+        public ObservableCollection_SerializeField<Item> Items { get; private set; } = new();
+        public void FilterBeforeAdd(IObservableCollection_BeforeAdd<Item> e) => e.IsEnable = IsEnable(e.Item);
+        public void FilterBeforeRemove(IObservableCollection_BeforeRemove<Item> e) => e.IsEnable = IsEnable(e.Item);
         private bool IsEnable(Item item)
         {
             switch (Mode.Value)

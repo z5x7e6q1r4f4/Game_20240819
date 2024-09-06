@@ -10,11 +10,11 @@ namespace Main
         IRXsTimeData
     {
         //Structur
-        [field: SerializeField] public RXsProperty_SerializeField<TimeNode> Parent { get; } = new();
-        [field: SerializeField] public RXsCollection_SerializeField<TimeNode> Children { get; } = new();
+        [field: SerializeField] public ObservableProperty_SerializeField<TimeNode> Parent { get; } = new();
+        [field: SerializeField] public ObservableCollection_SerializeField<TimeNode> Children { get; } = new();
         //Property
-        [field: SerializeField] public RXsProperty_SerializeField<float> Scale { get; } = new(1);
-        [field: SerializeField] public RXsProperty_SerializeField<TimeState> State { get; } = new(TimeState.Play);
+        [field: SerializeField] public ObservableProperty_SerializeField<float> Scale { get; } = new(1);
+        [field: SerializeField] public ObservableProperty_SerializeField<TimeState> State { get; } = new(TimeState.Play);
         public float Time { get; private set; }
         public float Delta { get; private set; }
         //Event

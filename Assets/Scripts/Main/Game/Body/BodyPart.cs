@@ -5,13 +5,13 @@ namespace Main.Game
 {
     public class BodyPart : GameComponent
     {
-        [field: SerializeField] public RXsProperty_SerializeField<Body> Body { get; private set; } = new();
+        [field: SerializeField] public ObservableProperty_SerializeField<Body> Body { get; private set; } = new();
         //Component
-        public IRXsCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
-        private RXsCollection_SerializeField<GameComponent> bodyComponents = new();
+        public IObservableCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
+        private ObservableCollection_SerializeField<GameComponent> bodyComponents = new();
         //Time
-        public IRXsProperty_Readonly<TimeNode> TimeNode => timeNode ??= Body.Select(body => body?.TimeNode);
-        private IRXsProperty_Readonly<TimeNode> timeNode ;
+        public IObservableProperty_Readonly<TimeNode> TimeNode => timeNode ??= Body.Select(body => body?.TimeNode);
+        private IObservableProperty_Readonly<TimeNode> timeNode ;
         protected override void OnGameComponentAwake()
         {
             Body.LinkCollection(this, body => body.BodyParts);

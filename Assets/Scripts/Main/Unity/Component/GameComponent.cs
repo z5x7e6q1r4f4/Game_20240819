@@ -7,20 +7,20 @@ namespace Main
     public abstract partial class GameComponent : MonoBehaviour
     {
         public bool EnableDebug { get => enableDebug.Value; set => enableDebug.Value = value; }
-        [SerializeField, DisableRXsValueDebug] private RXsProperty_SerializeField<bool> enableDebug = new();
+        [SerializeField, DisableRXsValueDebug] private ObservableProperty_SerializeField<bool> enableDebug = new();
         //Event
-        public IRXsObservableImmediately<GameComponent> OnGameComponentAwakeEvent
+        public IObservableImmediately<GameComponent> OnGameComponentAwakeEvent
             => onGameComponentAwakeEvent ??= new(observer => { if (hasAwake) observer.OnNext(this); });
-        public IRXsObservableImmediately<GameComponent> OnGameComponentEnableEvent
+        public IObservableImmediately<GameComponent> OnGameComponentEnableEvent
             => onGameComponentEnableEvent ??= new(observer => { if (isActiveAndEnabled && hasAwake) observer.OnNext(this); });
-        public IRXsObservableImmediately<GameComponent> OnGameComponentDisableEvent
+        public IObservableImmediately<GameComponent> OnGameComponentDisableEvent
             => onGameComponentDisableEvent ??= new(observer => { if (!isActiveAndEnabled) observer.OnNext(this); });
-        public IRXsObservable<GameComponent> OnGameComponentDestroyEvent
+        public IObservable<GameComponent> OnGameComponentDestroyEvent
             => onGameComponentDestroyEvent ??= new();
-        private RXsEventHandler<GameComponent> onGameComponentAwakeEvent;
-        private RXsEventHandler<GameComponent> onGameComponentEnableEvent;
-        private RXsEventHandler<GameComponent> onGameComponentDisableEvent;
-        private RXsEventHandler<GameComponent> onGameComponentDestroyEvent;
+        private ObservableEventHandler<GameComponent> onGameComponentAwakeEvent;
+        private ObservableEventHandler<GameComponent> onGameComponentEnableEvent;
+        private ObservableEventHandler<GameComponent> onGameComponentDisableEvent;
+        private ObservableEventHandler<GameComponent> onGameComponentDestroyEvent;
         //LifeCycle
         private bool hasAwake = false;
         protected T AwakeSelf<T>() where T : GameComponent
@@ -40,7 +40,7 @@ namespace Main
                 Immediately().
                 Where(e => e.Current).
                 Subscribe(() =>
-                    Operation.EnableDebug(this).
+                    Operation.EnableDebugAllValueFrom(this).
                     Until(enableDebug.AfterSet.Immediately().Where(e => !e.Current))
                 );
         }
@@ -65,7 +65,7 @@ namespace Main
             onGameComponentDestroyEvent?.Invoke(this);
         }
         //Component
-        public IRXsCollection_Readonly<GameComponent> GameComponentList => tracingList;
+        public IObservableCollection_Readonly<GameComponent> GameComponentList => tracingList;
         private GameComponentTracingList tracingList => _tracingList ??= GetOrAddComponent<GameComponentTracingList>(isTrackable: false);
         [DisableRXsValueDebug] private GameComponentTracingList _tracingList;
         public T AddComponent<T>(HideFlags hideFlags = HideFlags.None, bool isTrackable = true)

@@ -6,6 +6,6 @@ namespace Main.Game
     {
         public BodyPart BodyPart => bodyPart ??= GetComponent<BodyPart>();
         private BodyPart bodyPart;
-        protected RXsProperty<Body> Body => BodyPart.Body;
+        protected ObservablePropertyBase<Body> Body => BodyPart.Body;
     }
 }

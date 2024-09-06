@@ -47,7 +47,7 @@ namespace Main.RXs.Unity
             public SerializedPropertyElement(string displayName, SerializedProperty property, FieldInfo fieldInfo)
             {
                 var propertyField = new PropertyField(property, displayName);
-                var RXsProperty = property.GetParent().GetValue<IRXsProperty>();
+                var RXsProperty = property.GetParent().GetValue<IObservableProperty>();
                 previous = RXsProperty.Value;
                 propertyField.RegisterValueChangeCallback(e =>
                 {

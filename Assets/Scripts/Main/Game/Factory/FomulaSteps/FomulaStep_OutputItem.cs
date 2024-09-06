@@ -5,7 +5,7 @@ namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_OutputItem : FomulaStep_ComponentBase<InventoryOutput>
     {
-        [field: SerializeField] public RXsCollection_SerializeField<Item> Items { get; private set; } = new();
+        [field: SerializeField] public ObservableCollection_SerializeField<Item> Items { get; private set; } = new();
         protected override void OnGameComponentAwake()
         {
             base.OnGameComponentAwake();
