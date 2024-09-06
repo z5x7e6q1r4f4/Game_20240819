@@ -11,7 +11,7 @@ namespace Main.RXs
         public void Test_Order()
         {
             bool result = false;
-            RXsEventHandler<int> eventHandler = new();
+            ObservableEventHandler<int> eventHandler = new();
             using var _2 = eventHandler.Order(2).Subscribe(e =>
                 {
                     Assert.IsFalse(result);
@@ -37,7 +37,7 @@ namespace Main.RXs
             [Values(7, 15)] int smaller)
         {
             Reuse.Clear();
-            using var range = RXsObservable.FromRange(from, to);
+            using var range = Observable.Range(from, to);
             //way1
             var way1Count = 0;
             using var _1 = range.Where(x => x > grater).Where(x => x < smaller).Subscribe(x =>
@@ -74,7 +74,7 @@ namespace Main.RXs
         [Test]
         public void Test_OfType()
         {
-            using var observable = RXsObservable.FromReturn<object>(true, 0, "test", new object());
+            using var observable = Observable.Return<object>(true, 0, "test", new object());
             using var _1 = observable.OfType<string>().Subscribe(x => Assert.AreEqual("test", x));
             using var _2 = observable.OfType<int>().Subscribe(x => Assert.AreEqual(0, x));
             using var _3 = observable.OfType<bool>().Subscribe(x => Assert.AreEqual(true, x));
@@ -82,13 +82,13 @@ namespace Main.RXs
         [Test]
         public void Test_Select()
         {
-            using var _return = RXsObservable.FromReturn(1);
+            using var _return = Observable.Return(1);
             using var _ = _return.Select(x => x + 1).Subscribe(x => Assert.AreEqual(2, x));
         }
         [Test]
         public void Test_Dispose()
         {
-            using var _return = RXsObservable.FromReturn<object>(true, 0, "test", new object());
+            using var _return = Observable.Return<object>(true, 0, "test", new object());
             var sub = _return.
                 Where(x => x is int).
                 OfType<int>().
@@ -100,7 +100,7 @@ namespace Main.RXs
         public void Test_Take([Values(0, 1, 2, 3, 4)] int take)
         {
             int value = default;
-            using var range = RXsObservable.FromRange(0, 10);
+            using var range = Observable.Range(0, 10);
             range.Take(take).Subscribe(e => value = e);
             Assert.AreEqual(Math.Max(0, take - 1), value);
         }
@@ -108,18 +108,18 @@ namespace Main.RXs
         public void Test_Skip([Values(0, 1, 2, 3, 4)] int skip)
         {
             int value = 100;
-            using var range = RXsObservable.FromRange(0, 10);
+            using var range = Observable.Range(0, 10);
             range.Skip(skip).Subscribe(e => value = Math.Min(value, e));
             Assert.AreEqual(skip, value);
         }
         [Test]
         public void Test_Merge()
         {
-            using var observable1 = new RXsEventHandler<int>();
-            using var observable2 = new RXsEventHandler<string>();
-            using var observable3 = new RXsEventHandler<float>();
+            using var observable1 = new ObservableEventHandler<int>();
+            using var observable2 = new ObservableEventHandler<string>();
+            using var observable3 = new ObservableEventHandler<float>();
             object result = null;
-            using var _ = observable1.Merge( observable2, observable3).Subscribe(value => result = value);
+            using var _ = observable1.Merge(observable2).Merge(observable3).Subscribe(value => result = value);
             //
             observable1.Invoke(0);
             Assert.AreEqual(0, result);

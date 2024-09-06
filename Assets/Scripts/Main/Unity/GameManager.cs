@@ -1,4 +1,0 @@
-namespace Main 
-{
-    public class 
-}

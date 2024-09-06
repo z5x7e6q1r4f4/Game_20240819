@@ -10,7 +10,7 @@ namespace Main.Game
     {
         Item item;
         Body body;
-        TimeNode timeNode;
+        //TimeNode timeNode;
         BodyPart bodyPart;
         Factory factory;
         InventoryInput inventoryInput;
@@ -19,7 +19,7 @@ namespace Main.Game
         FomulaStep_InputItem inputItem;
         FomulaStep_OutputItem outputItem;
         FomulaStep_Stop stop;
-        FomulaStep_Timer timer;
+        //FomulaStep_Timer timer;
         [SetUp]
         public void SetUp()
         {
@@ -29,7 +29,7 @@ namespace Main.Game
             if (body == null)
             {
                 body = new GameObject("Body").AddComponent<Body>();
-                timeNode = body.AddComponent<TimeNode>();
+                //timeNode = body.AddComponent<TimeNode>();
                 bodyPart = new GameObject("BodyPart").AddComponent<BodyPart>();
                 inventoryInput = bodyPart.AddComponent<InventoryInput>();
                 inventoryOutput = bodyPart.AddComponent<InventoryOutput>();
@@ -58,7 +58,7 @@ namespace Main.Game
                 inputItem = fomula.AddComponent<FomulaStep_InputItem>();
                 outputItem = fomula.AddComponent<FomulaStep_OutputItem>();
                 stop = fomula.AddComponent<FomulaStep_Stop>();
-                timer = fomula.AddComponent<FomulaStep_Timer>();
+                //timer = fomula.AddComponent<FomulaStep_Timer>();
             }
             fomula.FomulaSteps.Clear();
             fomula.FomulaStop();
@@ -96,18 +96,18 @@ namespace Main.Game
             Assert.AreEqual(-1, fomula.Index.Value);
             Assert.IsTrue(inventoryOutput.Contains(item));
         }
-        [Test]
-        public void Test_Timer()
-        {
-            fomula.FomulaSteps.Add(timer);
-            timer.Target.Value = 10f;
-            fomula.FomulaSteps.Add(stop);
-            //
-            factory.Fomulas.Add(fomula);
-            timeNode.UpdateTime(5f);
-            Assert.AreEqual(0, fomula.Index.Value);
-            timeNode.UpdateTime(5f);
-            Assert.AreEqual(-1, fomula.Index.Value);
-        }
+        //[Test]
+        //public void Test_Timer()
+        //{
+        //    fomula.FomulaSteps.Add(timer);
+        //    timer.Target.Value = 10f;
+        //    fomula.FomulaSteps.Add(stop);
+        //    //
+        //    factory.Fomulas.Add(fomula);
+        //    timeNode.UpdateTime(5f);
+        //    Assert.AreEqual(0, fomula.Index.Value);
+        //    timeNode.UpdateTime(5f);
+        //    Assert.AreEqual(-1, fomula.Index.Value);
+        //}
     }
 }

@@ -1,6 +1,6 @@
-namespace Main.RXs
+namespace Main
 {
-    partial class Time
+    partial class TimeAndUpdate
     {
         public interface ITimeData
         {

@@ -1,5 +1,6 @@
 using Main.RXs;
 using NUnit.Framework.Internal;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,9 +34,9 @@ namespace Main.Game
         public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveAt(index, beforeRemove, afterRemove);
         public void Clear(bool beforeRemove = true, bool afterRemove = true) => Items.Clear(beforeRemove, afterRemove);
         public IObservableImmediately<IObservableCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
-        public IRXsObservable<IObservableCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
-        public IRXsObservable<IObservableCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
-        public IRXsObservable<IObservableCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
+        public IObservable<IObservableCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
+        public IObservable<IObservableCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
+        public IObservable<IObservableCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
         public bool Contains(Item item) => Items.Contains(item);
         public int IndexOf(Item item) => Items.IndexOf(item);
         public Item GetAt(int index, bool indexCheck = true) => Items.GetAt(index, indexCheck);

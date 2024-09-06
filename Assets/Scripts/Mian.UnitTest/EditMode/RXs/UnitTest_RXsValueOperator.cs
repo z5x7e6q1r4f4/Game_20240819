@@ -34,7 +34,7 @@ namespace Main.RXs
         public void Where([Values(3, 25)] int from, [Values(68, 12)] int to, [Values(10, 32)] int grater)
         {
             var collection = new ObservableCollection_SerializeField<int>();
-            using var range = RXsObservable.FromRange(from, to);
+            using var range = Observable.Range(from, to);
             using var sub = range.Subscribe(e => collection.Add(e));
             using var where = collection.Where(x => x > grater);
             foreach (var x in where)

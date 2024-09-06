@@ -1,4 +1,4 @@
-﻿namespace Main.RXs.Unity
+﻿namespace Main.RXs.Editor
 {
     public interface IRXsValueInspector { }
 }

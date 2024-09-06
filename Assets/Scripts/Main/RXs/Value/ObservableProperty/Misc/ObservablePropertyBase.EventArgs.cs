@@ -10,6 +10,7 @@ namespace Main.RXs
             Reuse.ObjectBase<EventArgs>,
             IObservableProperty_BeforeSet<T>,
             IObservableProperty_AfterSet<T>,
+            IObservableProperty_BeforeGet<T>,
             IDisposable
         {
             public ObservablePropertyEventArgsType Type { get; private set; }

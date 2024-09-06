@@ -1,11 +1,12 @@
 using System;
+using Main.RXs;
 
-namespace Main.RXs
+namespace Main
 {
-    partial class Time
+    public static partial class TimeAndUpdate
     {
         public static Timer GetTimer(
-            this ITimeObservable timeObservable,
+            this IObservable<ITimeData> timeObservable,
             float target = 0,
             float time = 0,
             float scale = 1,
@@ -18,7 +19,7 @@ namespace Main.RXs
             return timer;
         }
         public static Timer GetTimer(
-            this ITimeObservable timeObservable,
+            this IObservable<ITimeData> timeObservable,
             float target,
             Action onArrive,
             float time = 0,
@@ -26,6 +27,7 @@ namespace Main.RXs
             bool isPlaying = true)
         {
             var timer = GetTimer(timeObservable, target, time, scale, isPlaying);
+            timer.OnArrive.Subscribe(onArrive);
             timer.Until(timer.OnArrive);
             return timer;
         }

@@ -1,8 +1,9 @@
 using System;
+using Main.RXs;
 
-namespace Main.RXs
+namespace Main
 {
-    partial class Time
+    partial class TimeAndUpdate
     {
         public sealed class Timer :
             TimeUpdator,
@@ -21,6 +22,11 @@ namespace Main.RXs
             public void Stop() { Pause(); Time.SetIfNotEqule(0); }
             public void Play() => IsPlaying.SetIfNotEqule(true);
             public void Pause() => IsPlaying.SetIfNotEqule(false);
+            public override void Update(float delta)
+            {
+                base.Update(delta);
+                if (IsPlaying.Value && Time.Value >= Target.Value) onArrive.Invoke(this);
+            }
             public static Timer GetFromReusePool(IDisposable disposable, float target = 0, float time = 0, float scale = 1, bool isPlaying = true)
             {
                 var timer = StaticPool.Get(false);
@@ -33,7 +39,7 @@ namespace Main.RXs
             }
             void IReuseable.IOnRelease.OnRelease()
             {
-                OnUpdate.Clear();
+                OnUpdateHandler.Clear();
                 onArrive.Clear();
                 Delta.Value = 0;
                 disposable.Dispose();

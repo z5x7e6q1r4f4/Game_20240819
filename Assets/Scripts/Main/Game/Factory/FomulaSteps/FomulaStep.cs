@@ -1,4 +1,5 @@
 ﻿using Main.RXs;
+using System;
 
 namespace Main.Game.FomulaSteps
 {
@@ -7,10 +8,10 @@ namespace Main.Game.FomulaSteps
     {
         public Fomula Fomula => fomula ??= GetComponent<Fomula>();
         private Fomula fomula;
-        public IRXsObservable<FomulaStep> OnEnterStep => AwakeSelf<FomulaStep>().onEnterStep;
-        public IRXsObservable<FomulaStep> OnExitStep => AwakeSelf<FomulaStep>().onExitStep;
-        private readonly RXsEventHandler<FomulaStep> onEnterStep = new();
-        private readonly RXsEventHandler<FomulaStep> onExitStep = new();
+        public IObservable<FomulaStep> OnEnterStep => AwakeSelf<FomulaStep>().onEnterStep;
+        public IObservable<FomulaStep> OnExitStep => AwakeSelf<FomulaStep>().onExitStep;
+        private readonly ObservableEventHandler<FomulaStep> onEnterStep = new();
+        private readonly ObservableEventHandler<FomulaStep> onExitStep = new();
         public void EnterStep() => onEnterStep.Invoke(this);
         public void ExitStep() => onExitStep.Invoke(this);
     }

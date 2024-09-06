@@ -21,7 +21,7 @@ namespace Main.RXs
         object IObservableProperty_BeforeSet.Modified { get => Modified; set => Modified = (T)value; }
         //
         new IObservableProperty_Readonly<T> Property { get; }
-        new object Previous { get; }
+        new T Previous { get; }
         new T Current { get; }
         new T Modified { get; set; }
     }

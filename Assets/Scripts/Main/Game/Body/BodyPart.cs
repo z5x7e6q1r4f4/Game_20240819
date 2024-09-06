@@ -10,8 +10,8 @@ namespace Main.Game
         public IObservableCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
         private ObservableCollection_SerializeField<GameComponent> bodyComponents = new();
         //Time
-        public IObservableProperty_Readonly<TimeNode> TimeNode => timeNode ??= Body.Select(body => body?.TimeNode);
-        private IObservableProperty_Readonly<TimeNode> timeNode ;
+        //public IObservableProperty_Readonly<TimeNode> TimeNode => timeNode ??= Body.Select(body => body?.TimeNode);
+        //private IObservableProperty_Readonly<TimeNode> timeNode ;
         protected override void OnGameComponentAwake()
         {
             Body.LinkCollection(this, body => body.BodyParts);

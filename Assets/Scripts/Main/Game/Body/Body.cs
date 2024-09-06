@@ -11,8 +11,8 @@ namespace Main.Game
         public IObservableCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
         private readonly ObservableCollection_SerializeField<GameComponent> bodyComponents = new();
         //TimeNode
-        public TimeNode TimeNode => timeNode = timeNode != null ? timeNode : GetComponent<TimeNode>();
-        private TimeNode timeNode;
+        //public TimeNode TimeNode => timeNode = timeNode != null ? timeNode : GetComponent<TimeNode>();
+        //private TimeNode timeNode;
         protected override void OnGameComponentAwake()
         {
             BodyParts.LinkItem(this, bodyPart => bodyPart.Body);

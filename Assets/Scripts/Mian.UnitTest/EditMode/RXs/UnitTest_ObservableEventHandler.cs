@@ -3,13 +3,13 @@ using System;
 
 namespace Main.RXs
 {
-    public class UnitTest_RXsEventHandler
+    public class UnitTest_ObservableEventHandler
     {
         [Test]
         public void Test_Subscribe()
         {
             var input = "input";
-            var eventHandler = new RXsEventHandler<string>();
+            var eventHandler = new ObservableEventHandler<string>();
             int invokeCount = 0;
             Action<string> action = e =>
             {
@@ -28,7 +28,7 @@ namespace Main.RXs
         public void Test_Clear()
         {
             Reuse.Clear();
-            var eventHandler = new RXsEventHandler<string>();
+            var eventHandler = new ObservableEventHandler<string>();
             eventHandler.Subscribe(() => { });
             Reuse.Log();
             eventHandler.Clear();

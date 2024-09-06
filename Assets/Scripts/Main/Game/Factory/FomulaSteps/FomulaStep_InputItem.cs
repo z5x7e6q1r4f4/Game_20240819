@@ -22,7 +22,7 @@ namespace Main.Game.FomulaSteps
                     return;
                 }
             }
-            RXsSubscription.FromList(
+            Disposable.Create(
                 BodyComponents.AfterAdd.Subscribe(CheckOutput),
                 BodyComponents.AfterAdd.Immediately().Subscribe(e => e.Item.AfterAdd.Subscribe(CheckOutput).Until(OnExitStep))).
                 Until(OnExitStep);

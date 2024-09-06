@@ -6,27 +6,6 @@ namespace Main.RXs
     public class UnitTest_RXsObserver
     {
         [Test]
-        public void Test_OnNextToTyped()
-        {
-            var observer = Substitute.For<IRXsObserver<int>>();
-            observer.OnNextToTyped<int>(0);
-            observer.Received(1).OnNext(0);
-        }
-        [Test]
-        public void Test_OnCompletedToTyped()
-        {
-            var observer = Substitute.For<IRXsObserver<int>>();
-            observer.OnCompletedToTyped<int>();
-            (observer as IObserver<int>).Received(1).OnCompleted();
-        }
-        [Test]
-        public void Test_OnErrorToTyped()
-        {
-            var observer = Substitute.For<IRXsObserver<int>>();
-            observer.OnErrorToTyped<int>(null);
-            (observer as IObserver<int>).Received(1).OnError(null);
-        }
-        [Test]
         public void Test_FromAction()
         {
             int nextValue = default;
@@ -34,7 +13,7 @@ namespace Main.RXs
             bool hasOnCompleted = default;
             bool hasOnError = default;
             bool hasDispose = default;
-            var observer = RXsObserver.FromAction<int>(
+            var observer = Observer.Create<int>(
                 e => { hasOnNext = true; nextValue = e; },
                 () => hasOnCompleted = true,
                 e => hasOnError = true,
@@ -46,8 +25,8 @@ namespace Main.RXs
             Assert.AreEqual(false, hasOnError);
             Assert.AreEqual(false, hasDispose);
             observer.OnNext(1);
-            observer.OnCompletedToTyped<int>();
-            observer.OnErrorToTyped<int>(null);
+            observer.OnCompleted();
+            observer.OnError(null);
             observer.Dispose();
             Assert.AreEqual(1, nextValue);
             Assert.AreEqual(true, hasOnNext);
@@ -62,7 +41,7 @@ namespace Main.RXs
             (test as IDisposable).Dispose();
             Assert.AreEqual(true, test.isDispose);
         }
-        public class TestRXsObserverBaseReuseable : RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>
+        public class TestRXsObserverBaseReuseable : Observer.ObserverBaseReuseable<TestRXsObserverBaseReuseable, object>
         {
             public bool isDispose = false;
             protected override void OnCompleted() { }
@@ -73,8 +52,7 @@ namespace Main.RXs
                 isDispose = true;
                 base.Dispose();
             }
-            public new static TestRXsObserverBaseReuseable GetFromReusePool()
-                => RXsObserverBaseReusable<TestRXsObserverBaseReuseable, object>.GetFromReusePool();
+            public static TestRXsObserverBaseReuseable GetFromReusePool() => GetFromReusePool(false);
         }
     }
 }

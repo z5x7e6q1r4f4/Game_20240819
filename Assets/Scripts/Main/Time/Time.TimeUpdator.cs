@@ -1,8 +1,9 @@
 using System;
+using Main.RXs;
 
-namespace Main.RXs
+namespace Main
 {
-    partial class Time
+    partial class TimeAndUpdate
     {
         public class TimeUpdator : ITimeUpdator
         {
@@ -10,14 +11,14 @@ namespace Main.RXs
             public IObservableProperty<float> Delta { get; } = new ObservableProperty_SerializeField<float>();
             public IObservableProperty<float> Scale { get; } = new ObservableProperty_SerializeField<float>();
             public IObservableProperty<bool> IsPlaying { get; } = new ObservableProperty_SerializeField<bool>();
-            IObservable<ITimeUpdator> ITimeUpdator.OnUpdate => OnUpdate;
-            protected ObservableEventHandler<ITimeUpdator> OnUpdate { get; } = new();
-            public void Update(float delta)
+            public IObservable<ITimeUpdator> OnUpdate => OnUpdateHandler;
+            protected ObservableEventHandler<ITimeUpdator> OnUpdateHandler { get; } = new();
+            public virtual void Update(float delta)
             {
                 if (!IsPlaying.Value) return;
                 Delta.Value = delta * Scale.Value;
                 Time.Value += Delta.Value;
-                OnUpdate.Invoke(this);
+                OnUpdateHandler.Invoke(this);
             }
             public TimeUpdator() => IsPlaying.AfterSet.Subscribe(e =>
             {

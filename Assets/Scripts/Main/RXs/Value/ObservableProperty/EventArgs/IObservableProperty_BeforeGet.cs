@@ -15,7 +15,7 @@ namespace Main.RXs
         object IObservableProperty_BeforeGet.Modified { get => Modified; set => Modified = (T)value; }
         object IObservableProperty_BeforeGet.Previous => Previous;
         new IObservableProperty_Readonly<T> Property { get; }
-        new object Previous { get; }
+        new T Previous { get; }
         new T Modified { get; set; }
     }
 }

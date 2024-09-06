@@ -12,7 +12,12 @@
             void IReuseable.IOnRelease.OnRelease() => OnRelease();
             protected virtual void OnRelease() => base.Dispose();
             protected override void Dispose() => this.ReleaseToReusePool();
-            protected static TName GetFromReusePool(bool onGet = true) => StaticPool.Get(onGet);
+            protected static TName GetFromReusePool(bool onGet = true)
+            {
+                var observer = StaticPool.Get(onGet);
+                observer.hasDisposed = false;
+                return observer;
+            }
         }
     }
 }

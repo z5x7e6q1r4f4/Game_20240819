@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using Main.RXs.Unity;
+using Main.RXs.Editor;
 namespace Main.RXs
 {
     [Serializable]

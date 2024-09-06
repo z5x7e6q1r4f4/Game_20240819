@@ -8,11 +8,20 @@ namespace Main.RXs
         private readonly List<IDisposable> disposables = new();//subscription
         private readonly List<IObserverDisposableHandler<T>> observers = new();
         public void OnCompleted()
-        { foreach (var observer in observers) observer.OnCompleted(); }
+        {
+            using var observers = this.observers.ToReuseList();
+            foreach (var observer in observers) if (this.observers.Contains(observer)) observer.OnCompleted();
+        }
         public void OnError(Exception error)
-        { foreach (var observer in observers) observer.OnError(error); }
+        {
+            using var observers = this.observers.ToReuseList();
+            foreach (var observer in observers) if (this.observers.Contains(observer)) observer.OnError(error);
+        }
         public void OnNext(T value)
-        { foreach (var observer in observers) observer.OnNext(value); }
+        {
+            using var observers = this.observers.ToReuseList();
+            foreach (var observer in observers) if (this.observers.Contains(observer)) observer.OnNext(value);
+        }
         public IDisposable Subscribe(IObserver<T> observer)
         {
             var disposableHandler = observer.ToDisposableHandler();

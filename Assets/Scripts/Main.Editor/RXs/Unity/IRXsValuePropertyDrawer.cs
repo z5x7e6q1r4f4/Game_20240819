@@ -8,7 +8,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Main.RXs.Unity
+namespace Main.RXs.Editor
 {
     [CustomPropertyDrawer(typeof(IRXsValueInspector), true)]
     public class IRXsValuePropertyDrawer : PropertyDrawer

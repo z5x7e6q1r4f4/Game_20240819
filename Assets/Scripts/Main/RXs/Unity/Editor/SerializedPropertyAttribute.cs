@@ -1,6 +1,6 @@
 using System;
 
-namespace Main.RXs.Unity
+namespace Main.RXs.Editor
 {
     public class SerializedPropertyAttribute : Attribute { }
 }

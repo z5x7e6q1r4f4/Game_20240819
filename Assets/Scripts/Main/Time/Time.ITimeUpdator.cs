@@ -1,10 +1,11 @@
 using System;
+using Main.RXs;
 
-namespace Main.RXs
+namespace Main
 {
-    partial class Time
+    partial class TimeAndUpdate
     {
-        public interface ITimeUpdator : ITimeData, ITimeObservable
+        public interface ITimeUpdator : ITimeData, IObservable<ITimeData>
         {
             IDisposable IObservable<ITimeData>.Subscribe(IObserver<ITimeData> observer) => OnUpdate.Subscribe(observer);
             float ITimeData.Time => Time.Value;
