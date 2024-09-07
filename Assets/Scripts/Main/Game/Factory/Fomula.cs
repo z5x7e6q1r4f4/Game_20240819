@@ -1,17 +1,16 @@
-﻿using Main.RXs;
-using UnityEngine;
+﻿using UnityEngine;
 using Main.Game.FomulaSteps;
 
 namespace Main.Game
 {
     public class Fomula : GameComponent
     {
-        [field: SerializeField] public ObservableProperty_SerializeField<Factory> Factory { get; private set; } = new();
-        [field: SerializeField] public ObservableCollection_SerializeField_SubClassSelector<FomulaStep> FomulaSteps { get; private set; } = new();
-        public IObservableProperty<int> Index => AwakeSelf<Fomula>().index;
-        [SerializeField] private ObservableProperty_SerializeField<int> index = new(-1);
-        public IObservableProperty_Readonly<FomulaStep> CurrentStep => AwakeSelf<Fomula>().currentStep;
-        private ObservableProperty_SerializeField<FomulaStep> currentStep = new();
+        [field: SerializeField] public PropertySerializeField<Factory> Factory { get; private set; } = new();
+        [field: SerializeField] public CollectionSerializeFieldSubClassSelector<FomulaStep> FomulaSteps { get; private set; } = new();
+        public IProperty<int> Index => AwakeSelf<Fomula>().index;
+        [SerializeField] private PropertySerializeField<int> index = new(-1);
+        public IPropertyReadonly<FomulaStep> CurrentStep => AwakeSelf<Fomula>().currentStep;
+        private PropertySerializeField<FomulaStep> currentStep = new();
         protected override void OnGameComponentAwake()
         {
             Factory.LinkCollection(this, factory => factory.Fomulas);

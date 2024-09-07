@@ -1,17 +1,15 @@
-using Main.RXs;
-using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Main.Game
 {
-    public class Inventory : BodyPartComponent, IInventoryTest, IObservableCollection<Item>
+    public class Inventory : BodyPartComponent, IInventoryTest, ICollection<Item>
     {
-        protected IObservableCollection<Item> Items => AwakeSelf<Inventory>().items;
-        [SerializeField] private ObservableCollection_SerializeField<Item> items = new();
-        public IObservableProperty<int> Capacity => AwakeSelf<Inventory>().capacity;
-        [SerializeField] private ObservableProperty_SerializeField<int> capacity = new();
+        protected ICollection<Item> Items => AwakeSelf<Inventory>().items;
+        [SerializeField] private CollectionSerializeField<Item> items = new();
+        public IProperty<int> Capacity => AwakeSelf<Inventory>().capacity;
+        [SerializeField] private PropertySerializeField<int> capacity = new();
         public int Remain => Capacity.Value - Items.Count;
         protected override void OnGameComponentAwake()
         {
@@ -33,17 +31,17 @@ namespace Main.Game
         public void RemoveRange(IEnumerable<Item> collection, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveRange(collection, beforeRemove, afterRemove);
         public int RemoveAt(int index, bool beforeRemove = true, bool afterRemove = true) => Items.RemoveAt(index, beforeRemove, afterRemove);
         public void Clear(bool beforeRemove = true, bool afterRemove = true) => Items.Clear(beforeRemove, afterRemove);
-        public IObservableImmediately<IObservableCollection_AfterAdd<Item>> AfterAdd => Items.AfterAdd;
-        public IObservable<IObservableCollection_AfterRemove<Item>> AfterRemove => Items.AfterRemove;
-        public IObservable<IObservableCollection_BeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
-        public IObservable<IObservableCollection_BeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
+        public IObservableImmediately<CollectionAfterAdd<Item>> AfterAdd => Items.AfterAdd;
+        public IObservable<CollectionAfterRemove<Item>> AfterRemove => Items.AfterRemove;
+        public IObservable<CollectionBeforeAdd<Item>> BeforeAdd => Items.BeforeAdd;
+        public IObservable<CollectionBeforeRemove<Item>> BeforeRemove => Items.BeforeRemove;
         public bool Contains(Item item) => Items.Contains(item);
         public int IndexOf(Item item) => Items.IndexOf(item);
         public Item GetAt(int index, bool indexCheck = true) => Items.GetAt(index, indexCheck);
         public void SetAt(int index, Item value, bool indexCheck = true, bool invokeEvent = true) => Items.SetAt(index, value, indexCheck, invokeEvent);
         public IEnumerator<Item> GetEnumerator() => Items.GetEnumerator();
         //Test
-        protected ObservableCollection_SerializeField<Item> testItems { get; } = new();
+        protected CollectionSerializeField<Item> testItems { get; } = new();
         private bool testResult = true;
         public IInventoryTest Test()
         {

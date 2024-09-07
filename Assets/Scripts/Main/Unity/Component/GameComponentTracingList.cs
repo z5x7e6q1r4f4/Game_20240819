@@ -1,21 +1,20 @@
-using Main.RXs;
 using System;
 using System.Collections.Generic;
 
 namespace Main
 {
-    internal class GameComponentTracingList : GameComponent, IObservableCollection<GameComponent>
+    internal class GameComponentTracingList : GameComponent, ICollection<GameComponent>
     {
-        protected IObservableCollection<GameComponent> GameComponents => AwakeSelf<GameComponentTracingList>().gameComponents;
-        private readonly ObservableCollection_SerializeField<GameComponent> gameComponents = new();
+        protected ICollection<GameComponent> GameComponents => AwakeSelf<GameComponentTracingList>().gameComponents;
+        private readonly CollectionSerializeField<GameComponent> gameComponents = new();
         protected override void OnGameComponentAwake() => gameComponents.AddRange(GetComponents<GameComponent>());
         #region IRXsCollection
-        public IObservable<IObservableCollection_BeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
-        public IObservable<IObservableCollection_BeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
-        public IObservableImmediately<IObservableCollection_AfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
-        public IObservable<IObservableCollection_AfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
+        public IObservable<CollectionBeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
+        public IObservable<CollectionBeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
+        public IObservableImmediately<CollectionAfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;
+        public IObservable<CollectionAfterRemove<GameComponent>> AfterRemove => GameComponents.AfterRemove;
         public int Count => GameComponents.Count;
-        GameComponent IObservableCollection_Readonly<GameComponent>.this[int index] => ((IObservableCollection_Readonly<GameComponent>)GameComponents)[index];
+        GameComponent ICollectionReadonly<GameComponent>.this[int index] => ((ICollectionReadonly<GameComponent>)GameComponents)[index];
         public GameComponent this[int index] { get => GameComponents[index]; set => GameComponents[index] = value; }
         public int Add(GameComponent item, bool beforeAdd = true, bool afterAdd = true) => GameComponents.Add(item, beforeAdd, afterAdd);
         public void AddRange(IEnumerable<GameComponent> collection, bool beforeAdd = true, bool afterAdd = true) => GameComponents.AddRange(collection, beforeAdd, afterAdd);

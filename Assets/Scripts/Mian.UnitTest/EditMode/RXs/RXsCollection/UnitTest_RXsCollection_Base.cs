@@ -26,7 +26,7 @@ namespace Main.RXs.ObservableCollections
         }
         protected static string item => items.First();
         protected static string newItem => newItems.First();
-        protected ObservableCollection_SerializeField<string> collection;
+        protected CollectionSerializeField<string> collection;
         [SetUp]
         public void SetUp()
         {

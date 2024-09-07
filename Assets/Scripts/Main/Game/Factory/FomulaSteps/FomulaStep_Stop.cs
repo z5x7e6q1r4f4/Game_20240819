@@ -1,4 +1,3 @@
-using Main.RXs;
 namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_Stop : FomulaStep

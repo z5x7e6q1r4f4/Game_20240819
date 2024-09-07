@@ -1,18 +1,17 @@
-﻿using Main.RXs;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Main.Game
 {
     public class BodyMoveable : BodyPartComponent, IMoveable
     {
-        public IObservableProperty<Vector3> Direction => AwakeSelf<BodyMoveable>().direction;
-        [SerializeField] private ObservableProperty_SerializeField<Vector3> direction = new();
-        public IObservableProperty<float> Speed => AwakeSelf<BodyMoveable>().speed;
-        [SerializeField] private ObservableProperty_SerializeField<float> speed = new();
-        public IObservableProperty<Vector3> Delta => AwakeSelf<BodyMoveable>().delta;
-        private readonly ObservableProperty_SerializeField<Vector3> delta = new();
-        public IObservableProperty<ITransformHandler> TransformHandler => AwakeSelf<BodyMoveable>().transformHandler;
-        private readonly ObservableProperty_SerializeField<ITransformHandler> transformHandler = new();
+        public IProperty<Vector3> Direction => AwakeSelf<BodyMoveable>().direction;
+        [SerializeField] private PropertySerializeField<Vector3> direction = new();
+        public IProperty<float> Speed => AwakeSelf<BodyMoveable>().speed;
+        [SerializeField] private PropertySerializeField<float> speed = new();
+        public IProperty<Vector3> Delta => AwakeSelf<BodyMoveable>().delta;
+        private readonly PropertySerializeField<Vector3> delta = new();
+        public IProperty<ITransformHandler> TransformHandler => AwakeSelf<BodyMoveable>().transformHandler;
+        private readonly PropertySerializeField<ITransformHandler> transformHandler = new();
         protected override void OnGameComponentAwake()
         {
             BodyPart.BodyComponents.OfType<ITransformHandler>().FirstOrDefault(transformHandler);

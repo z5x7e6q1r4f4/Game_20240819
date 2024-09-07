@@ -140,7 +140,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1296
+    width: 1294
     height: 939
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -167,8 +167,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1296
-    height: 685
+    width: 1294
+    height: 431
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 299
-    height: 685
+    width: 300
+    height: 431
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -215,10 +215,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 299
+    x: 300
     y: 0
-    width: 306
-    height: 685
+    width: 305
+    height: 431
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -244,8 +244,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 605
     y: 0
-    width: 691
-    height: 685
+    width: 689
+    height: 431
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 685
-    width: 1296
-    height: 254
+    y: 431
+    width: 1294
+    height: 508
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
@@ -300,9 +300,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1296
+    x: 1294
     y: 0
-    width: 624
+    width: 626
     height: 939
   m_MinSize: {x: 446, y: 86}
   m_MaxSize: {x: 4001, y: 4021}
@@ -313,7 +313,7 @@ MonoBehaviour:
   - {fileID: 27}
   - {fileID: 13}
   m_Selected: 3
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -335,9 +335,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Code Coverage\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1297
+    x: 1295
     y: 19
-    width: 623
+    width: 625
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -371,9 +371,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1296
+    x: 1294
     y: 73
-    width: 623
+    width: 625
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 1
@@ -422,8 +422,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 19
-    width: 298
-    height: 664
+    width: 299
+    height: 410
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: befaffff
+      m_ExpandedIDs: 7ed1ffff0cd2ffffbefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -486,10 +486,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 300
+    x: 301
     y: 19
-    width: 304
-    height: 664
+    width: 303
+    height: 410
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1202,8 +1202,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 606
     y: 19
-    width: 689
-    height: 664
+    width: 687
+    height: 410
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1257,10 +1257,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 689
-      height: 643
-    m_Scale: {x: 0.5043924, y: 0.5043924}
-    m_Translation: {x: 344.5, y: 321.5}
+      width: 687
+      height: 389
+    m_Scale: {x: 0.50292826, y: 0.50292826}
+    m_Translation: {x: 343.5, y: 194.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1268,12 +1268,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -683
-      y: -637.4006
+      y: -386.73508
       width: 1366
-      height: 1274.8011
+      height: 773.47015
     m_MinimalGUI: 1
-  m_defaultScale: 0.5043924
-  m_LastWindowPixelSize: {x: 689, y: 664}
+  m_defaultScale: 0.50292826
+  m_LastWindowPixelSize: {x: 687, y: 410}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1337,9 +1337,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 174
-    width: 1295
-    height: 817
+    y: 504
+    width: 1293
+    height: 487
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Main/Unity
+    - Assets/Scripts/Main/Value/Collection
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1372,16 +1372,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Main/Unity/Time
+  - Assets/Scripts/Main/Value/Collection
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\UnityProject\Game_20240819
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62b30000
-    m_LastClickedID: 45922
-    m_ExpandedIDs: 000000005ab000005cb000005eb0000060b0000062b0000064b0000066b0000068b000006ab000006cb000006eb00000
+    m_SelectedIDs: b8b20000
+    m_LastClickedID: 45752
+    m_ExpandedIDs: 000000004eb0000050b0000052b0000054b0000056b0000058b000005ab000005cb000005eb0000060b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1410,7 +1410,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ab000005cb000005eb0000060b0000062b0000064b0000066b0000068b000006ab000006cb000006eb00000
+    m_ExpandedIDs: 000000004eb0000050b0000052b0000054b0000056b0000058b000005ab000005cb000005eb0000060b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1490,9 +1490,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 704
-    width: 1295
-    height: 233
+    y: 450
+    width: 1293
+    height: 487
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2687,10 +2687,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project Settings\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1296
-    y: 73
-    width: 623
-    height: 918
+    x: 939
+    y: 115
+    width: 432
+    height: 713
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2752,9 +2752,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Test Runner\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1296
+    x: 1294
     y: 73
-    width: 623
+    width: 625
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -2768,15 +2768,15 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 363
-    splitterInitialOffset: 348
+    ID: 180
+    splitterInitialOffset: 554
     currentActiveSplitter: -1
     realSizes:
-    - 306
-    - 542
+    - 663
+    - 185
     relativeSizes:
-    - 0.36057693
-    - 0.6394231
+    - 0.7822706
+    - 0.21772939
     minSizes:
     - 32
     - 32
@@ -2791,7 +2791,7 @@ MonoBehaviour:
     oldMinSizes: 
     oldMaxSizes: 
     oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_TestListGUIs:
   - m_Window: {fileID: 27}
     m_NewResultList:
@@ -2825,7 +2825,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1278
+      parentId: 1000
       parentUniqueId: '[Game_20240819][suite]'
     - id: 1268
       uniqueId: 'UnitTest.EditMode.dll/[Main][suite]'
@@ -2912,7 +2912,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Count(True)
       resultStatus: 1
-      duration: 0.0046734
+      duration: 0.3459606
       messages: 
       output: 
       stacktrace: 
@@ -2929,7 +2929,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Count(False)
       resultStatus: 1
-      duration: 0.0001743
+      duration: 0.0003122
       messages: 
       output: 
       stacktrace: 
@@ -2962,7 +2962,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(0,"a")
       resultStatus: 1
-      duration: 0.0008685
+      duration: 0.0010146
       messages: 
       output: 
       stacktrace: 
@@ -2979,7 +2979,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(0,"b")
       resultStatus: 1
-      duration: 0.0002161
+      duration: 0.0002555
       messages: 
       output: 
       stacktrace: 
@@ -2996,7 +2996,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(0,"c")
       resultStatus: 1
-      duration: 0.0001588
+      duration: 0.0002298
       messages: 
       output: 
       stacktrace: 
@@ -3013,7 +3013,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(1,"a")
       resultStatus: 1
-      duration: 0.000154
+      duration: 0.0002008
       messages: 
       output: 
       stacktrace: 
@@ -3030,7 +3030,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(1,"b")
       resultStatus: 1
-      duration: 0.000174
+      duration: 0.000195
       messages: 
       output: 
       stacktrace: 
@@ -3047,7 +3047,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(1,"c")
       resultStatus: 1
-      duration: 0.0001794
+      duration: 0.0002116
       messages: 
       output: 
       stacktrace: 
@@ -3064,7 +3064,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(2,"a")
       resultStatus: 1
-      duration: 0.0002257
+      duration: 0.0001925
       messages: 
       output: 
       stacktrace: 
@@ -3081,7 +3081,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(2,"b")
       resultStatus: 1
-      duration: 0.0001703
+      duration: 0.000186
       messages: 
       output: 
       stacktrace: 
@@ -3098,7 +3098,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Data(2,"c")
       resultStatus: 1
-      duration: 0.0001729
+      duration: 0.0002302
       messages: 
       output: 
       stacktrace: 
@@ -3115,7 +3115,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Immediately
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Immediately
       resultStatus: 1
-      duration: 0.003152
+      duration: 0.0030742
       messages: 
       output: 
       stacktrace: 
@@ -3148,7 +3148,7 @@ MonoBehaviour:
       name: Test_AfterAdd_IsEnable(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_IsEnable(True)
       resultStatus: 1
-      duration: 0.0010766
+      duration: 0.0012838
       messages: 
       output: 
       stacktrace: 
@@ -3165,7 +3165,7 @@ MonoBehaviour:
       name: Test_AfterAdd_IsEnable(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_IsEnable(False)
       resultStatus: 1
-      duration: 0.0001983
+      duration: 0.0002521
       messages: 
       output: 
       stacktrace: 
@@ -3198,7 +3198,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Modified(null)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Modified(null)
       resultStatus: 1
-      duration: 0.0007451
+      duration: 0.0008955
       messages: 
       output: 
       stacktrace: 
@@ -3215,7 +3215,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Modified("modified")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterAdd.Test_AfterAdd_Modified("modified")
       resultStatus: 1
-      duration: 0.0002222
+      duration: 0.0002695
       messages: 
       output: 
       stacktrace: 
@@ -3264,7 +3264,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_Count(True)
       resultStatus: 1
-      duration: 0.0014552
+      duration: 0.0014221
       messages: 
       output: 
       stacktrace: 
@@ -3281,7 +3281,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_Count(False)
       resultStatus: 1
-      duration: 0.0001714
+      duration: 0.0002402
       messages: 
       output: 
       stacktrace: 
@@ -3314,7 +3314,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item1")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_Data("Item1")
       resultStatus: 1
-      duration: 0.0009356
+      duration: 0.0007987
       messages: 
       output: 
       stacktrace: 
@@ -3331,7 +3331,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item2")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_Data("Item2")
       resultStatus: 1
-      duration: 0.00021
+      duration: 0.000258
       messages: 
       output: 
       stacktrace: 
@@ -3348,7 +3348,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item3")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_Data("Item3")
       resultStatus: 1
-      duration: 0.0001639
+      duration: 0.0002515
       messages: 
       output: 
       stacktrace: 
@@ -3381,7 +3381,7 @@ MonoBehaviour:
       name: Test_AfterRemove_IsEnable(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_IsEnable(True)
       resultStatus: 1
-      duration: 0.0012784
+      duration: 0.0011765
       messages: 
       output: 
       stacktrace: 
@@ -3398,7 +3398,7 @@ MonoBehaviour:
       name: Test_AfterRemove_IsEnable(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_AfterRemove.Test_AfterRemove_IsEnable(False)
       resultStatus: 1
-      duration: 0.0001846
+      duration: 0.0003435
       messages: 
       output: 
       stacktrace: 
@@ -3447,7 +3447,7 @@ MonoBehaviour:
       name: Test_Add(True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Add(True,True)
       resultStatus: 1
-      duration: 0.0008632
+      duration: 0.0008655
       messages: 
       output: 
       stacktrace: 
@@ -3464,7 +3464,7 @@ MonoBehaviour:
       name: Test_Add(True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Add(True,False)
       resultStatus: 1
-      duration: 0.0001453
+      duration: 0.0002035
       messages: 
       output: 
       stacktrace: 
@@ -3481,7 +3481,7 @@ MonoBehaviour:
       name: Test_Add(False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Add(False,True)
       resultStatus: 1
-      duration: 0.0001306
+      duration: 0.0003177
       messages: 
       output: 
       stacktrace: 
@@ -3498,7 +3498,7 @@ MonoBehaviour:
       name: Test_Add(False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Add(False,False)
       resultStatus: 1
-      duration: 0.000132
+      duration: 0.0001796
       messages: 
       output: 
       stacktrace: 
@@ -3531,7 +3531,7 @@ MonoBehaviour:
       name: Test_AddRange(True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_AddRange(True,True)
       resultStatus: 1
-      duration: 0.0004466
+      duration: 0.0005217
       messages: 
       output: 
       stacktrace: 
@@ -3548,7 +3548,7 @@ MonoBehaviour:
       name: Test_AddRange(True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_AddRange(True,False)
       resultStatus: 1
-      duration: 0.0001483
+      duration: 0.0002622
       messages: 
       output: 
       stacktrace: 
@@ -3565,7 +3565,7 @@ MonoBehaviour:
       name: Test_AddRange(False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_AddRange(False,True)
       resultStatus: 1
-      duration: 0.0001366
+      duration: 0.0002081
       messages: 
       output: 
       stacktrace: 
@@ -3582,7 +3582,7 @@ MonoBehaviour:
       name: Test_AddRange(False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_AddRange(False,False)
       resultStatus: 1
-      duration: 0.0001279
+      duration: 0.0002196
       messages: 
       output: 
       stacktrace: 
@@ -3599,7 +3599,7 @@ MonoBehaviour:
       name: Test_Clear
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Clear
       resultStatus: 1
-      duration: 0.0003239
+      duration: 0.0004157
       messages: 
       output: 
       stacktrace: 
@@ -3632,7 +3632,7 @@ MonoBehaviour:
       name: Test_Insert(-1,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(-1,True,True)
       resultStatus: 1
-      duration: 0.0028056
+      duration: 0.0025488
       messages: 
       output: 
       stacktrace: 
@@ -3649,7 +3649,7 @@ MonoBehaviour:
       name: Test_Insert(-1,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(-1,True,False)
       resultStatus: 1
-      duration: 0.0002192
+      duration: 0.0003494
       messages: 
       output: 
       stacktrace: 
@@ -3666,7 +3666,7 @@ MonoBehaviour:
       name: Test_Insert(-1,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(-1,False,True)
       resultStatus: 1
-      duration: 0.0001724
+      duration: 0.000289
       messages: 
       output: 
       stacktrace: 
@@ -3683,7 +3683,7 @@ MonoBehaviour:
       name: Test_Insert(-1,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(-1,False,False)
       resultStatus: 1
-      duration: 0.0001497
+      duration: 0.0002066
       messages: 
       output: 
       stacktrace: 
@@ -3700,7 +3700,7 @@ MonoBehaviour:
       name: Test_Insert(0,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(0,True,True)
       resultStatus: 1
-      duration: 0.0003312
+      duration: 0.0002989
       messages: 
       output: 
       stacktrace: 
@@ -3717,7 +3717,7 @@ MonoBehaviour:
       name: Test_Insert(0,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(0,True,False)
       resultStatus: 1
-      duration: 0.0001743
+      duration: 0.0001829
       messages: 
       output: 
       stacktrace: 
@@ -3734,7 +3734,7 @@ MonoBehaviour:
       name: Test_Insert(0,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(0,False,True)
       resultStatus: 1
-      duration: 0.0001332
+      duration: 0.0001763
       messages: 
       output: 
       stacktrace: 
@@ -3751,7 +3751,7 @@ MonoBehaviour:
       name: Test_Insert(0,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(0,False,False)
       resultStatus: 1
-      duration: 0.0001344
+      duration: 0.0001688
       messages: 
       output: 
       stacktrace: 
@@ -3768,7 +3768,7 @@ MonoBehaviour:
       name: Test_Insert(1,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(1,True,True)
       resultStatus: 1
-      duration: 0.0001316
+      duration: 0.0001733
       messages: 
       output: 
       stacktrace: 
@@ -3785,7 +3785,7 @@ MonoBehaviour:
       name: Test_Insert(1,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(1,True,False)
       resultStatus: 1
-      duration: 0.0001308
+      duration: 0.000168
       messages: 
       output: 
       stacktrace: 
@@ -3802,7 +3802,7 @@ MonoBehaviour:
       name: Test_Insert(1,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(1,False,True)
       resultStatus: 1
-      duration: 0.0001252
+      duration: 0.0001751
       messages: 
       output: 
       stacktrace: 
@@ -3819,7 +3819,7 @@ MonoBehaviour:
       name: Test_Insert(1,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(1,False,False)
       resultStatus: 1
-      duration: 0.0001323
+      duration: 0.0001695
       messages: 
       output: 
       stacktrace: 
@@ -3836,7 +3836,7 @@ MonoBehaviour:
       name: Test_Insert(2,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(2,True,True)
       resultStatus: 1
-      duration: 0.0001246
+      duration: 0.0001656
       messages: 
       output: 
       stacktrace: 
@@ -3853,7 +3853,7 @@ MonoBehaviour:
       name: Test_Insert(2,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(2,True,False)
       resultStatus: 1
-      duration: 0.0001192
+      duration: 0.0001789
       messages: 
       output: 
       stacktrace: 
@@ -3870,7 +3870,7 @@ MonoBehaviour:
       name: Test_Insert(2,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(2,False,True)
       resultStatus: 1
-      duration: 0.000131
+      duration: 0.0002155
       messages: 
       output: 
       stacktrace: 
@@ -3887,7 +3887,7 @@ MonoBehaviour:
       name: Test_Insert(2,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(2,False,False)
       resultStatus: 1
-      duration: 0.0001409
+      duration: 0.0002447
       messages: 
       output: 
       stacktrace: 
@@ -3904,7 +3904,7 @@ MonoBehaviour:
       name: Test_Insert(3,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(3,True,True)
       resultStatus: 1
-      duration: 0.0001391
+      duration: 0.0001922
       messages: 
       output: 
       stacktrace: 
@@ -3921,7 +3921,7 @@ MonoBehaviour:
       name: Test_Insert(3,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(3,True,False)
       resultStatus: 1
-      duration: 0.0001305
+      duration: 0.0001916
       messages: 
       output: 
       stacktrace: 
@@ -3938,7 +3938,7 @@ MonoBehaviour:
       name: Test_Insert(3,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(3,False,True)
       resultStatus: 1
-      duration: 0.0001254
+      duration: 0.0001812
       messages: 
       output: 
       stacktrace: 
@@ -3955,7 +3955,7 @@ MonoBehaviour:
       name: Test_Insert(3,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(3,False,False)
       resultStatus: 1
-      duration: 0.0001245
+      duration: 0.0001803
       messages: 
       output: 
       stacktrace: 
@@ -3972,7 +3972,7 @@ MonoBehaviour:
       name: Test_Insert(4,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(4,True,True)
       resultStatus: 1
-      duration: 0.0001432
+      duration: 0.0002087
       messages: 
       output: 
       stacktrace: 
@@ -3989,7 +3989,7 @@ MonoBehaviour:
       name: Test_Insert(4,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(4,True,False)
       resultStatus: 1
-      duration: 0.0001476
+      duration: 0.0002052
       messages: 
       output: 
       stacktrace: 
@@ -4006,7 +4006,7 @@ MonoBehaviour:
       name: Test_Insert(4,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(4,False,True)
       resultStatus: 1
-      duration: 0.0001417
+      duration: 0.0001951
       messages: 
       output: 
       stacktrace: 
@@ -4023,7 +4023,7 @@ MonoBehaviour:
       name: Test_Insert(4,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(4,False,False)
       resultStatus: 1
-      duration: 0.000148
+      duration: 0.0001874
       messages: 
       output: 
       stacktrace: 
@@ -4040,7 +4040,7 @@ MonoBehaviour:
       name: Test_Insert(5,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(5,True,True)
       resultStatus: 1
-      duration: 0.0001409
+      duration: 0.0001823
       messages: 
       output: 
       stacktrace: 
@@ -4057,7 +4057,7 @@ MonoBehaviour:
       name: Test_Insert(5,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(5,True,False)
       resultStatus: 1
-      duration: 0.0001493
+      duration: 0.000197
       messages: 
       output: 
       stacktrace: 
@@ -4074,7 +4074,7 @@ MonoBehaviour:
       name: Test_Insert(5,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(5,False,True)
       resultStatus: 1
-      duration: 0.0001433
+      duration: 0.0001866
       messages: 
       output: 
       stacktrace: 
@@ -4091,7 +4091,7 @@ MonoBehaviour:
       name: Test_Insert(5,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Insert(5,False,False)
       resultStatus: 1
-      duration: 0.0001472
+      duration: 0.0001978
       messages: 
       output: 
       stacktrace: 
@@ -4124,7 +4124,7 @@ MonoBehaviour:
       name: Test_Remove(True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Remove(True,True)
       resultStatus: 1
-      duration: 0.0005032
+      duration: 0.0006646
       messages: 
       output: 
       stacktrace: 
@@ -4141,7 +4141,7 @@ MonoBehaviour:
       name: Test_Remove(True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Remove(True,False)
       resultStatus: 1
-      duration: 0.0002195
+      duration: 0.0002157
       messages: 
       output: 
       stacktrace: 
@@ -4158,7 +4158,7 @@ MonoBehaviour:
       name: Test_Remove(False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Remove(False,True)
       resultStatus: 1
-      duration: 0.0001592
+      duration: 0.0001854
       messages: 
       output: 
       stacktrace: 
@@ -4175,7 +4175,7 @@ MonoBehaviour:
       name: Test_Remove(False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_Remove(False,False)
       resultStatus: 1
-      duration: 0.0001304
+      duration: 0.000172
       messages: 
       output: 
       stacktrace: 
@@ -4208,7 +4208,7 @@ MonoBehaviour:
       name: Test_RemoveAt(-1,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(-1,True,True)
       resultStatus: 1
-      duration: 0.0005181
+      duration: 0.0006806
       messages: 
       output: 
       stacktrace: 
@@ -4225,7 +4225,7 @@ MonoBehaviour:
       name: Test_RemoveAt(-1,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(-1,True,False)
       resultStatus: 1
-      duration: 0.0002119
+      duration: 0.0003039
       messages: 
       output: 
       stacktrace: 
@@ -4242,7 +4242,7 @@ MonoBehaviour:
       name: Test_RemoveAt(-1,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(-1,False,True)
       resultStatus: 1
-      duration: 0.0001548
+      duration: 0.0002365
       messages: 
       output: 
       stacktrace: 
@@ -4259,7 +4259,7 @@ MonoBehaviour:
       name: Test_RemoveAt(-1,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(-1,False,False)
       resultStatus: 1
-      duration: 0.0001723
+      duration: 0.0002296
       messages: 
       output: 
       stacktrace: 
@@ -4276,7 +4276,7 @@ MonoBehaviour:
       name: Test_RemoveAt(0,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(0,True,True)
       resultStatus: 1
-      duration: 0.0001756
+      duration: 0.000261
       messages: 
       output: 
       stacktrace: 
@@ -4293,7 +4293,7 @@ MonoBehaviour:
       name: Test_RemoveAt(0,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(0,True,False)
       resultStatus: 1
-      duration: 0.0001305
+      duration: 0.0001987
       messages: 
       output: 
       stacktrace: 
@@ -4310,7 +4310,7 @@ MonoBehaviour:
       name: Test_RemoveAt(0,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(0,False,True)
       resultStatus: 1
-      duration: 0.0001252
+      duration: 0.0001745
       messages: 
       output: 
       stacktrace: 
@@ -4327,7 +4327,7 @@ MonoBehaviour:
       name: Test_RemoveAt(0,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(0,False,False)
       resultStatus: 1
-      duration: 0.0001212
+      duration: 0.0001694
       messages: 
       output: 
       stacktrace: 
@@ -4344,7 +4344,7 @@ MonoBehaviour:
       name: Test_RemoveAt(1,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(1,True,True)
       resultStatus: 1
-      duration: 0.0001172
+      duration: 0.0001714
       messages: 
       output: 
       stacktrace: 
@@ -4361,7 +4361,7 @@ MonoBehaviour:
       name: Test_RemoveAt(1,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(1,True,False)
       resultStatus: 1
-      duration: 0.000122
+      duration: 0.0001782
       messages: 
       output: 
       stacktrace: 
@@ -4378,7 +4378,7 @@ MonoBehaviour:
       name: Test_RemoveAt(1,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(1,False,True)
       resultStatus: 1
-      duration: 0.0001153
+      duration: 0.0001696
       messages: 
       output: 
       stacktrace: 
@@ -4395,7 +4395,7 @@ MonoBehaviour:
       name: Test_RemoveAt(1,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(1,False,False)
       resultStatus: 1
-      duration: 0.0001122
+      duration: 0.0001671
       messages: 
       output: 
       stacktrace: 
@@ -4412,7 +4412,7 @@ MonoBehaviour:
       name: Test_RemoveAt(2,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(2,True,True)
       resultStatus: 1
-      duration: 0.00012
+      duration: 0.0001785
       messages: 
       output: 
       stacktrace: 
@@ -4429,7 +4429,7 @@ MonoBehaviour:
       name: Test_RemoveAt(2,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(2,True,False)
       resultStatus: 1
-      duration: 0.0001163
+      duration: 0.0001705
       messages: 
       output: 
       stacktrace: 
@@ -4446,7 +4446,7 @@ MonoBehaviour:
       name: Test_RemoveAt(2,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(2,False,True)
       resultStatus: 1
-      duration: 0.0001169
+      duration: 0.0001722
       messages: 
       output: 
       stacktrace: 
@@ -4463,7 +4463,7 @@ MonoBehaviour:
       name: Test_RemoveAt(2,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(2,False,False)
       resultStatus: 1
-      duration: 0.0002194
+      duration: 0.0002497
       messages: 
       output: 
       stacktrace: 
@@ -4480,7 +4480,7 @@ MonoBehaviour:
       name: Test_RemoveAt(3,True,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(3,True,True)
       resultStatus: 1
-      duration: 0.0002003
+      duration: 0.0002274
       messages: 
       output: 
       stacktrace: 
@@ -4497,7 +4497,7 @@ MonoBehaviour:
       name: Test_RemoveAt(3,True,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(3,True,False)
       resultStatus: 1
-      duration: 0.0002082
+      duration: 0.0002078
       messages: 
       output: 
       stacktrace: 
@@ -4514,7 +4514,7 @@ MonoBehaviour:
       name: Test_RemoveAt(3,False,True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(3,False,True)
       resultStatus: 1
-      duration: 0.0001553
+      duration: 0.000211
       messages: 
       output: 
       stacktrace: 
@@ -4531,7 +4531,7 @@ MonoBehaviour:
       name: Test_RemoveAt(3,False,False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Basic.Test_RemoveAt(3,False,False)
       resultStatus: 1
-      duration: 0.000148
+      duration: 0.0001971
       messages: 
       output: 
       stacktrace: 
@@ -4580,7 +4580,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Count(True)
       resultStatus: 1
-      duration: 0.0005004
+      duration: 0.0005844
       messages: 
       output: 
       stacktrace: 
@@ -4597,7 +4597,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Count(False)
       resultStatus: 1
-      duration: 0.0002105
+      duration: 0.0002408
       messages: 
       output: 
       stacktrace: 
@@ -4630,7 +4630,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(0,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(0,"a")
       resultStatus: 1
-      duration: 0.0006492
+      duration: 0.0007346
       messages: 
       output: 
       stacktrace: 
@@ -4647,7 +4647,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(0,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(0,"b")
       resultStatus: 1
-      duration: 0.0001856
+      duration: 0.0003571
       messages: 
       output: 
       stacktrace: 
@@ -4664,7 +4664,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(0,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(0,"c")
       resultStatus: 1
-      duration: 0.00016
+      duration: 0.0002084
       messages: 
       output: 
       stacktrace: 
@@ -4681,7 +4681,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(1,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(1,"a")
       resultStatus: 1
-      duration: 0.0001599
+      duration: 0.0002036
       messages: 
       output: 
       stacktrace: 
@@ -4698,7 +4698,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(1,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(1,"b")
       resultStatus: 1
-      duration: 0.0001604
+      duration: 0.0003604
       messages: 
       output: 
       stacktrace: 
@@ -4715,7 +4715,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(1,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(1,"c")
       resultStatus: 1
-      duration: 0.0001916
+      duration: 0.0002188
       messages: 
       output: 
       stacktrace: 
@@ -4732,7 +4732,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(2,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(2,"a")
       resultStatus: 1
-      duration: 0.0001434
+      duration: 0.0001921
       messages: 
       output: 
       stacktrace: 
@@ -4749,7 +4749,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(2,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(2,"b")
       resultStatus: 1
-      duration: 0.0001501
+      duration: 0.0001865
       messages: 
       output: 
       stacktrace: 
@@ -4766,7 +4766,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Data(2,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Data(2,"c")
       resultStatus: 1
-      duration: 0.0001416
+      duration: 0.0002602
       messages: 
       output: 
       stacktrace: 
@@ -4799,7 +4799,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_IsEnable(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_IsEnable(True)
       resultStatus: 1
-      duration: 0.0005336
+      duration: 0.0006616
       messages: 
       output: 
       stacktrace: 
@@ -4816,7 +4816,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_IsEnable(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_IsEnable(False)
       resultStatus: 1
-      duration: 0.0001753
+      duration: 0.0003135
       messages: 
       output: 
       stacktrace: 
@@ -4849,7 +4849,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Modified(null)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Modified(null)
       resultStatus: 1
-      duration: 0.0006023
+      duration: 0.0006907
       messages: 
       output: 
       stacktrace: 
@@ -4866,7 +4866,7 @@ MonoBehaviour:
       name: Test_BaforeAdd_Modified("modified")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeAdd.Test_BaforeAdd_Modified("modified")
       resultStatus: 1
-      duration: 0.0001599
+      duration: 0.000405
       messages: 
       output: 
       stacktrace: 
@@ -4915,7 +4915,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_Count(True)
       resultStatus: 1
-      duration: 0.0004983
+      duration: 0.000686
       messages: 
       output: 
       stacktrace: 
@@ -4932,7 +4932,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_Count(False)
       resultStatus: 1
-      duration: 0.0002577
+      duration: 0.000257
       messages: 
       output: 
       stacktrace: 
@@ -4965,7 +4965,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_Data("Item1")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_Data("Item1")
       resultStatus: 1
-      duration: 0.0006462
+      duration: 0.0007569
       messages: 
       output: 
       stacktrace: 
@@ -4982,7 +4982,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_Data("Item2")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_Data("Item2")
       resultStatus: 1
-      duration: 0.0002448
+      duration: 0.0002683
       messages: 
       output: 
       stacktrace: 
@@ -4999,7 +4999,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_Data("Item3")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_Data("Item3")
       resultStatus: 1
-      duration: 0.0001758
+      duration: 0.0002503
       messages: 
       output: 
       stacktrace: 
@@ -5032,7 +5032,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_IsEnable(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_IsEnable(True)
       resultStatus: 1
-      duration: 0.0005708
+      duration: 0.0006431
       messages: 
       output: 
       stacktrace: 
@@ -5049,7 +5049,7 @@ MonoBehaviour:
       name: Test_BeforeRemove_IsEnable(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_BeforeRemove.Test_BeforeRemove_IsEnable(False)
       resultStatus: 1
-      duration: 0.0001939
+      duration: 0.0002622
       messages: 
       output: 
       stacktrace: 
@@ -5098,7 +5098,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Count(True)
       resultStatus: 1
-      duration: 0.0005936
+      duration: 0.0006183
       messages: 
       output: 
       stacktrace: 
@@ -5115,7 +5115,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Count(False)
       resultStatus: 1
-      duration: 0.0002232
+      duration: 0.0002526
       messages: 
       output: 
       stacktrace: 
@@ -5148,7 +5148,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(0,"a")
       resultStatus: 1
-      duration: 0.0005252
+      duration: 0.0007018
       messages: 
       output: 
       stacktrace: 
@@ -5165,7 +5165,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(0,"b")
       resultStatus: 1
-      duration: 0.0001601
+      duration: 0.0002382
       messages: 
       output: 
       stacktrace: 
@@ -5182,7 +5182,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(0,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(0,"c")
       resultStatus: 1
-      duration: 0.0001531
+      duration: 0.0002469
       messages: 
       output: 
       stacktrace: 
@@ -5199,7 +5199,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(1,"a")
       resultStatus: 1
-      duration: 0.0001436
+      duration: 0.0002004
       messages: 
       output: 
       stacktrace: 
@@ -5216,7 +5216,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(1,"b")
       resultStatus: 1
-      duration: 0.0001515
+      duration: 0.0002143
       messages: 
       output: 
       stacktrace: 
@@ -5233,7 +5233,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(1,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(1,"c")
       resultStatus: 1
-      duration: 0.000144
+      duration: 0.0001844
       messages: 
       output: 
       stacktrace: 
@@ -5250,7 +5250,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"a")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(2,"a")
       resultStatus: 1
-      duration: 0.0001502
+      duration: 0.0001732
       messages: 
       output: 
       stacktrace: 
@@ -5267,7 +5267,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"b")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(2,"b")
       resultStatus: 1
-      duration: 0.0001462
+      duration: 0.0001668
       messages: 
       output: 
       stacktrace: 
@@ -5284,7 +5284,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Data(2,"c")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Data(2,"c")
       resultStatus: 1
-      duration: 0.0001468
+      duration: 0.0001787
       messages: 
       output: 
       stacktrace: 
@@ -5301,7 +5301,7 @@ MonoBehaviour:
       name: Test_AfterAdd_Immediately
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterAdd_Immediately
       resultStatus: 1
-      duration: 0.0004082
+      duration: 0.0004932
       messages: 
       output: 
       stacktrace: 
@@ -5334,7 +5334,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Count(True)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterRemove_Count(True)
       resultStatus: 1
-      duration: 0.0006519
+      duration: 0.0007434
       messages: 
       output: 
       stacktrace: 
@@ -5351,7 +5351,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Count(False)
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterRemove_Count(False)
       resultStatus: 1
-      duration: 0.000229
+      duration: 0.0002257
       messages: 
       output: 
       stacktrace: 
@@ -5384,7 +5384,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item1")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterRemove_Data("Item1")
       resultStatus: 1
-      duration: 0.0005486
+      duration: 0.0008449
       messages: 
       output: 
       stacktrace: 
@@ -5401,7 +5401,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item2")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterRemove_Data("Item2")
       resultStatus: 1
-      duration: 0.000198
+      duration: 0.0002378
       messages: 
       output: 
       stacktrace: 
@@ -5418,7 +5418,7 @@ MonoBehaviour:
       name: Test_AfterRemove_Data("Item3")
       fullName: Main.RXs.ObservableCollections.UnitTest_RXsCollection_Readonly.Test_AfterRemove_Data("Item3")
       resultStatus: 1
-      duration: 0.0002114
+      duration: 0.0001862
       messages: 
       output: 
       stacktrace: 
@@ -5483,7 +5483,7 @@ MonoBehaviour:
       name: Test_AfterSet_Count(True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_Count(True)
       resultStatus: 1
-      duration: 0.0030355
+      duration: 0.0033385
       messages: 
       output: 
       stacktrace: 
@@ -5500,7 +5500,7 @@ MonoBehaviour:
       name: Test_AfterSet_Count(False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_Count(False)
       resultStatus: 1
-      duration: 0.0001654
+      duration: 0.0002304
       messages: 
       output: 
       stacktrace: 
@@ -5517,7 +5517,7 @@ MonoBehaviour:
       name: Test_AfterSet_Data
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_Data
       resultStatus: 1
-      duration: 0.0004364
+      duration: 0.0005395
       messages: 
       output: 
       stacktrace: 
@@ -5550,7 +5550,7 @@ MonoBehaviour:
       name: Test_AfterSet_IsEnable(True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_IsEnable(True)
       resultStatus: 1
-      duration: 0.0010961
+      duration: 0.0011907
       messages: 
       output: 
       stacktrace: 
@@ -5567,7 +5567,7 @@ MonoBehaviour:
       name: Test_AfterSet_IsEnable(False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_IsEnable(False)
       resultStatus: 1
-      duration: 0.0001775
+      duration: 0.0003414
       messages: 
       output: 
       stacktrace: 
@@ -5600,7 +5600,7 @@ MonoBehaviour:
       name: Test_AfterSet_Modified(null)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_Modified(null)
       resultStatus: 1
-      duration: 0.0004959
+      duration: 0.0006439
       messages: 
       output: 
       stacktrace: 
@@ -5617,7 +5617,7 @@ MonoBehaviour:
       name: Test_AfterSet_Modified("modified")
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_AfterSet_Modified("modified")
       resultStatus: 1
-      duration: 0.0002324
+      duration: 0.0002616
       messages: 
       output: 
       stacktrace: 
@@ -5650,7 +5650,7 @@ MonoBehaviour:
       name: Test_BeforeSet_Count(True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_Count(True)
       resultStatus: 1
-      duration: 0.0004613
+      duration: 0.0006586
       messages: 
       output: 
       stacktrace: 
@@ -5667,7 +5667,7 @@ MonoBehaviour:
       name: Test_BeforeSet_Count(False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_Count(False)
       resultStatus: 1
-      duration: 0.0002032
+      duration: 0.000224
       messages: 
       output: 
       stacktrace: 
@@ -5684,7 +5684,7 @@ MonoBehaviour:
       name: Test_BeforeSet_Data
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_Data
       resultStatus: 1
-      duration: 0.0015076
+      duration: 0.0019855
       messages: 
       output: 
       stacktrace: 
@@ -5717,7 +5717,7 @@ MonoBehaviour:
       name: Test_BeforeSet_IsEnable(True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_IsEnable(True)
       resultStatus: 1
-      duration: 0.0005802
+      duration: 0.0006549
       messages: 
       output: 
       stacktrace: 
@@ -5734,7 +5734,7 @@ MonoBehaviour:
       name: Test_BeforeSet_IsEnable(False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_IsEnable(False)
       resultStatus: 1
-      duration: 0.0002318
+      duration: 0.000218
       messages: 
       output: 
       stacktrace: 
@@ -5767,7 +5767,7 @@ MonoBehaviour:
       name: Test_BeforeSet_Modified(null)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_Modified(null)
       resultStatus: 1
-      duration: 0.0006202
+      duration: 0.0005782
       messages: 
       output: 
       stacktrace: 
@@ -5784,7 +5784,7 @@ MonoBehaviour:
       name: Test_BeforeSet_Modified("modified")
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_BeforeSet_Modified("modified")
       resultStatus: 1
-      duration: 0.0001848
+      duration: 0.0002443
       messages: 
       output: 
       stacktrace: 
@@ -5817,7 +5817,7 @@ MonoBehaviour:
       name: Test_SetValue(True,True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_SetValue(True,True)
       resultStatus: 1
-      duration: 0.0003648
+      duration: 0.0005165
       messages: 
       output: 
       stacktrace: 
@@ -5834,7 +5834,7 @@ MonoBehaviour:
       name: Test_SetValue(True,False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_SetValue(True,False)
       resultStatus: 1
-      duration: 0.0001247
+      duration: 0.0002307
       messages: 
       output: 
       stacktrace: 
@@ -5851,7 +5851,7 @@ MonoBehaviour:
       name: Test_SetValue(False,True)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_SetValue(False,True)
       resultStatus: 1
-      duration: 0.0001254
+      duration: 0.0001722
       messages: 
       output: 
       stacktrace: 
@@ -5868,7 +5868,7 @@ MonoBehaviour:
       name: Test_SetValue(False,False)
       fullName: Main.RXs.RXsProperty.UnitTest_RXsProperty.Test_SetValue(False,False)
       resultStatus: 1
-      duration: 0.0001087
+      duration: 0.0001549
       messages: 
       output: 
       stacktrace: 
@@ -5901,15 +5901,15 @@ MonoBehaviour:
       name: Test_Clear
       fullName: Main.RXs.UnitTest_ObservableEventHandler.Test_Clear
       resultStatus: 1
-      duration: 0.00597
+      duration: 0.0063417
       messages: 
-      output: 'Pool<<color=yellow>Main.RXs.Observer+ObserverFromAction`1[System.String]</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>1</color>,Inactive=<color=green>0</color>
+      output: 'Pool<<color=yellow>Main.Observer+ObserverFromAction`1[System.String]</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=red>1</color>,Inactive=<color=green>0</color>
 
-        Pool<<color=yellow>Main.RXs.Disposable+DisposableFromAction</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>1</color>,Inactive=<color=green>0</color>
+        Pool<<color=yellow>Main.Disposable+DisposableFromAction</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=red>1</color>,Inactive=<color=green>0</color>
 
-        Pool<<color=yellow>Main.RXs.Observer+ObserverFromAction`1[System.String]</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>0</color>,Inactive=<color=green>1</color>
+        Pool<<color=yellow>Main.Observer+ObserverFromAction`1[System.String]</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>0</color>,Inactive=<color=green>1</color>
 
-        Pool<<color=yellow>Main.RXs.Disposable+DisposableFromAction</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>0</color>,Inactive=<color=green>1</color>
+        Pool<<color=yellow>Main.Disposable+DisposableFromAction</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>1</color>,Active=<color=green>0</color>,Inactive=<color=green>1</color>
 
         Pool<<color=yellow>Main.Reuse+ReuseList`1[System.IDisposable]</color>>,Prefab=<color=yellow>Null</color>,All=<color=green>2</color>,Active=<color=green>0</color>,Inactive=<color=green>2</color>
 
@@ -5928,7 +5928,7 @@ MonoBehaviour:
       name: Test_Subscribe
       fullName: Main.RXs.UnitTest_ObservableEventHandler.Test_Subscribe
       resultStatus: 1
-      duration: 0.000447
+      duration: 0.0011482
       messages: 
       output: 
       stacktrace: 
@@ -5961,7 +5961,7 @@ MonoBehaviour:
       name: Test_Base
       fullName: Main.RXs.UnitTest_RXsObservable.Test_Base
       resultStatus: 1
-      duration: 0.0027469
+      duration: 0.0028841
       messages: 
       output: 
       stacktrace: 
@@ -5994,7 +5994,7 @@ MonoBehaviour:
       name: Test_FromReturn(System.Object[])
       fullName: Main.RXs.UnitTest_RXsObservable.Test_FromReturn(System.Object[])
       resultStatus: 1
-      duration: 0.0034112
+      duration: 0.0023645
       messages: 
       output: 
       stacktrace: 
@@ -6011,7 +6011,7 @@ MonoBehaviour:
       name: Test_FromReturn(System.Object[])
       fullName: Main.RXs.UnitTest_RXsObservable.Test_FromReturn(System.Object[] GeneratedTestCase2)
       resultStatus: 1
-      duration: 0.0001388
+      duration: 0.0002142
       messages: 
       output: 
       stacktrace: 
@@ -6044,7 +6044,7 @@ MonoBehaviour:
       name: Test_Range(0,5,5,System.Int32[])
       fullName: Main.RXs.UnitTest_RXsObservable.Test_Range(0,5,5,System.Int32[])
       resultStatus: 1
-      duration: 0.0012702
+      duration: 0.0013717
       messages: 
       output: 
       stacktrace: 
@@ -6061,7 +6061,7 @@ MonoBehaviour:
       name: Test_Range(5,0,5,System.Int32[])
       fullName: Main.RXs.UnitTest_RXsObservable.Test_Range(5,0,5,System.Int32[])
       resultStatus: 1
-      duration: 0.000142
+      duration: 0.0001892
       messages: 
       output: 
       stacktrace: 
@@ -6094,7 +6094,7 @@ MonoBehaviour:
       name: Test_FromAction
       fullName: Main.RXs.UnitTest_RXsObserver.Test_FromAction
       resultStatus: 1
-      duration: 0.000979
+      duration: 0.0008475
       messages: 
       output: 
       stacktrace: 
@@ -6111,7 +6111,7 @@ MonoBehaviour:
       name: Test_Reusable
       fullName: Main.RXs.UnitTest_RXsObserver.Test_Reusable
       resultStatus: 1
-      duration: 0.0007903
+      duration: 0.0007953
       messages: 
       output: 
       stacktrace: 
@@ -6144,7 +6144,7 @@ MonoBehaviour:
       name: Test_Dispose
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Dispose
       resultStatus: 1
-      duration: 0.0036404
+      duration: 0.003708
       messages: 
       output: 
       stacktrace: 
@@ -6161,7 +6161,7 @@ MonoBehaviour:
       name: Test_Merge
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Merge
       resultStatus: 1
-      duration: 0.0062695
+      duration: 0.0116392
       messages: 
       output: 
       stacktrace: 
@@ -6178,7 +6178,7 @@ MonoBehaviour:
       name: Test_OfType
       fullName: Main.RXs.UnitTest_RXsOperator.Test_OfType
       resultStatus: 1
-      duration: 0.0034487
+      duration: 0.0036538
       messages: 
       output: 
       stacktrace: 
@@ -6195,7 +6195,7 @@ MonoBehaviour:
       name: Test_Order
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Order
       resultStatus: 1
-      duration: 0.0007974
+      duration: 0.0007864
       messages: 
       output: 
       stacktrace: 
@@ -6212,7 +6212,7 @@ MonoBehaviour:
       name: Test_Select
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Select
       resultStatus: 1
-      duration: 0.0005634
+      duration: 0.0006441
       messages: 
       output: 
       stacktrace: 
@@ -6245,7 +6245,7 @@ MonoBehaviour:
       name: Test_Skip(0)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Skip(0)
       resultStatus: 1
-      duration: 0.0007726
+      duration: 0.0008579
       messages: 
       output: 
       stacktrace: 
@@ -6262,7 +6262,7 @@ MonoBehaviour:
       name: Test_Skip(1)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Skip(1)
       resultStatus: 1
-      duration: 0.0001566
+      duration: 0.0002103
       messages: 
       output: 
       stacktrace: 
@@ -6279,7 +6279,7 @@ MonoBehaviour:
       name: Test_Skip(2)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Skip(2)
       resultStatus: 1
-      duration: 0.0001321
+      duration: 0.0001692
       messages: 
       output: 
       stacktrace: 
@@ -6296,7 +6296,7 @@ MonoBehaviour:
       name: Test_Skip(3)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Skip(3)
       resultStatus: 1
-      duration: 0.0001427
+      duration: 0.0001727
       messages: 
       output: 
       stacktrace: 
@@ -6313,7 +6313,7 @@ MonoBehaviour:
       name: Test_Skip(4)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Skip(4)
       resultStatus: 1
-      duration: 0.0001403
+      duration: 0.0002627
       messages: 
       output: 
       stacktrace: 
@@ -6346,7 +6346,7 @@ MonoBehaviour:
       name: Test_Take(0)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Take(0)
       resultStatus: 1
-      duration: 0.0008424
+      duration: 0.001072
       messages: 
       output: 
       stacktrace: 
@@ -6363,7 +6363,7 @@ MonoBehaviour:
       name: Test_Take(1)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Take(1)
       resultStatus: 1
-      duration: 0.0002518
+      duration: 0.0002716
       messages: 
       output: 
       stacktrace: 
@@ -6380,7 +6380,7 @@ MonoBehaviour:
       name: Test_Take(2)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Take(2)
       resultStatus: 1
-      duration: 0.000174
+      duration: 0.0001493
       messages: 
       output: 
       stacktrace: 
@@ -6397,7 +6397,7 @@ MonoBehaviour:
       name: Test_Take(3)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Take(3)
       resultStatus: 1
-      duration: 0.0002088
+      duration: 0.0001238
       messages: 
       output: 
       stacktrace: 
@@ -6414,7 +6414,7 @@ MonoBehaviour:
       name: Test_Take(4)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Take(4)
       resultStatus: 1
-      duration: 0.0001466
+      duration: 0.0001225
       messages: 
       output: 
       stacktrace: 
@@ -6447,7 +6447,7 @@ MonoBehaviour:
       name: Test_Where(0,27,2,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,27,2,7)
       resultStatus: 1
-      duration: 0.0016628
+      duration: 0.0018423
       messages: 
       output: 
       stacktrace: 
@@ -6464,7 +6464,7 @@ MonoBehaviour:
       name: Test_Where(0,27,2,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,27,2,15)
       resultStatus: 1
-      duration: 0.0003965
+      duration: 0.0004539
       messages: 
       output: 
       stacktrace: 
@@ -6481,7 +6481,7 @@ MonoBehaviour:
       name: Test_Where(0,27,30,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,27,30,7)
       resultStatus: 1
-      duration: 0.0003291
+      duration: 0.000326
       messages: 
       output: 
       stacktrace: 
@@ -6498,7 +6498,7 @@ MonoBehaviour:
       name: Test_Where(0,27,30,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,27,30,15)
       resultStatus: 1
-      duration: 0.0003544
+      duration: 0.0003343
       messages: 
       output: 
       stacktrace: 
@@ -6515,7 +6515,7 @@ MonoBehaviour:
       name: Test_Where(0,44,2,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,44,2,7)
       resultStatus: 1
-      duration: 0.0003558
+      duration: 0.0003328
       messages: 
       output: 
       stacktrace: 
@@ -6532,7 +6532,7 @@ MonoBehaviour:
       name: Test_Where(0,44,2,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,44,2,15)
       resultStatus: 1
-      duration: 0.0003927
+      duration: 0.0004518
       messages: 
       output: 
       stacktrace: 
@@ -6549,7 +6549,7 @@ MonoBehaviour:
       name: Test_Where(0,44,30,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,44,30,7)
       resultStatus: 1
-      duration: 0.0003345
+      duration: 0.0004063
       messages: 
       output: 
       stacktrace: 
@@ -6566,7 +6566,7 @@ MonoBehaviour:
       name: Test_Where(0,44,30,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(0,44,30,15)
       resultStatus: 1
-      duration: 0.000336
+      duration: 0.0003164
       messages: 
       output: 
       stacktrace: 
@@ -6583,7 +6583,7 @@ MonoBehaviour:
       name: Test_Where(39,27,2,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,27,2,7)
       resultStatus: 1
-      duration: 0.0003652
+      duration: 0.0003659
       messages: 
       output: 
       stacktrace: 
@@ -6600,7 +6600,7 @@ MonoBehaviour:
       name: Test_Where(39,27,2,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,27,2,15)
       resultStatus: 1
-      duration: 0.0003442
+      duration: 0.0003912
       messages: 
       output: 
       stacktrace: 
@@ -6617,7 +6617,7 @@ MonoBehaviour:
       name: Test_Where(39,27,30,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,27,30,7)
       resultStatus: 1
-      duration: 0.0003208
+      duration: 0.0003072
       messages: 
       output: 
       stacktrace: 
@@ -6634,7 +6634,7 @@ MonoBehaviour:
       name: Test_Where(39,27,30,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,27,30,15)
       resultStatus: 1
-      duration: 0.0003216
+      duration: 0.0003025
       messages: 
       output: 
       stacktrace: 
@@ -6651,7 +6651,7 @@ MonoBehaviour:
       name: Test_Where(39,44,2,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,44,2,7)
       resultStatus: 1
-      duration: 0.0003135
+      duration: 0.0003026
       messages: 
       output: 
       stacktrace: 
@@ -6668,7 +6668,7 @@ MonoBehaviour:
       name: Test_Where(39,44,2,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,44,2,15)
       resultStatus: 1
-      duration: 0.0003197
+      duration: 0.0003163
       messages: 
       output: 
       stacktrace: 
@@ -6685,7 +6685,7 @@ MonoBehaviour:
       name: Test_Where(39,44,30,7)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,44,30,7)
       resultStatus: 1
-      duration: 0.0003116
+      duration: 0.0003039
       messages: 
       output: 
       stacktrace: 
@@ -6702,7 +6702,7 @@ MonoBehaviour:
       name: Test_Where(39,44,30,15)
       fullName: Main.RXs.UnitTest_RXsOperator.Test_Where(39,44,30,15)
       resultStatus: 1
-      duration: 0.0003282
+      duration: 0.0003009
       messages: 
       output: 
       stacktrace: 
@@ -6735,7 +6735,7 @@ MonoBehaviour:
       name: ConnectTo_Collection
       fullName: Main.RXs.UnitTest_RXsValueOperator.ConnectTo_Collection
       resultStatus: 1
-      duration: 0.0058808
+      duration: 0.0055364
       messages: 
       output: 
       stacktrace: 
@@ -6752,7 +6752,7 @@ MonoBehaviour:
       name: ConnectTo_Property
       fullName: Main.RXs.UnitTest_RXsValueOperator.ConnectTo_Property
       resultStatus: 1
-      duration: 0.0031619
+      duration: 0.0033813
       messages: 
       output: 
       stacktrace: 
@@ -6769,7 +6769,7 @@ MonoBehaviour:
       name: ObserverOn
       fullName: Main.RXs.UnitTest_RXsValueOperator.ObserverOn
       resultStatus: 1
-      duration: 0.00579
+      duration: 0.0064889
       messages: 
       output: 
       stacktrace: 
@@ -6786,7 +6786,7 @@ MonoBehaviour:
       name: OfType
       fullName: Main.RXs.UnitTest_RXsValueOperator.OfType
       resultStatus: 1
-      duration: 0.0086655
+      duration: 0.0084425
       messages: 
       output: 
       stacktrace: 
@@ -6819,7 +6819,7 @@ MonoBehaviour:
       name: Where(3,68,10)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(3,68,10)
       resultStatus: 1
-      duration: 0.0018045
+      duration: 0.0027169
       messages: 
       output: 
       stacktrace: 
@@ -6836,7 +6836,7 @@ MonoBehaviour:
       name: Where(3,68,32)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(3,68,32)
       resultStatus: 1
-      duration: 0.0004119
+      duration: 0.0005717
       messages: 
       output: 
       stacktrace: 
@@ -6853,7 +6853,7 @@ MonoBehaviour:
       name: Where(3,12,10)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(3,12,10)
       resultStatus: 1
-      duration: 0.0001728
+      duration: 0.0003062
       messages: 
       output: 
       stacktrace: 
@@ -6870,7 +6870,7 @@ MonoBehaviour:
       name: Where(3,12,32)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(3,12,32)
       resultStatus: 1
-      duration: 0.000159
+      duration: 0.0002155
       messages: 
       output: 
       stacktrace: 
@@ -6887,7 +6887,7 @@ MonoBehaviour:
       name: Where(25,68,10)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(25,68,10)
       resultStatus: 1
-      duration: 0.000333
+      duration: 0.0004509
       messages: 
       output: 
       stacktrace: 
@@ -6904,7 +6904,7 @@ MonoBehaviour:
       name: Where(25,68,32)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(25,68,32)
       resultStatus: 1
-      duration: 0.000309
+      duration: 0.0004318
       messages: 
       output: 
       stacktrace: 
@@ -6921,7 +6921,7 @@ MonoBehaviour:
       name: Where(25,12,10)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(25,12,10)
       resultStatus: 1
-      duration: 0.000202
+      duration: 0.0002644
       messages: 
       output: 
       stacktrace: 
@@ -6938,7 +6938,7 @@ MonoBehaviour:
       name: Where(25,12,32)
       fullName: Main.RXs.UnitTest_RXsValueOperator.Where(25,12,32)
       resultStatus: 1
-      duration: 0.0001602
+      duration: 0.0002068
       messages: 
       output: 
       stacktrace: 
@@ -6987,7 +6987,7 @@ MonoBehaviour:
       name: Test_Clone(True,Main.UnitTest_Objects_Clone+NormalClass,null,null)
       fullName: Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+NormalClass,null,null)
       resultStatus: 1
-      duration: 0.0934142
+      duration: 0.050511
       messages: 
       output: 
       stacktrace: 
@@ -7004,7 +7004,7 @@ MonoBehaviour:
       name: Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCloneable,null,null)
       fullName: Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCloneable,null,null)
       resultStatus: 1
-      duration: 0.0018754
+      duration: 0.0016157
       messages: 
       output: 
       stacktrace: 
@@ -7021,7 +7021,7 @@ MonoBehaviour:
       name: Test_Clone(True,Main.UnitTest_Objects_Clone+ClassWithCustom,null,null)
       fullName: Main.UnitTest_Objects_Clone.Test_Clone(True,Main.UnitTest_Objects_Clone+ClassWithCustom,null,null)
       resultStatus: 1
-      duration: 0.0001634
+      duration: 0.0002093
       messages: 
       output: 
       stacktrace: 
@@ -7038,7 +7038,7 @@ MonoBehaviour:
       name: Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCustom,Main.UnitTest_Objects_Clone+ClassWithCustomAttribute,null)
       fullName: Main.UnitTest_Objects_Clone.Test_Clone(False,Main.UnitTest_Objects_Clone+ClassWithCustom,Main.UnitTest_Objects_Clone+ClassWithCustomAttribute,null)
       resultStatus: 1
-      duration: 0.0002303
+      duration: 0.0004637
       messages: 
       output: 
       stacktrace: 
@@ -7087,7 +7087,7 @@ MonoBehaviour:
       name: Test_New(False,Main.UnitTest_Objects_New+NormalClass,null,null)
       fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+NormalClass,null,null)
       resultStatus: 1
-      duration: 0.0003384
+      duration: 0.0004379
       messages: 
       output: 
       stacktrace: 
@@ -7104,7 +7104,7 @@ MonoBehaviour:
       name: Test_New(False,Main.UnitTest_Objects_New+ClassWithAttribute,null,null)
       fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithAttribute,null,null)
       resultStatus: 1
-      duration: 0.0003058
+      duration: 0.0003743
       messages: 
       output: 
       stacktrace: 
@@ -7121,7 +7121,7 @@ MonoBehaviour:
       name: Test_New(True,Main.UnitTest_Objects_New+ClassWithCustom,null,null)
       fullName: Main.UnitTest_Objects_New.Test_New(True,Main.UnitTest_Objects_New+ClassWithCustom,null,null)
       resultStatus: 1
-      duration: 0.0003192
+      duration: 0.0003584
       messages: 
       output: 
       stacktrace: 
@@ -7138,7 +7138,7 @@ MonoBehaviour:
       name: Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,null,System.Object[])
       fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,null,System.Object[])
       resultStatus: 1
-      duration: 0.0002856
+      duration: 0.0003029
       messages: 
       output: 
       stacktrace: 
@@ -7155,7 +7155,7 @@ MonoBehaviour:
       name: Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,Main.UnitTest_Objects_New+ClassWithCustomAttribute,null)
       fullName: Main.UnitTest_Objects_New.Test_New(False,Main.UnitTest_Objects_New+ClassWithCustom,Main.UnitTest_Objects_New+ClassWithCustomAttribute,null)
       resultStatus: 1
-      duration: 0.000232
+      duration: 0.0002358
       messages: 
       output: 
       stacktrace: 
@@ -7204,7 +7204,7 @@ MonoBehaviour:
       name: UnitTest_Timer(1.0f,1.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(1.0f,1.0f)
       resultStatus: 1
-      duration: 0.0005491
+      duration: 0.0945887
       messages: 
       output: 
       stacktrace: 
@@ -7221,7 +7221,7 @@ MonoBehaviour:
       name: UnitTest_Timer(1.0f,5.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(1.0f,5.0f)
       resultStatus: 1
-      duration: 0.0004848
+      duration: 0.0014033
       messages: 
       output: 
       stacktrace: 
@@ -7238,7 +7238,7 @@ MonoBehaviour:
       name: UnitTest_Timer(1.0f,10.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(1.0f,10.0f)
       resultStatus: 1
-      duration: 0.0004529
+      duration: 0.0004241
       messages: 
       output: 
       stacktrace: 
@@ -7255,7 +7255,7 @@ MonoBehaviour:
       name: UnitTest_Timer(5.0f,1.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(5.0f,1.0f)
       resultStatus: 1
-      duration: 0.0003839
+      duration: 0.0004
       messages: 
       output: 
       stacktrace: 
@@ -7272,7 +7272,7 @@ MonoBehaviour:
       name: UnitTest_Timer(5.0f,5.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(5.0f,5.0f)
       resultStatus: 1
-      duration: 0.0003741
+      duration: 0.000364
       messages: 
       output: 
       stacktrace: 
@@ -7289,7 +7289,7 @@ MonoBehaviour:
       name: UnitTest_Timer(5.0f,10.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(5.0f,10.0f)
       resultStatus: 1
-      duration: 0.0003439
+      duration: 0.0003876
       messages: 
       output: 
       stacktrace: 
@@ -7306,7 +7306,7 @@ MonoBehaviour:
       name: UnitTest_Timer(10.0f,1.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(10.0f,1.0f)
       resultStatus: 1
-      duration: 0.0003238
+      duration: 0.0004196
       messages: 
       output: 
       stacktrace: 
@@ -7323,7 +7323,7 @@ MonoBehaviour:
       name: UnitTest_Timer(10.0f,5.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(10.0f,5.0f)
       resultStatus: 1
-      duration: 0.0003406
+      duration: 0.0004337
       messages: 
       output: 
       stacktrace: 
@@ -7340,7 +7340,7 @@ MonoBehaviour:
       name: UnitTest_Timer(10.0f,10.0f)
       fullName: Main.UnitTest_RXsTime.UnitTest_Timer(10.0f,10.0f)
       resultStatus: 1
-      duration: 0.0003411
+      duration: 0.0004849
       messages: 
       output: 
       stacktrace: 
@@ -7358,7 +7358,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 1359d198
       m_LastClickedID: -1731110637
-      m_ExpandedIDs: 31fbb980451b3c87f6a67887c741b7875c876d8869ecb28b71ea378f72c92b93f42155961359d19800d4139e052cb39f744017a4e90f6ea6bbfa99a6cf1f00abd2d304aff43196af1bf30eb3a44a39b6644199b606a0f4b804a8aeb938368abb054309bd14695dc2ac69f5c26cc478c655e051ca9f04b7cc6547a4d005b472d349d8f0d73d420ee0f5aa31e15d328be427a4cbe501e22ce778d1dde75a7489e8895177ea2e6033ec720e8aed01a846efd49ba8f57d968908add9f00e0408d912279faa17992d0f1c42c2791cf50feb1ff331782232456b232197b328b0afa12b97a8ed2e5145ca3313756c3bb1884f401177d640fa2c5f439963494617a49d4de93918528efd6754c5f129552215e255f6b6ee5527b9e9561f30d35cdfe3d560f9257166ff96e26668426a670f5dbf69a4d19c6d3e9feb6ed5979d6f1d36d3764b5ea47ccac4c37c6fb0f97ed9874d7fffffff7f
+      m_ExpandedIDs: 31fbb980451b3c87f6a67887c741b7875c876d8869ecb28b71ea378f72c92b93f42155961359d19800d4139e052cb39f4db33ba3744017a4e90f6ea6bbfa99a6cf1f00abd2d304aff43196afa44a39b606a0f4b804a8aeb938368abb054309bd14695dc2ac69f5c26cc478c655e051ca9f04b7cc6547a4d005b472d349d8f0d73d420ee0f5aa31e15d328be427a4cbe501e22ce778d1dde75a7489e8895177ea2e6033ec720e8aed01a846efd49ba8f57d968908add9f00e0408d912279faa17992d0f1c42c2791cf50feb1ff331782232456b232197b328b0afa12b97a8ed2e5145ca3313756c3bb1884f401177d640fa2c5f439963494617a49d4de93918528efd6754c5f129552215e255f6b6ee5527b9e9561f30d35cdfe3d560f9257166ff96e26668426a670f5dbf693735d86aa4d19c6d3e9feb6ed5979d6f1d36d3764b5ea47ccac4c37c6fb0f97ed9874d7fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -7420,7 +7420,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1023
+      parentId: 1025
       parentUniqueId: '[Game_20240819][suite]'
     - id: 1017
       uniqueId: 'UnitTest.PlayMode.Game.dll/[Main][suite]'
@@ -7475,7 +7475,7 @@ MonoBehaviour:
       name: Test_Body_BodyPart_Component
       fullName: Main.Game.UnitTest_Body.Test_Body_BodyPart_Component
       resultStatus: 1
-      duration: 0.3107888
+      duration: 0.0031302
       messages: 
       output: 
       stacktrace: 
@@ -7492,7 +7492,7 @@ MonoBehaviour:
       name: Test_Body_BodyPart_Link
       fullName: Main.Game.UnitTest_Body.Test_Body_BodyPart_Link
       resultStatus: 1
-      duration: 0.0077627
+      duration: 0.002035
       messages: 
       output: 
       stacktrace: 
@@ -7525,7 +7525,7 @@ MonoBehaviour:
       name: Test_Input
       fullName: Main.Game.UnitTest_Fomula.Test_Input
       resultStatus: 1
-      duration: 0.0308654
+      duration: 0.0056857
       messages: 
       output: 
       stacktrace: 
@@ -7542,7 +7542,7 @@ MonoBehaviour:
       name: Test_Output
       fullName: Main.Game.UnitTest_Fomula.Test_Output
       resultStatus: 1
-      duration: 0.0018708
+      duration: 0.0007208
       messages: 
       output: 
       stacktrace: 
@@ -7575,7 +7575,7 @@ MonoBehaviour:
       name: Test_Capacity
       fullName: Main.Game.UnitTest_Inventory.Test_Capacity
       resultStatus: 1
-      duration: 0.0030226
+      duration: 0.0023815
       messages: 
       output: 
       stacktrace: 
@@ -7592,7 +7592,7 @@ MonoBehaviour:
       name: Test_InputFilter
       fullName: Main.Game.UnitTest_Inventory.Test_InputFilter
       resultStatus: 1
-      duration: 0.0014721
+      duration: 0.0011082
       messages: 
       output: 
       stacktrace: 
@@ -7609,7 +7609,7 @@ MonoBehaviour:
       name: Test_InputFilter_Test
       fullName: Main.Game.UnitTest_Inventory.Test_InputFilter_Test
       resultStatus: 1
-      duration: 0.0025281
+      duration: 0.0012884
       messages: 
       output: 
       stacktrace: 
@@ -7626,7 +7626,7 @@ MonoBehaviour:
       name: Test_OutputFilter
       fullName: Main.Game.UnitTest_Inventory.Test_OutputFilter
       resultStatus: 1
-      duration: 0.0014531
+      duration: 0.0011005
       messages: 
       output: 
       stacktrace: 
@@ -7643,7 +7643,7 @@ MonoBehaviour:
       name: Test_OutputFilter_Test
       fullName: Main.Game.UnitTest_Inventory.Test_OutputFilter_Test
       resultStatus: 1
-      duration: 0.0014584
+      duration: 0.0011912
       messages: 
       output: 
       stacktrace: 
@@ -7660,7 +7660,7 @@ MonoBehaviour:
       name: Test_Test
       fullName: Main.Game.UnitTest_Inventory.Test_Test
       resultStatus: 1
-      duration: 0.0014062
+      duration: 0.0011346
       messages: 
       output: 
       stacktrace: 
@@ -7672,12 +7672,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1004
       parentUniqueId: 'UnitTest.PlayMode.Game.dll/Main/Game/[UnitTest.PlayMode.Game][Main.Game.UnitTest_Inventory][suite]'
-    m_ResultText: Game_20240819 (10 tests) (0.000s)
+    m_ResultText: Test_Output (0.001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1359d198
-      m_LastClickedID: -1731110637
+      m_SelectedIDs: f21c5448
+      m_LastClickedID: 1213471986
       m_ExpandedIDs: aca89f87552caa8f1359d198d051e2ad64a183c6f1f952c9213d15caf6d585f0f38ce0f7516d14fcf26ffa10992d0f1ce9805d290238af572b0300643e9feb6eb755d67dffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0

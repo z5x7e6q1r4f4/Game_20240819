@@ -16,7 +16,7 @@ namespace Main
                 if (autoDispose) operatorObservable.Dispose();
                 return observable.SubscribeOperator(operatorObserver); ;
             });
-        public static IDisposable EnableDebug<T>(this IObservable<T> observable, string name = null)
-            => observable.Debug(name).Subscribe(Observer.Create<T>());
+        public static IDisposable EnableDebug<T>(this IObservable<T> observable, string name = null, int order = int.MinValue)
+            => observable.Order(order).Debug(name).Subscribe(Observer.Create<T>());
     }
 }

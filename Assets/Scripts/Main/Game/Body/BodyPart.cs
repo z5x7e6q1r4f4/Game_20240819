@@ -1,14 +1,13 @@
-﻿using Main.RXs;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Main.Game
 {
     public class BodyPart : GameComponent
     {
-        [field: SerializeField] public ObservableProperty_SerializeField<Body> Body { get; private set; } = new();
+        [field: SerializeField] public PropertySerializeField<Body> Body { get; private set; } = new();
         //Component
-        public IObservableCollection_Readonly<GameComponent> BodyComponents => bodyComponents;
-        private ObservableCollection_SerializeField<GameComponent> bodyComponents = new();
+        public ICollectionReadonly<GameComponent> BodyComponents => bodyComponents;
+        private CollectionSerializeField<GameComponent> bodyComponents = new();
         //Time
         //public IObservableProperty_Readonly<TimeNode> TimeNode => timeNode ??= Body.Select(body => body?.TimeNode);
         //private IObservableProperty_Readonly<TimeNode> timeNode ;

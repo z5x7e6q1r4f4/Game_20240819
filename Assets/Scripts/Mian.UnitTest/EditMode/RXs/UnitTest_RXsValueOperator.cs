@@ -9,8 +9,8 @@ namespace Main.RXs
         [Test]
         public void ConnectTo_Collection()
         {
-            var collection = new ObservableCollection_SerializeField<int> { 1, 2, 3 };
-            var result = new ObservableCollection_SerializeField<int>();
+            var collection = new CollectionSerializeField<int> { 1, 2, 3 };
+            var result = new CollectionSerializeField<int>();
             var subscription = collection.ConnectTo(result);
             Assert.AreEqual(collection.Count, result.Count);
             for (int i = 0; i < collection.Count; i++)
@@ -23,8 +23,8 @@ namespace Main.RXs
         [Test]
         public void ConnectTo_Property()
         {
-            var collection = new ObservableProperty_SerializeField<int>(1);
-            var result = new ObservableProperty_SerializeField<int>();
+            var collection = new PropertySerializeField<int>(1);
+            var result = new PropertySerializeField<int>();
             var subscription = collection.ConnectTo(result);
             Assert.AreEqual(collection.Value, result.Value);
             subscription.Dispose();
@@ -33,7 +33,7 @@ namespace Main.RXs
         [Test]
         public void Where([Values(3, 25)] int from, [Values(68, 12)] int to, [Values(10, 32)] int grater)
         {
-            var collection = new ObservableCollection_SerializeField<int>();
+            var collection = new CollectionSerializeField<int>();
             using var range = Observable.Range(from, to);
             using var sub = range.Subscribe(e => collection.Add(e));
             using var where = collection.Where(x => x > grater);
@@ -50,8 +50,8 @@ namespace Main.RXs
         }
         public void OfType_Tester<T>(params object[] source)
         {
-            var collection = new ObservableCollection_SerializeField<object>();
-            var typedCollection = new ObservableCollection_SerializeField<T>();
+            var collection = new CollectionSerializeField<object>();
+            var typedCollection = new CollectionSerializeField<T>();
             using var subscription = collection.OfType(typedCollection);
             collection.AddRange(source);
             var typedSource = source.OfType<T>();
@@ -88,11 +88,11 @@ namespace Main.RXs
             Assert.AreEqual(c3, c_Observer.Value);
         }
         private class ClassA
-        { public ObservableProperty_SerializeField<ClassB> ClassB { get; } = new(); }
+        { public PropertySerializeField<ClassB> ClassB { get; } = new(); }
         private class ClassB
-        { public ObservableProperty_SerializeField<ClassC> ClassC { get; } = new(); }
+        { public PropertySerializeField<ClassC> ClassC { get; } = new(); }
         private class ClassC
-        { public ObservableProperty_SerializeField<ClassD> ClassD { get; } = new(); }
+        { public PropertySerializeField<ClassD> ClassD { get; } = new(); }
         private class ClassD { }
     }
 }

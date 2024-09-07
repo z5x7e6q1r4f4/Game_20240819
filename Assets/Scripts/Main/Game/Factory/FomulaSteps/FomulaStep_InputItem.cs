@@ -1,11 +1,10 @@
-﻿using Main.RXs;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Main.Game.FomulaSteps
 {
     public class FomulaStep_InputItem : FomulaStep_ComponentBase<InventoryInput>
     {
-        [field: SerializeField] public ObservableCollection_SerializeField<Item> Items { get; private set; } = new();
+        [field: SerializeField] public CollectionSerializeField<Item> Items { get; private set; } = new();
         protected override void OnGameComponentAwake()
         {
             base.OnGameComponentAwake();

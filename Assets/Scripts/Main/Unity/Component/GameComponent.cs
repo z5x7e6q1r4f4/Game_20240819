@@ -1,4 +1,3 @@
-using Main.RXs;
 using System;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace Main
     public abstract partial class GameComponent : MonoBehaviour
     {
         public bool EnableDebug { get => enableDebug.Value; set => enableDebug.Value = value; }
-        [SerializeField, DisableRXsValueDebug] private ObservableProperty_SerializeField<bool> enableDebug = new();
+        [SerializeField, DisableValueDebug] private PropertySerializeField<bool> enableDebug = new();
         //Event
         public IObservableImmediately<GameComponent> OnGameComponentAwakeEvent
             => onGameComponentAwakeEvent ??= new(observer => { if (hasAwake) observer.OnNext(this); });
@@ -40,7 +39,7 @@ namespace Main
                 Immediately().
                 Where(e => e.Current).
                 Subscribe(() =>
-                 RXs.Operation.EnableDebugAllValueFrom(this).
+                 ValueExtension.EnableDebugAllValueFrom(this).
                     Until(enableDebug.AfterSet.Immediately().Where(e => !e.Current))
                 );
         }
@@ -65,9 +64,9 @@ namespace Main
             onGameComponentDestroyEvent?.Invoke(this);
         }
         //Component
-        public IObservableCollection_Readonly<GameComponent> GameComponentList => tracingList;
+        public ICollectionReadonly<GameComponent> GameComponentList => tracingList;
         private GameComponentTracingList tracingList => _tracingList ??= GetOrAddComponent<GameComponentTracingList>(isTrackable: false);
-        [DisableRXsValueDebug] private GameComponentTracingList _tracingList;
+        [DisableValueDebug] private GameComponentTracingList _tracingList;
         public T AddComponent<T>(HideFlags hideFlags = HideFlags.None, bool isTrackable = true)
             where T : Component
         {

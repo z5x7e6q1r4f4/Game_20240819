@@ -19,7 +19,7 @@ namespace Main
                 return list;
             }
             public static ReuseList<T> Get(params T[] collection) => Get(collection.AsEnumerable());
-            void IDisposable.Dispose() => this.ReleaseToReusePool();
+            public void Dispose() => this.ReleaseToReusePool();
         }
         public static ReuseList<T> ToReuseList<T>(this IEnumerable<T> collection) => ReuseList<T>.Get(collection);
     }

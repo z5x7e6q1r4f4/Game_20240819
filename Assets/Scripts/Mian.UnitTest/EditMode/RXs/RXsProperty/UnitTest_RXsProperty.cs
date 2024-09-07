@@ -6,7 +6,7 @@ namespace Main.RXs.RXsProperty
     {
         private readonly string newValue = "newValue";
         private readonly string value = "value";
-        private ObservableProperty_SerializeField<string> property;
+        private PropertySerializeField<string> property;
         [SetUp]
         public void SetUp()
         {

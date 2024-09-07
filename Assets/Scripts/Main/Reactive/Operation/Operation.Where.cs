@@ -11,9 +11,8 @@ namespace Main
                 {
                     if (predicate(value)) { observer.OnNext(value); }
                 }, observer.OnCompleted, observer.OnError);
-                operatorObserver.AsOperatorOf(observer);
                 if (autoDispose) operatorObservable.Dispose();
-                return observable.SubscribeOperator(operatorObserver);
+                return observable.SubscribeOperator(operatorObserver.AsOperatorOf(observer));
             });
     }
 }

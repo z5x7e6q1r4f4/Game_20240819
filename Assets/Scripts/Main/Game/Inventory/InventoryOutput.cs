@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Main.RXs;
 namespace Main.Game
 {
     public class InventoryOutput : Inventory

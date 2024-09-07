@@ -1,4 +1,3 @@
-using Main.RXs;
 using System;
 
 namespace Main.Game
@@ -12,10 +11,10 @@ namespace Main.Game
             Enable,
             Disable,
         }
-        public ObservableProperty_SerializeField<FilterMode> Mode { get; private set; } = new();
-        public ObservableCollection_SerializeField<Item> Items { get; private set; } = new();
-        public void FilterBeforeAdd(IObservableCollection_BeforeAdd<Item> e) => e.IsEnable = IsEnable(e.Item);
-        public void FilterBeforeRemove(IObservableCollection_BeforeRemove<Item> e) => e.IsEnable = IsEnable(e.Item);
+        public PropertySerializeField<FilterMode> Mode { get; private set; } = new();
+        public CollectionSerializeField<Item> Items { get; private set; } = new();
+        public void FilterBeforeAdd(CollectionBeforeAdd<Item> e) => e.IsEnable = IsEnable(e.Item);
+        public void FilterBeforeRemove(CollectionBeforeRemove<Item> e) => e.IsEnable = IsEnable(e.Item);
         private bool IsEnable(Item item)
         {
             switch (Mode.Value)

@@ -8,9 +8,9 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Main.RXs.Editor
+namespace Main.Editor
 {
-    [CustomPropertyDrawer(typeof(IRXsValueInspector), true)]
+    [CustomPropertyDrawer(typeof(IValueInspector), true)]
     public class IRXsValuePropertyDrawer : PropertyDrawer
     {
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
@@ -47,7 +47,7 @@ namespace Main.RXs.Editor
             public SerializedPropertyElement(string displayName, SerializedProperty property, FieldInfo fieldInfo)
             {
                 var propertyField = new PropertyField(property, displayName);
-                var RXsProperty = property.GetParent().GetValue<IObservableProperty>();
+                var RXsProperty = property.GetParent().GetValue<IProperty>();
                 previous = RXsProperty.Value;
                 propertyField.RegisterValueChangeCallback(e =>
                 {
