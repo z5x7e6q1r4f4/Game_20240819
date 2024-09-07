@@ -1,11 +1,18 @@
+using System;
+
 namespace Main
 {
     public static partial class Operation
     {
-        private static void AsOperatorOf(this IDisposableContainer operatorObserver, IDisposableContainer observer)
+        private static void AsOperatorOf(this IDisposableHandler operatorObserver, IDisposableHandler observer)
         {
-            var subForObserver = observer.Add(sub => operatorObserver.Dispose());
-            var subForOperator = operatorObserver.Add(sub => observer.RemoveAndDispose(sub));
+            observer.Add(operatorObserver);
+            operatorObserver.Add(() => observer.RemoveAndDispose(operatorObserver));
+        }
+        private static void SubscribeOperator<T>(this IObservable<T> observable, IObserverDisposableHandler<T> operatorObserver)
+        {
+            var sub = observable.Subscribe(operatorObserver);
+            operatorObserver.Add(sub);
         }
     }
 }

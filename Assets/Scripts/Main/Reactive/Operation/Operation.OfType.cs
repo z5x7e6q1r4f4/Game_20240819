@@ -12,11 +12,12 @@ namespace Main
                     try { observer.OnNext((TTo)(object)value); } catch { }
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.Subscribe(operatorObserver);
+                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
                 return operatorObserver;
             });
+
         public static IObservable<T> OfType<T>(this IObservable<object> observable, bool autoDispose = true)
-            => observable.OfType<object, T>();
+            => observable.OfType<object, T>(autoDispose);
     }
 }

@@ -47,10 +47,10 @@ namespace Main.RXs
             protected override void OnCompleted() { }
             protected override void OnError(Exception error) { }
             protected override void OnNext(object value) { }
-            public override void Dispose()
+            protected override void OnDispose()
             {
                 isDispose = true;
-                base.Dispose();
+                base.OnDispose();
             }
             public static TestRXsObserverBaseReuseable GetFromReusePool() => GetFromReusePool(false);
         }

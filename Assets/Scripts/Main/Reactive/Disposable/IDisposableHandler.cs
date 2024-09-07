@@ -2,7 +2,7 @@
 
 namespace Main
 {
-    public interface IDisposableContainer : IDisposable
+    public interface IDisposableHandler : IDisposable
     {
         int Count { get; }
         void Add(IDisposable disposable);

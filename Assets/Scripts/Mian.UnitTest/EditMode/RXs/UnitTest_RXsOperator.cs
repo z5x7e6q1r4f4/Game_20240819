@@ -118,8 +118,10 @@ namespace Main.RXs
             using var observable1 = new EventHandler<int>();
             using var observable2 = new EventHandler<string>();
             using var observable3 = new EventHandler<float>();
+            using var observable4 = new EventHandler<double>();
             object result = null;
-            using var _ = observable1.Merge(observable2).Merge(observable3).Subscribe(value => result = value);
+            using var _ = observable1.Merge(observable2).Merge(observable3).Merge(observable4).
+                Subscribe(value => result = value);
             //
             observable1.Invoke(0);
             Assert.AreEqual(0, result);
@@ -129,14 +131,17 @@ namespace Main.RXs
             //
             observable3.Invoke(.0f);
             Assert.AreEqual(.0f, result);
+            //
+            observable4.Invoke(.1d);
+            Assert.AreEqual(.1d, result);
             //Clear(Dispose)
             observable1.Clear();
             observable1.Invoke(1);
-            Assert.AreEqual(.0f, result);
+            Assert.AreEqual(.1d, result);
             //
             observable3.Clear();
             observable3.Invoke(.1f);
-            Assert.AreEqual(.0f, result);
+            Assert.AreEqual(.1d, result);
         }
     }
 }

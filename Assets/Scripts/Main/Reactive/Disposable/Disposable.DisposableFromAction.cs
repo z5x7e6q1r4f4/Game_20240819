@@ -17,11 +17,12 @@ namespace Main
             void IReuseable.IOnGet.OnGet() => hasDisposed = false;
             void IReuseable.IOnRelease.OnRelease()
             {
-                base.Dispose();
                 OnDisposeAction?.Invoke(this);
-                OnDisposeAction = null;
+                Clear();
+                base.OnDispose();
             }
-            public override void Dispose() => this.ReleaseToReusePool();
+            public void Clear() => OnDisposeAction = null;
+            protected override void OnDispose() => this.ReleaseToReusePool();
             public static DisposableFromAction GetFromReusePool() => StaticPool.Get();
         }
     }

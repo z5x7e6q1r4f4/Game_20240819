@@ -2,5 +2,5 @@
 
 namespace Main
 {
-    public interface IObserverDisposableHandler<in T> : IDisposableContainer, IObserver<T>, IObserverOrderable { }
+    public interface IObserverDisposableHandler<in T> : IDisposableHandler, IObserver<T>, IObserverOrderable { }
 }

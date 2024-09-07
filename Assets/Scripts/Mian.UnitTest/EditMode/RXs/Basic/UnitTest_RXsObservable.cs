@@ -13,9 +13,9 @@ namespace Main.RXs
             bool isOnNext = false;
             bool isDisposiable = false;
             var observable = Observable.Create<int>(
-                (self, observer) =>
+               (self, observer) =>
                 {
-                    ((System.IDisposable)self).Dispose();
+                    self.Dispose();
                     observer.OnNext(1); return observer;
                 }, _ => isDisposiable = true);
             using var _ = observable.Subscribe(e =>

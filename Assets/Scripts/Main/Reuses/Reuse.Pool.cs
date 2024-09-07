@@ -70,7 +70,7 @@ namespace Main
                 return $"Pool<<color=yellow>{type}</color>>," +
                     $"Prefab=<color=yellow>{prefab}</color>," +
                     $"All=<color=green>{AllCount}</color>," +
-                    $"Active=<color=green>{(ActiveCount == 0 ? $"<color=green>0" : $"<color=red>{ActiveCount}")}</color>," +
+                    $"Active={(ActiveCount == 0 ? $"<color=green>0" : $"<color=red>{ActiveCount}")}</color>," +
                     $"Inactive=<color=green>{InactiveCount}</color>";
             }
         }

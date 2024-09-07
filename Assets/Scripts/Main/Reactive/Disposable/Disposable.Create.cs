@@ -13,7 +13,7 @@ namespace Main
             return disposable;
         }
         public static DisposableFromAction Create(IEnumerable<IDisposable> disposables)
-            => Create(_ => { foreach (var disposable in disposables) disposable.Dispose(); });
+            => Create((_ => { foreach (var disposable in disposables) disposable.Dispose(); }));
         public static DisposableFromAction Create(params IDisposable[] disposables)
             => Create(disposables.AsEnumerable());
         public static DisposableFromAction Create(Action onDispose)

@@ -4,7 +4,7 @@ namespace Main
 {
     partial class Disposable 
     {
-        public static void RemoveAndDispose(this IDisposableContainer disposableHandler, IDisposable disposable)
+        public static void RemoveAndDispose(this IDisposableHandler disposableHandler, IDisposable disposable)
         {
             if (disposableHandler.Remove(disposable) &&
                 disposableHandler.Count == 0)

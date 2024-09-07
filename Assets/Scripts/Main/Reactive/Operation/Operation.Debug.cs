@@ -13,7 +13,7 @@ namespace Main
                     observer.OnNext(value);
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.Subscribe(operatorObserver);
+                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
                 return operatorObserver;
             });

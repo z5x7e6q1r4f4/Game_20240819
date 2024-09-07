@@ -14,7 +14,7 @@ namespace Main
             var timeData = Substitute.For<TimeAndUpdate.ITimeData>();
             timeData.Delta.Returns(delta);
             EventHandler<TimeAndUpdate.ITimeData> timeNode = new();
-            var timer = timeNode.GetTimer(target);
+            using var timer = timeNode.GetTimer(target);
             Assert.AreEqual(0, timer.Time.Value);
             Assert.AreEqual(target, timer.Target.Value);
             //

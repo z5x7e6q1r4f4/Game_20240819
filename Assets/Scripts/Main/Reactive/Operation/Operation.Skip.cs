@@ -12,7 +12,7 @@ namespace Main
                     if (count <= 0) observer.OnNext(value); else count--;
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.Subscribe(operatorObserver);
+                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
                 return operatorObserver;
             });
