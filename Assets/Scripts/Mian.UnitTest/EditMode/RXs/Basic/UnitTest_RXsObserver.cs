@@ -13,7 +13,7 @@ namespace Main.RXs
             bool hasOnCompleted = default;
             bool hasOnError = default;
             bool hasDispose = default;
-            var observer = Observer.Create<int>(
+            var observer = (IObserverDisposableHandler<int>)Observer.Create<int>(
                 e => { hasOnNext = true; nextValue = e; },
                 () => hasOnCompleted = true,
                 e => hasOnError = true,
@@ -41,13 +41,13 @@ namespace Main.RXs
             (test as IDisposable).Dispose();
             Assert.AreEqual(true, test.isDispose);
         }
-        public class TestRXsObserverBaseReuseable : Observer.ObserverBaseReuseable<TestRXsObserverBaseReuseable, object>
+        public class TestRXsObserverBaseReuseable : ObserverBaseReuseable<TestRXsObserverBaseReuseable, object>
         {
             public bool isDispose = false;
             protected override void OnCompleted() { }
             protected override void OnError(Exception error) { }
             protected override void OnNext(object value) { }
-            protected override void Dispose()
+            public override void Dispose()
             {
                 isDispose = true;
                 base.Dispose();

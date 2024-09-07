@@ -9,7 +9,7 @@ namespace Main.RXs
         public void Test_Subscribe()
         {
             var input = "input";
-            var eventHandler = new ObservableEventHandler<string>();
+            var eventHandler = new EventHandler<string>();
             int invokeCount = 0;
             Action<string> action = e =>
             {
@@ -28,7 +28,7 @@ namespace Main.RXs
         public void Test_Clear()
         {
             Reuse.Clear();
-            var eventHandler = new ObservableEventHandler<string>();
+            var eventHandler = new EventHandler<string>();
             eventHandler.Subscribe(() => { });
             Reuse.Log();
             eventHandler.Clear();

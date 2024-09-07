@@ -13,7 +13,7 @@ namespace Main
         {
             var timeData = Substitute.For<TimeAndUpdate.ITimeData>();
             timeData.Delta.Returns(delta);
-            ObservableEventHandler<TimeAndUpdate.ITimeData> timeNode = new();
+            EventHandler<TimeAndUpdate.ITimeData> timeNode = new();
             var timer = timeNode.GetTimer(target);
             Assert.AreEqual(0, timer.Time.Value);
             Assert.AreEqual(target, timer.Target.Value);

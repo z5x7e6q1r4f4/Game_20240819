@@ -15,7 +15,7 @@ namespace Main.RXs
             var observable = Observable.Create<int>(
                 (self, observer) =>
                 {
-                    self.Dispose();
+                    ((System.IDisposable)self).Dispose();
                     observer.OnNext(1); return observer;
                 }, _ => isDisposiable = true);
             using var _ = observable.Subscribe(e =>

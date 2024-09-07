@@ -11,7 +11,7 @@ namespace Main.RXs
         public void Test_Order()
         {
             bool result = false;
-            ObservableEventHandler<int> eventHandler = new();
+            EventHandler<int> eventHandler = new();
             using var _2 = eventHandler.Order(2).Subscribe(e =>
                 {
                     Assert.IsFalse(result);
@@ -115,9 +115,9 @@ namespace Main.RXs
         [Test]
         public void Test_Merge()
         {
-            using var observable1 = new ObservableEventHandler<int>();
-            using var observable2 = new ObservableEventHandler<string>();
-            using var observable3 = new ObservableEventHandler<float>();
+            using var observable1 = new EventHandler<int>();
+            using var observable2 = new EventHandler<string>();
+            using var observable3 = new EventHandler<float>();
             object result = null;
             using var _ = observable1.Merge(observable2).Merge(observable3).Subscribe(value => result = value);
             //

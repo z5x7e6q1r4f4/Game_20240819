@@ -17,10 +17,10 @@ namespace Main
             => onGameComponentDisableEvent ??= new(observer => { if (!isActiveAndEnabled) observer.OnNext(this); });
         public IObservable<GameComponent> OnGameComponentDestroyEvent
             => onGameComponentDestroyEvent ??= new();
-        private ObservableEventHandler<GameComponent> onGameComponentAwakeEvent;
-        private ObservableEventHandler<GameComponent> onGameComponentEnableEvent;
-        private ObservableEventHandler<GameComponent> onGameComponentDisableEvent;
-        private ObservableEventHandler<GameComponent> onGameComponentDestroyEvent;
+        private EventHandler<GameComponent> onGameComponentAwakeEvent;
+        private EventHandler<GameComponent> onGameComponentEnableEvent;
+        private EventHandler<GameComponent> onGameComponentDisableEvent;
+        private EventHandler<GameComponent> onGameComponentDestroyEvent;
         //LifeCycle
         private bool hasAwake = false;
         protected T AwakeSelf<T>() where T : GameComponent
@@ -40,7 +40,7 @@ namespace Main
                 Immediately().
                 Where(e => e.Current).
                 Subscribe(() =>
-                    Operation.EnableDebugAllValueFrom(this).
+                 RXs.Operation.EnableDebugAllValueFrom(this).
                     Until(enableDebug.AfterSet.Immediately().Where(e => !e.Current))
                 );
         }
