@@ -12,9 +12,8 @@ namespace Main
                     try { observer.OnNext((TTo)(object)value); } catch { }
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
-                return operatorObserver;
+                return observable.SubscribeOperator(operatorObserver); ;
             });
 
         public static IObservable<T> OfType<T>(this IObservable<object> observable, bool autoDispose = true)

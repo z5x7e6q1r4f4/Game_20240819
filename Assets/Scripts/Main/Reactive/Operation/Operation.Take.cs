@@ -13,9 +13,8 @@ namespace Main
                     if (count <= 0)  @operator.Dispose(); 
                 }, _ => observer.OnCompleted(), (_, error) => observer.OnError(error));
                 operatorObserver.AsOperatorOf(observer);
-                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
-                return operatorObserver;
+                return observable.SubscribeOperator(operatorObserver);
             });
     }
 }

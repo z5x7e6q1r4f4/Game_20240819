@@ -27,7 +27,9 @@ namespace Main
             var disposableHandler = observer.ToDisposableHandler();
             var disposable = Disposable.Create(disposable =>
             {
+                //移除核心
                 observers.Remove(disposableHandler);//移除Observer
+                //防止多次Dispose
                 disposables.Remove(disposable);//不會再次被List方Dispose
                 disposableHandler.Remove(disposable);//移除Disposable並確認是否可以DisposeObserver
             });

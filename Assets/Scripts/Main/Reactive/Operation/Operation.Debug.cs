@@ -13,9 +13,8 @@ namespace Main
                     observer.OnNext(value);
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
-                return operatorObserver;
+                return observable.SubscribeOperator(operatorObserver); ;
             });
         public static IDisposable EnableDebug<T>(this IObservable<T> observable, string name = null)
             => observable.Debug(name).Subscribe(Observer.Create<T>());

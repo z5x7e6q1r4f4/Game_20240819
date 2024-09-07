@@ -12,9 +12,8 @@ namespace Main
                     observer.OnNext(selector(value));
                 }, observer.OnCompleted, observer.OnError);
                 operatorObserver.AsOperatorOf(observer);
-                observable.SubscribeOperator(operatorObserver);
                 if (autoDispose) operatorObservable.Dispose();
-                return operatorObserver;
+                return observable.SubscribeOperator(operatorObserver);
             });
     }
 }

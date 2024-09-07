@@ -9,10 +9,11 @@ namespace Main
             observer.Add(operatorObserver);
             operatorObserver.Add(() => observer.Remove(operatorObserver));
         }
-        private static void SubscribeOperator<T>(this IObservable<T> observable, IObserverDisposableHandler<T> operatorObserver)
+        private static IDisposable SubscribeOperator<T>(this IObservable<T> observable, IObserverDisposableHandler<T> operatorObserver)
         {
-            var sub = observable.Subscribe(operatorObserver);
-            operatorObserver.Add(sub);
+            var disposable = observable.Subscribe(operatorObserver);
+            operatorObserver.Add(disposable);
+            return operatorObserver;
         }
     }
 }
