@@ -5,7 +5,7 @@ namespace Main
     partial class Disposable
     {
         public sealed class DisposableFromAction :
-            DisposableBase,
+            DisposableHandlerBase,
             IReuseable.IOnRelease,
             IReuseable.IOnGet
         {

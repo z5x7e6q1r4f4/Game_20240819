@@ -4,15 +4,14 @@ using System.Collections.Generic;
 
 namespace Main
 {
-    public abstract class DisposableBase : IDisposableHandler
+    public abstract class DisposableHandlerBase : IDisposableHandler
     {
         private readonly List<IDisposable> disposables = new();
         protected bool hasDisposed = false;
-        int IDisposableHandler.Count => disposables.Count;
         void IDisposableHandler.Add(IDisposable disposable)
         { if (!disposables.Contains(disposable) && disposable != this) disposables.Add(disposable); }
-
-        bool IDisposableHandler.Remove(IDisposable disposable) => disposables.Remove(disposable);
+        void IDisposableHandler.Remove(IDisposable disposable, bool tryDispose)
+        { if (disposables.Remove(disposable) && tryDispose && disposables.Count == 0) Dispose(); }
         public void Dispose() { if (!hasDisposed) { hasDisposed = true; OnDispose(); } }
         protected virtual void OnDispose()
         {

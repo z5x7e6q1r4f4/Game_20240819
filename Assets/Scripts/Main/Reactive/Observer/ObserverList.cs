@@ -29,7 +29,7 @@ namespace Main
             {
                 observers.Remove(disposableHandler);//移除Observer
                 disposables.Remove(disposable);//不會再次被List方Dispose
-                disposableHandler.RemoveAndDispose(disposable);//移除Disposable並確認是否可以DisposeObserver
+                disposableHandler.Remove(disposable);//移除Disposable並確認是否可以DisposeObserver
             });
             observers.Add(disposableHandler);
             disposables.Add(disposable);

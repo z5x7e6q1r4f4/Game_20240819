@@ -3,7 +3,7 @@ using System;
 namespace Main
 {
     public abstract class ObserverBase<T> :
-        DisposableBase,
+        DisposableHandlerBase,
         IObserverDisposableHandler<T>
     {
         int IObserverOrderable.Order { get; set; }
