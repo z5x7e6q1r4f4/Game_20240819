@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Main
@@ -25,14 +26,19 @@ namespace Main
         public static T Get<T>(T prefab = null, bool onGet = true)
             where T : class, IReuseable
             => GetPool(prefab).Get(onGet);
+        //
         public static void ReleaseToReusePool<T>(this T item, bool onRelease = true)
             where T : class, IReuseable
             => item.Pool?.Release(item, onRelease);
+        public static bool IsActive(IReuseable reuseable) => reuseable.Pool?.Active.Contains(reuseable) ?? false;
+        public static bool IsInactive(IReuseable reuseable) => reuseable.Pool?.Inactive.Contains(reuseable) ?? false;
+        public static bool IsInPool(IReuseable reuseable) => reuseable.Pool?.All.Contains(reuseable) ?? false;
         //LifeCycle
         public static void Clear()
         {
-            foreach (var pool in Pools.Values) pool.Dispose();
-            Pools.Clear();
+            var pools = Pools.Values.ToArray();
+            foreach (var pool in pools) pool.Dispose();
+            //Pools.Clear();
             ReleaseOnClear?.Invoke();
             ReleaseOnClear = null;
         }

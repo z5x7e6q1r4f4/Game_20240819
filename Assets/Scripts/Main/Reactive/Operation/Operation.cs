@@ -4,17 +4,17 @@ namespace Main
 {
     public static partial class Operation
     {
-        private static IObserverDisposableHandler<T> AsOperatorOf<T>(this IObserverDisposableHandler<T> operatorObserver, IDisposableHandler observer)
+        public static IObserverBase<TOperator> AsOperatorOf<TOperator, TObserver>(this IObserverBase<TOperator> operatorObserver, IObserverBase<TObserver> observer)
         {
-            observer.Add(operatorObserver);
-            operatorObserver.Add(() => observer.Remove(operatorObserver));
-            if (observer is IObserverOrderable orderable) operatorObserver.Order = orderable.Order;
+            observer.AddSubscription(operatorObserver);
+            operatorObserver.WhenDispose(() => observer.RemoveSubscription(operatorObserver));
+            operatorObserver.Order = observer.Order;
             return operatorObserver;
         }
-        private static IDisposable SubscribeOperator<T>(this IObservable<T> observable, IObserverDisposableHandler<T> operatorObserver)
+        public static IDisposable SubscribeOperator<T>(this IObservable<T> observable, IObserverBase<T> operatorObserver)
         {
             var disposable = observable.Subscribe(operatorObserver);
-            operatorObserver.Add(disposable);
+            operatorObserver.WithDispose(disposable);
             return operatorObserver;
         }
     }

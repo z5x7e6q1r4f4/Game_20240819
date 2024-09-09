@@ -8,7 +8,7 @@ namespace Main
             Action<ObserverFromAction<T>, T> onNext = null,
             Action<ObserverFromAction<T>> onCompleted = null,
             Action<ObserverFromAction<T>, Exception> onError = null,
-            Action<ObserverFromAction<T>> onDispose = null)
+            Action<IDisposableBase> onDispose = null)
         {
             var observer = ObserverFromAction<T>.GetFromReusePool();
             observer.OnNextAction += onNext;

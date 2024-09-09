@@ -25,14 +25,22 @@ namespace Main
         [Default(typeof(Component))]
         public class ComponentNewAttribute : CustomNewAttribute
         {
+            public string name = null;
+            public HideFlags hideFlags = default;
+            public bool tryFind = false;
             public readonly static ComponentNewAttribute Instance = new();
             public override T New<T>(Type type, params object[] args)
             {
-                var hideFlag = args.OfType<HideFlags>().FirstOrDefault();
+                //HideFlag
+                var hideFlagsArg = args.OfType<HideFlags>();
+                if (hideFlagsArg.Count() > 0) hideFlags = hideFlagsArg.First();
+                //GameObject
                 var gameObject = args.OfType<GameObject>().FirstOrDefault();
-                gameObject ??= new GameObject(type.Name);
+                if (gameObject is null && name != null && tryFind) gameObject = GameObject.Find(name);
+                gameObject ??= new GameObject(name ?? type.Name);
+                //Main
                 var result = gameObject.AddComponent(type);
-                result.hideFlags = hideFlag;
+                result.hideFlags = hideFlags;
                 if (result is T typed) return typed;
                 throw new Exception("Type error");
             }

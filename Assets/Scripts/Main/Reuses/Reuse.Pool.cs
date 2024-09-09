@@ -7,11 +7,10 @@ namespace Main
         private class Pool<T> : IPool<T>
             where T : class, IReuseable
         {
-            public int AllCount => ActiveCount + InactiveCount;
-            public int ActiveCount => active.Count;
-            public int InactiveCount => inactive.Count;
             public object Key { get; }
             public bool IsPrefab { get; }
+            IEnumerable<T> IPool<T>.Active => active;
+            IEnumerable<T> IPool<T>.Inactive => inactive;
             private readonly ReuseList<T> active = new();
             private readonly ReuseList<T> inactive = new();
             private T Prefab { get; }
@@ -57,6 +56,8 @@ namespace Main
                 inactive.Clear();
                 //Active
                 active.Clear();
+                //ReusePools
+                Pools.Remove(Key);
             }
             private void Destroy(T item)
             {
@@ -69,9 +70,9 @@ namespace Main
                 var prefab = Prefab?.ToString() ?? "Null";
                 return $"Pool<<color=yellow>{type}</color>>," +
                     $"Prefab=<color=yellow>{prefab}</color>," +
-                    $"All=<color=green>{AllCount}</color>," +
-                    $"Active={(ActiveCount == 0 ? $"<color=green>0" : $"<color=red>{ActiveCount}")}</color>," +
-                    $"Inactive=<color=green>{InactiveCount}</color>";
+                    $"All=<color=green>{active.Count + inactive.Count}</color>," +
+                    $"Active={(active.Count == 0 ? $"<color=green>0" : $"<color=red>{active.Count}")}</color>," +
+                    $"Inactive=<color=green>{inactive.Count}</color>";
             }
         }
     }

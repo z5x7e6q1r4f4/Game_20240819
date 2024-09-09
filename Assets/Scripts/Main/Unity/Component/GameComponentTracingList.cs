@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Main
 {
@@ -7,8 +8,12 @@ namespace Main
     {
         protected ICollection<GameComponent> GameComponents => AwakeSelf<GameComponentTracingList>().gameComponents;
         private readonly CollectionSerializeField<GameComponent> gameComponents = new();
-        protected override void OnGameComponentAwake() => gameComponents.AddRange(GetComponents<GameComponent>());
-        #region IRXsCollection
+        protected override void OnGameComponentAwake()
+        {
+            gameComponents.AddRange(GetComponents<GameComponent>());
+            gameComponents.Remove(this);
+        }
+        #region ICollection
         public IObservable<CollectionBeforeAdd<GameComponent>> BeforeAdd => GameComponents.BeforeAdd;
         public IObservable<CollectionBeforeRemove<GameComponent>> BeforeRemove => GameComponents.BeforeRemove;
         public IObservableImmediately<CollectionAfterAdd<GameComponent>> AfterAdd => GameComponents.AfterAdd;

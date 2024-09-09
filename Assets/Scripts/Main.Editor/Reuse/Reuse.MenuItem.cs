@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-namespace Main.RXs
+namespace Main.Reactive
 {
     public static class ReuseEditor
     {

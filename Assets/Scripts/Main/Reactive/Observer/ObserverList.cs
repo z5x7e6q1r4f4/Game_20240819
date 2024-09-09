@@ -6,7 +6,7 @@ namespace Main
     public sealed class ObserverList<T> : IObserver<T>, IObservable<T>
     {
         private readonly List<IDisposable> disposables = new();//subscription
-        private readonly List<IObserverDisposableHandler<T>> observers = new();
+        private readonly List<IObserverBase<T>> observers = new();
         public void OnCompleted()
         {
             using var observers = this.observers.ToReuseList();
@@ -24,18 +24,18 @@ namespace Main
         }
         public IDisposable Subscribe(IObserver<T> observer)
         {
-            var disposableHandler = observer.ToDisposableHandler();
+            var disposableHandler = observer.AsObserverBase();
             var disposable = Disposable.Create(disposable =>
             {
                 //移除核心
                 observers.Remove(disposableHandler);//移除Observer
                 //防止多次Dispose
                 disposables.Remove(disposable);//不會再次被List方Dispose
-                disposableHandler.Remove(disposable);//移除Disposable並確認是否可以DisposeObserver
+                disposableHandler.RemoveSubscription(disposable);//移除Subscription並確認是否可以DisposeObserver
             });
             observers.Add(disposableHandler);
             disposables.Add(disposable);
-            disposableHandler.Add(disposable);
+            disposableHandler.AddSubscription(disposable);
             observers.Sort((x, y) => x.Order.CompareTo(y.Order));//Orderable
             return disposable;
         }

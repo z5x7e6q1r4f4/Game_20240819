@@ -5,25 +5,15 @@ namespace Main
     partial class Disposable
     {
         public sealed class DisposableFromAction :
-            DisposableHandlerBase,
-            IReuseable.IOnRelease,
-            IReuseable.IOnGet
+            DisposableBaseReuseable<DisposableFromAction>,
+            IReuseable.IOnRelease
         {
-            Reuse.IPool IReuseable.Pool { get; set; }
-            private static Reuse.IPool<DisposableFromAction> StaticPool
-                => staticPool ??= Reuse.GetPool<DisposableFromAction>(releaseOnClear: () => staticPool = null);
-            private static Reuse.IPool<DisposableFromAction> staticPool;
-            public event Action<DisposableFromAction> OnDisposeAction;
-            void IReuseable.IOnGet.OnGet() => hasDisposed = false;
-            void IReuseable.IOnRelease.OnRelease()
+            public static DisposableFromAction GetFromReusePool(Action<IDisposableBase> onDispose)
             {
-                OnDisposeAction?.Invoke(this);
-                Clear();
-                base.OnDispose();
+                var disposable = GetFromReusePool(false);
+                disposable.OnDisposeAction += onDispose;
+                return disposable;
             }
-            public void Clear() => OnDisposeAction = null;
-            protected override void OnDispose() => this.ReleaseToReusePool();
-            public static DisposableFromAction GetFromReusePool() => StaticPool.Get();
         }
     }
 }

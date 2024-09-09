@@ -30,7 +30,7 @@ namespace Main
             IsPlaying.AfterSet.Subscribe(e =>
             {
                 if (e.IsSame || e.Current) return;
-                Delta.SetIfNotEqule(0);
+                Delta.SetIfNotEquals(0);
                 foreach (var child in Children) child.UpdateTime(Delta.Value);
             }).Until(OnGameComponentDestroyEvent);
             Parent.LinkCollection(this, timeNode => timeNode.Children).Until(OnGameComponentDestroyEvent);

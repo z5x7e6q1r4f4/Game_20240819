@@ -78,7 +78,7 @@ namespace Main
         public T GetOrAddComponent<T>(HideFlags hideFlags = HideFlags.HideInInspector, bool isTrackable = true)
             where T : Component
             => GetComponent<T>() ?? AddComponent<T>(hideFlags, isTrackable);
-        public void RemoveComponent<T>(T component, bool isTrackable = true)
+        public void RemoveComponent<T>(T component = default, bool isTrackable = true)
         {
             component ??= GetComponent<T>();
             if (component == null) return;
@@ -88,5 +88,6 @@ namespace Main
             if (isTrackable && component is GameComponent gameComponent) tracingList.Remove(gameComponent);
             Destroy(component as Component);
         }
+        public void RemoveComponent(bool isTrackable = true) => RemoveComponent(this, isTrackable);
     }
 }
